@@ -1,34 +1,159 @@
 [
   {
     "schema_version": "EDGE_RESEARCH_PACKET_V1",
-    "packet_id": "EDGE-INTEGRATION-TEST-20261004",
-    "created_at_utc": "2026-10-04T16:20:00Z",
+    "packet_id": "2ca77912d8a568178f1be6763a94ef39f5d8ed8016da63b1ffd71ec8d18eef28",
+    "created_at_utc": "2026-10-04T23:35:24Z",
     "source_urls": [
-      "https://github.com/emresengs/whaleradar-futures-edge-feed"
+      "https://www.okx.com/api/v5/market/ticker?instId=BTC-USDT-SWAP",
+      "https://www.okx.com/api/v5/public/funding-rate?instId=BTC-USDT-SWAP",
+      "https://www.okx.com/api/v5/public/open-interest?instType=SWAP&instId=BTC-USDT-SWAP",
+      "https://www.okx.com/api/v5/market/ticker?instId=ETH-USDT-SWAP",
+      "https://polymarket.com/event/what-price-will-bitcoin-hit-in-october-2026"
     ],
-    "source_type": "integration_test",
+    "source_type": "official_exchange_api_and_official_prediction_market",
     "source_reliability": "HIGH",
     "extraordinary_claim_unverified": false,
-    "title": "Edge Watch to Superman transport integration test",
-    "hypothesis": "Transport and ingestion path should accept a valid packet without proposing a strategy change.",
-    "mechanism": "Valid schema packet marked REJECT exercises remote fetch, schema validation, deduplication, receipt creation and safe classification only.",
+    "title": "BTC-ETH spot-led breakout with limited leverage expansion",
+    "hypothesis": "When BTC and ETH jointly break to fresh 24-hour highs while BTC contract open interest is flat-to-lower and funding remains non-extreme, 1-4 hour continuation quality is better than a leverage-driven breakout, but the bias should remain conditional until order-flow and breadth confirmation arrives.",
+    "mechanism": "Price appreciation without proportional contract-OI growth suggests the move is not primarily new crowded leverage. Positive but modest funding and a small negative premium reduce immediate long-crowding risk. ETH participation adds cross-asset confirmation, while absent taker, liquidation, depth and reliable Polymarket probability-velocity confirmation cap confidence.",
     "exact_features": [
-      "RSI"
+      "momentum",
+      "funding",
+      "basis",
+      "openinterest",
+      "OI",
+      "positioning",
+      "liquidity",
+      "spread",
+      "depth",
+      "flow",
+      "taker",
+      "liquidation",
+      "cross_asset_confirmation",
+      "distance_to_24h_high"
     ],
-    "exact_rule_or_model_spec": "No trading rule. Integration test only.",
+    "exact_rule_or_model_spec": "Paper-only candidate state detector evaluated on point-in-time snapshots: TREND_UP_CANDIDATE = BTC_return_1h >= rolling_past_180d_same_utc_hour_q80 AND BTC_distance_to_24h_high <= 0.25% AND ETH_return_1h > 0 AND BTC_OI_contract_change_1h <= +0.50% AND BTC_funding <= rolling_past_90d_q75 AND abs(BTC_perpetual_premium) <= 10 bps. Upgrade to CONFIRMED_CONTINUATION only if at least one independent microstructure condition also holds: taker_buy_ratio_5m >= past_30d_q67, bid_microprice_pressure_z >= 1, or breadth_positive_share_top50_5m >= past_30d_q67. If confirmation is absent, record CONDITIONAL only; do not alter, size, open, close, or route any live position.",
     "required_data": [
-      "existing feature dataset"
+      "Point-in-time BTC and ETH perpetual bid/ask/last prices at 1-minute or finer resolution",
+      "Prospectively timestamped BTC contract open interest with firstObservedAt and ingestedAt",
+      "Current and settled funding plus perpetual premium/index basis",
+      "Top-50 liquid perpetual breadth and returns",
+      "Taker buy/sell flow, L2 depth, spread, microprice and liquidation lower-bound stream",
+      "Polymarket price-threshold probability history with observation timestamp, spread, liquidity and volume"
     ],
-    "transaction_cost_implications": "None.",
-    "expected_benefit": "Verify end-to-end research packet transport safely.",
-    "risks": "None to trading because recommended_action is REJECT and all deployment permissions are false.",
-    "falsification_criteria": "Bridge does not fetch, validate, deduplicate, classify, or receipt the packet.",
-    "validation_plan": "Fetch through the public raw feed and verify one receipt with classification REJECT; repeat fetch must deduplicate.",
-    "minimum_sample": 0,
-    "recommended_action": "REJECT",
+    "transaction_cost_implications": "Do not chase the breakout when spread, Q-sized entry book-walk, expected adverse markout, funding drag and stressed exit cost consume the predicted edge. Test immediate entry against 5/15-minute confirmation-delay shadows and include 1.5x and 2x fee/slippage stress; delayed confirmation may improve false-breakout selection but can forfeit early continuation returns.",
+    "expected_benefit": "Potentially distinguish healthier spot/short-covering-led continuation from crowded OI-expansion breakouts, improving 1-4 hour trade selection without using a hard veto and while preserving baseline trade frequency through conditional scoring.",
+    "risks": "The current observation may be a weekend liquidity move, short covering, or a false breakout. OKX alone does not establish cross-exchange confirmation. Contract OI can fall during short covering without implying durable spot demand. Polymarket threshold odds did not provide a verified fresh probability-velocity confirmation. Missing taker, liquidation, breadth and full-depth data prevents high confidence. Historical Binance OI archives may contain point-in-time timestamp ambiguity and must not be used as labeled without the existing data gate.",
+    "falsification_criteria": "REJECT if, after costs, the confirmed state does not exceed matched baseline net PnL or profit factor; if maximum drawdown worsens by more than 5%; if benefit disappears under 1.5x costs; if OI-flat breakouts do not outperform OI-expansion breakouts on forward 1h/4h returns or MAE; if results are driven by fewer than five event clusters; if added confirmation reduces retained trades below 98%; or if prospective point-in-time OI does not reproduce the relationship.",
+    "validation_plan": "Use only causal snapshots satisfying usableAt <= decision_time. Develop thresholds on 2024-2025, validate unchanged on January-June 2026, and use July-September 2026 once as a locked historical test only where point-in-time semantics are verified. Because archived OI timing is suspect, treat the primary OI result as prospective: freeze the rule and run at least 90 future days in paper shadow. Compare BASELINE, PRICE_ONLY, PRICE_X_OI_FLAT, PRICE_X_FUNDING, FULL_CONFIRMATION, 5M_DELAY, 15M_DELAY and matched-frequency random controls. Report net PnL, profit factor, maximum drawdown, MAE/MFE, implementation shortfall, retention, trade count, capital utilization and 1.5x/2x cost sensitivity with day/event-block bootstrap.",
+    "minimum_sample": "At least 200 independent breakout episodes, 100 with flat-or-lower OI, 100 with expanding OI, 500 eligible baseline decisions, and at least 90 prospective calendar days; extend the shadow until all counts are met.",
+    "recommended_action": "TEST",
     "paper_only": true,
     "production_change_allowed": false,
     "live_change_allowed": false,
-    "real_money_allowed": false
+    "real_money_allowed": false,
+    "market_scope": [
+      "BTC",
+      "ETH",
+      "broad_crypto"
+    ],
+    "regime": "TREND_UP",
+    "directional_assessment": {
+      "15m": {
+        "up_probability": 0.43,
+        "down_probability": 0.22,
+        "range_probability": 0.35,
+        "confidence": "LOW",
+        "primary_drivers": [
+          "fresh intraday highs",
+          "short-horizon mean-reversion risk",
+          "no verified taker or depth confirmation"
+        ]
+      },
+      "1h": {
+        "up_probability": 0.55,
+        "down_probability": 0.18,
+        "range_probability": 0.27,
+        "confidence": "MEDIUM",
+        "primary_drivers": [
+          "BTC breakout continuation",
+          "ETH participation",
+          "funding remains modest",
+          "contract OI not expanding"
+        ]
+      },
+      "4h": {
+        "up_probability": 0.58,
+        "down_probability": 0.18,
+        "range_probability": 0.24,
+        "confidence": "MEDIUM",
+        "primary_drivers": [
+          "multi-hour BTC and ETH momentum",
+          "non-crowded positioning signature",
+          "price near 24-hour highs"
+        ]
+      },
+      "24h": {
+        "up_probability": 0.5,
+        "down_probability": 0.22,
+        "range_probability": 0.28,
+        "confidence": "LOW",
+        "primary_drivers": [
+          "positive 24-hour momentum",
+          "macro and rates uncertainty",
+          "no fresh multi-class event confirmation"
+        ]
+      }
+    },
+    "evidence_timestamp_utc": "2026-10-04T23:20:22Z",
+    "evidence_freshness_minutes": 15,
+    "evidence_buckets_used": [
+      "derivatives_positioning",
+      "price_technical_state",
+      "cross_sectional_rotation",
+      "polymarket_context",
+      "contradictions_regime"
+    ],
+    "contradictions": [
+      "Price made fresh 24-hour highs, but BTC contract OI was slightly lower than the prior observation rather than expanding.",
+      "Funding rose but remained modest; the reported premium stayed slightly negative.",
+      "ETH confirmed direction but lagged BTC on the 24-hour change.",
+      "No verified fresh Polymarket probability acceleration, taker-flow, liquidation or L2-depth confirmation was available."
+    ],
+    "invalidation_triggers": [
+      "BTC loses 85900 and fails to reclaim it on a completed 15-minute observation.",
+      "BTC contract OI rises more than 1.5% in one hour while price stalls or falls.",
+      "Funding enters its rolling 90-day top decile or premium exceeds +10 bps without breadth confirmation.",
+      "ETH turns negative over one hour while BTC remains near the high.",
+      "Top-50 breadth falls below 40% positive or Q-sized book-walk exceeds the predicted edge."
+    ],
+    "polymarket_context": {
+      "relevant_market_titles": [
+        "What price will Bitcoin hit in October?"
+      ],
+      "probability_now": "No reliable fresh point estimate used; the latest accessible official page showed the $90,000 threshold near 51%, but no trustworthy short-horizon probability change series.",
+      "probability_change": "Unverified/no usable acceleration signal",
+      "horizon_of_change": "October 2026",
+      "liquidity_spread_oi_volume_observations": "Official page showed about $1.94M aggregate event volume; outcome-level spread and open interest were not reliably available in the fresh snapshot.",
+      "event_deadline": "2026-10-31T23:59:59-04:00",
+      "reliability_notes": "Useful only as low-weight context because threshold events overlap, some outcomes have already resolved, and no point-in-time order-book history was obtained."
+    },
+    "derivatives_context": {
+      "BTC_OKX_last": 86570.5,
+      "BTC_OKX_24h_open": 84715.6,
+      "BTC_OKX_24h_high": 86687.1,
+      "BTC_OKX_24h_low": 84675.9,
+      "BTC_OKX_contract_OI": 2858947.74,
+      "BTC_OKX_OI_USD": 2475216915.39,
+      "BTC_OKX_current_funding": 0.00006135685056,
+      "BTC_OKX_settled_funding": 0.0000479022334781,
+      "BTC_OKX_premium": -0.0003640881902504,
+      "ETH_OKX_last": 2731.31,
+      "ETH_OKX_24h_open": 2685.01,
+      "ETH_OKX_24h_high": 2736.86,
+      "observations": "Relative to the prior official snapshot, BTC and ETH advanced to fresh intraday highs while BTC contract OI edged lower; this is consistent with, but does not prove, a less leverage-crowded move."
+    },
+    "macro_news_context": "No new official macro release or regulatory announcement was found that independently explained the move. Existing rates uncertainty limits 24-hour confidence.",
+    "expected_trade_expression": "CONDITIONAL"
   }
 ]
