@@ -1,0 +1,34 @@
+[
+  {
+    "schema_version": "EDGE_RESEARCH_PACKET_V1",
+    "packet_id": "EDGE-INTEGRATION-TEST-20261004",
+    "created_at_utc": "2026-10-04T16:20:00Z",
+    "source_urls": [
+      "https://github.com/emresengs/whaleradar-futures-edge-feed"
+    ],
+    "source_type": "integration_test",
+    "source_reliability": "HIGH",
+    "extraordinary_claim_unverified": false,
+    "title": "Edge Watch to Superman transport integration test",
+    "hypothesis": "Transport and ingestion path should accept a valid packet without proposing a strategy change.",
+    "mechanism": "Valid schema packet marked REJECT exercises remote fetch, schema validation, deduplication, receipt creation and safe classification only.",
+    "exact_features": [
+      "RSI"
+    ],
+    "exact_rule_or_model_spec": "No trading rule. Integration test only.",
+    "required_data": [
+      "existing feature dataset"
+    ],
+    "transaction_cost_implications": "None.",
+    "expected_benefit": "Verify end-to-end research packet transport safely.",
+    "risks": "None to trading because recommended_action is REJECT and all deployment permissions are false.",
+    "falsification_criteria": "Bridge does not fetch, validate, deduplicate, classify, or receipt the packet.",
+    "validation_plan": "Fetch through the public raw feed and verify one receipt with classification REJECT; repeat fetch must deduplicate.",
+    "minimum_sample": 0,
+    "recommended_action": "REJECT",
+    "paper_only": true,
+    "production_change_allowed": false,
+    "live_change_allowed": false,
+    "real_money_allowed": false
+  }
+]
