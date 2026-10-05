@@ -1,20 +1,21 @@
 [
   {
     "schema_version": "EDGE_RESEARCH_PACKET_V1",
-    "packet_id": "76dc4c72ee97ce891eff6ec0e617dfdd4642e977bceb860268fd0f0438d7662d",
-    "created_at_utc": "2026-10-05T04:28:00Z",
+    "packet_id": "065c8973abe26888ed5fcbe2037c7bc2bdf901de5081b1fad84d52a243a98c82",
+    "created_at_utc": "2026-10-05T08:16:00Z",
     "source_urls": [
+      "https://www.okx.com/api/v5/market/candles?instId=BTC-USDT-SWAP",
       "https://www.okx.com/api/v5/market/ticker?instId=BTC-USDT-SWAP",
-      "https://www.okx.com/api/v5/public/funding-rate?instId=BTC-USDT-SWAP",
       "https://www.okx.com/api/v5/public/open-interest?instType=SWAP&instId=BTC-USDT-SWAP",
+      "https://www.okx.com/api/v5/public/funding-rate?instId=BTC-USDT-SWAP",
       "https://www.okx.com/api/v5/market/ticker?instId=ETH-USDT-SWAP"
     ],
     "source_type": "official_exchange_api",
     "source_reliability": "HIGH",
     "extraordinary_claim_unverified": false,
-    "title": "BTC-ETH failed breakout with open-interest rebuild",
-    "hypothesis": "A previously non-crowded BTC-ETH breakout should be downgraded from TREND_UP to REVERSAL_RISK or NO_EDGE when price loses the declared breakout support while contract open interest rebuilds materially and ETH confirmation deteriorates; this state may identify stale continuation labels without forcing a short.",
-    "mechanism": "The earlier continuation thesis relied on price rising without proportional leverage expansion. Since that observation, BTC fell below the predeclared 85,900 support while OKX BTC contract open interest rose about 3.1%, and ETH also fell from its confirmation level. The combination contradicts the original spot-led mechanism and is consistent with new leverage entering a failed breakout. Falling funding and a still-negative premium mean the new OI may include shorts and do not justify a direct short signal, so the appropriate directional state is reversal risk/no edge rather than TREND_DOWN.",
+    "title": "BTC-ETH support reclaim with leverage unwind resets reversal risk to no edge",
+    "hypothesis": "After a failed-breakout reversal-risk state, two or more completed 15-minute BTC closes above the predeclared support combined with falling contract open interest and ETH recovery should reset the stale reversal label to NO_EDGE, without automatically restoring a long bias.",
+    "mechanism": "BTC reclaimed 85,900 and held above it across multiple completed 15-minute observations while OKX BTC contract open interest fell about 1.87% from the failed-breakout snapshot and ETH recovered. This matches the prior packet's explicit NO_EDGE condition: leverage fell while price returned to the prior range. Because BTC remains below the original breakout snapshot, OI remains about 1.17% above that original level, and taker-flow, breadth, liquidation and cross-exchange confirmation are absent, the evidence cancels reversal risk but does not re-establish trend continuation.",
     "exact_features": [
       "momentum",
       "funding",
@@ -23,24 +24,25 @@
       "OI",
       "positioning",
       "cross_asset_confirmation",
-      "distance_to_24h_high",
-      "failed_breakout",
-      "support_reclaim"
+      "support_reclaim",
+      "completed_15m_hold",
+      "OI_unwind"
     ],
-    "exact_rule_or_model_spec": "Paper-only state-transition detector. Let t0 be a prior SPOT_LED_BREAKOUT candidate. FAILED_BREAKOUT_OI_REBUILD = age(t0)<=6h AND completed_15m_close < support_t0 AND no completed_15m reclaim above support_t0 AND OI_contract(t)/OI_contract(t0)-1 >= 0.02 AND BTC_price(t)/BTC_price(t0)-1 < 0 AND ETH_price(t)/ETH_price(t0)-1 < 0. Set regime=REVERSAL_RISK and expected_trade_expression=NEUTRAL. Do not automatically short, close, resize, or suppress a live trade. In paper research, compare stale continuation scoring with a state reset to NO_EDGE; if baseline frequency preservation is required, permit only same-side candidate rotation where raw WhaleRadar score is at least 95% of baseline and all cost/liquidity gates pass.",
+    "exact_rule_or_model_spec": "Paper-only state-transition detector. Given a prior FAILED_BREAKOUT_OI_REBUILD state with support S, set REVERSAL_RISK_CANCELLED = close_15m[-2] > S AND close_15m[-1] > S AND OI_contract_now/OI_contract_failed_breakout - 1 <= -0.015 AND BTC_price_now > BTC_price_failed_breakout AND ETH_price_now > ETH_price_failed_breakout. Set regime=NO_EDGE and expected_trade_expression=NEUTRAL. Restore conditional TREND_UP only if BTC also recovers the original breakout reference, ETH remains positive, and at least one independent confirmation passes: taker_buy_ratio_5m >= rolling_30d_q67, breadth_positive_share_top50_5m >= rolling_30d_q67, or bid_microprice_pressure_z >= 1. Do not open, close, reverse, resize, delay, suppress, or route a live order from this state.",
     "required_data": [
-      "Point-in-time BTC and ETH perpetual prices and completed 15-minute candles",
-      "Prospectively timestamped contract open interest with firstObservedAt and ingestedAt",
+      "Point-in-time BTC and ETH perpetual prices",
+      "Completed one-minute or 15-minute BTC candles with finality flags",
+      "Prospectively timestamped BTC contract open interest with firstObservedAt and ingestedAt",
       "Funding rate and perpetual premium/index basis",
-      "Taker flow, L2 depth, spread, liquidation stream and top-50 breadth for confirmation",
-      "The original candidate timestamp, support level and feature snapshot"
+      "Taker flow, top-50 breadth, L2 depth/microprice and liquidation stream for independent confirmation",
+      "Original breakout and failed-breakout state snapshots, timestamps and support level"
     ],
-    "transaction_cost_implications": "A failed-breakout reset may avoid paying spread and slippage to chase a stale continuation, but any delay, veto, exit or reversal also has opportunity and execution costs. Test score-reset, same-side rotation and unchanged-baseline arms separately. Include actual fee tier, funding, Q-sized book-walk, missed-move cost, and 1.5x/2x slippage stress; never assume a forced exit or short is costless.",
-    "expected_benefit": "Reduce stale trend-up classifications after the causal mechanism changes, lowering false-breakout drawdown while preserving useful trade frequency through a score reset or same-side rotation rather than an automatic hard veto.",
-    "risks": "The support breach may be temporary and had not been independently confirmed with a completed 15-minute candle in the accessible snapshot. Rising OI is direction-ambiguous and may represent new shorts, hedges, or spread trades. Funding fell and premium remained negative, which contradicts a simple crowded-long interpretation. Evidence is concentrated on OKX because Binance public endpoints were inaccessible from the research environment, and no fresh taker, liquidation, breadth, L2 or Polymarket probability-velocity confirmation was available.",
-    "falsification_criteria": "REJECT if the state reset does not improve matched-frequency net PnL, profit factor or maximum drawdown in both locked OOS periods; if benefit disappears after 1.5x costs; if retained trade count falls below 98%; if the effect is explained by price-only support loss with no incremental value from OI and ETH; if prospective OI fails to reproduce the relation; or if gains come from fewer than five independent event clusters.",
-    "validation_plan": "Use causal snapshots with usableAt<=decision_time. Develop thresholds on 2024-2025, validate unchanged on January-June 2026, and use July-September 2026 once as a locked test only where point-in-time OI semantics are verified. Freeze the detector and run at least 90 future paper days. Compare BASELINE_STALE_TREND, PRICE_ONLY_RESET, PRICE_X_OI_RESET, PRICE_X_ETH_RESET, FULL_FAILED_BREAKOUT_RESET, SAME_SIDE_ROTATION, HARD_VETO_SHADOW and matched-frequency random controls. Report net PnL, profit factor, maximum drawdown, MAE/MFE, retention, trade count, capital utilization, implementation shortfall and cost sensitivity with day/event-block bootstrap.",
-    "minimum_sample": "At least 200 prior breakout candidates, 75 completed support-loss events with OI rebuilding at least 2%, 50 events with simultaneous ETH deterioration, 500 eligible baseline decisions, and at least 90 prospective calendar days; extend until all counts are met.",
+    "transaction_cost_implications": "A state reset can prevent repeated execution of a stale reversal or continuation narrative, but NO_EDGE must not be treated as a free veto. Offline tests must separately price unchanged-baseline, score-reset, same-side rotation and hard-veto shadow arms using actual fee tier, funding, Q-sized book walk, missed-move cost and 1.5x/2x slippage stress.",
+    "expected_benefit": "Reduce whipsaw from persisting with a reversal label after leverage unwinds and support is causally reclaimed, while preserving trade frequency by resetting confidence rather than forcing an opposite-side trade or mandatory skip.",
+    "risks": "Evidence is concentrated on OKX; Binance endpoints were inaccessible in the research environment. The OI observation was less fresh than the latest price snapshot. Falling OI with rising price can be short covering rather than durable demand. BTC had not recovered the original breakout reference and no taker, breadth, liquidation, full-depth or reliable Polymarket probability-velocity confirmation was available. A range reset can miss a renewed directional move.",
+    "falsification_criteria": "REJECT if the reset does not improve matched-frequency net PnL, profit factor or maximum drawdown in both locked OOS periods; if benefit disappears under 1.5x costs; if retained trade count falls below 98%; if a price-only two-close reclaim performs equally well and OI unwind adds no incremental value; if prospective point-in-time OI does not reproduce the relation; or if results depend on fewer than five independent event clusters.",
+    "validation_plan": "Use only observations with usableAt<=decision_time. Develop on 2024-2025, validate unchanged on January-June 2026, and use July-September 2026 once as a locked historical test only where OI time semantics are verified. Freeze the detector and run at least 90 future paper days. Compare STALE_REVERSAL, PRICE_ONLY_RECLAIM, PRICE_X_OI_UNWIND_RESET, PRICE_X_ETH_RESET, FULL_NO_EDGE_RESET, SAME_SIDE_ROTATION, HARD_VETO_SHADOW and matched-frequency random resets. Report net PnL, profit factor, maximum drawdown, MAE/MFE, retention, trade count, capital utilization, implementation shortfall and 1.5x/2x cost sensitivity with day/event-block bootstrap.",
+    "minimum_sample": "At least 200 failed-breakout states, 75 two-close support reclaims, 50 reclaims with OI unwind of at least 1.5%, 500 eligible baseline decisions, five independent event clusters and at least 90 prospective calendar days; extend until all counts are met.",
     "recommended_action": "TEST",
     "paper_only": true,
     "production_change_allowed": false,
@@ -51,55 +53,55 @@
       "ETH",
       "broad_crypto"
     ],
-    "regime": "REVERSAL_RISK",
+    "regime": "NO_EDGE",
     "directional_assessment": {
       "15m": {
-        "up_probability": 0.24,
-        "down_probability": 0.46,
-        "range_probability": 0.3,
-        "confidence": "MEDIUM",
+        "up_probability": 0.34,
+        "down_probability": 0.21,
+        "range_probability": 0.45,
+        "confidence": "LOW",
         "primary_drivers": [
-          "BTC broke below the declared 85,900 support",
-          "sharp retreat from the 24-hour high",
-          "ETH confirmation weakened"
+          "multiple completed 15-minute closes above 85,900",
+          "OI unwind",
+          "short-term price recovery without flow confirmation"
         ]
       },
       "1h": {
-        "up_probability": 0.25,
-        "down_probability": 0.43,
-        "range_probability": 0.32,
-        "confidence": "MEDIUM",
+        "up_probability": 0.39,
+        "down_probability": 0.22,
+        "range_probability": 0.39,
+        "confidence": "LOW",
         "primary_drivers": [
-          "failed breakout follow-through",
-          "price fell while multi-hour OI remained elevated",
-          "funding decline limits crowded-long certainty"
+          "support reclaim",
+          "ETH recovery",
+          "BTC remains below the original breakout snapshot"
         ]
       },
       "4h": {
-        "up_probability": 0.31,
-        "down_probability": 0.31,
-        "range_probability": 0.38,
+        "up_probability": 0.37,
+        "down_probability": 0.23,
+        "range_probability": 0.4,
         "confidence": "LOW",
         "primary_drivers": [
-          "original trend-up mechanism weakened",
-          "OI direction is ambiguous",
-          "no taker, liquidation or breadth confirmation"
+          "failed-breakout risk has softened",
+          "leverage rebuild partly unwound",
+          "no independent order-flow confirmation"
         ]
       },
       "24h": {
-        "up_probability": 0.43,
-        "down_probability": 0.24,
-        "range_probability": 0.33,
+        "up_probability": 0.42,
+        "down_probability": 0.22,
+        "range_probability": 0.36,
         "confidence": "LOW",
         "primary_drivers": [
-          "24-hour price remains above the rolling open",
-          "intraday breakout failed",
-          "macro and cross-exchange confirmation are absent"
+          "price remains above the 24-hour open",
+          "ETH remains above its 24-hour open",
+          "macro and cross-exchange confirmation absent"
         ]
       }
     },
-    "evidence_timestamp_utc": "2026-10-05T04:22:43Z",
-    "evidence_freshness_minutes": 6,
+    "evidence_timestamp_utc": "2026-10-05T08:02:38Z",
+    "evidence_freshness_minutes": 14,
     "evidence_buckets_used": [
       "derivatives_positioning",
       "price_technical_state",
@@ -107,47 +109,60 @@
       "contradictions_regime"
     ],
     "contradictions": [
-      "BTC remained above its 24-hour open, so the broader daily move was still positive despite the failed intraday breakout.",
-      "Open interest rebuilt materially from the original snapshot, but funding fell and premium stayed negative, so OI direction cannot be identified as new longs.",
-      "ETH weakened with BTC, but remained above its 24-hour open.",
-      "No fresh taker-flow, liquidation, breadth, full-depth or reliable Polymarket probability-change confirmation was available."
+      "BTC reclaimed and held 85,900, but remained below the original 86,570.5 breakout snapshot.",
+      "BTC contract OI fell about 1.87% from the failed-breakout snapshot but remained about 1.17% above the original breakout snapshot.",
+      "Funding was positive and modest while premium remained negative.",
+      "ETH recovered with BTC, but no taker-flow, breadth, liquidation, full-depth or Polymarket probability-change confirmation was available."
     ],
     "invalidation_triggers": [
-      "Cancel REVERSAL_RISK if BTC completes a 15-minute reclaim above 85,900 and then holds above it for another completed 15-minute observation.",
-      "Flip back toward conditional TREND_UP only if BTC reclaims the breakout area, ETH confirms, and OI growth is accompanied by positive breadth or taker-flow confirmation.",
-      "Escalate toward TREND_DOWN only if BTC breaks the 24-hour open/low area with negative breadth and sell-flow or liquidation confirmation.",
-      "Treat the current signal as NO_EDGE if OI falls rapidly while price returns to the prior range, indicating a leverage flush rather than sustained reversal."
+      "Return to REVERSAL_RISK if BTC completes a 15-minute close below 85,900 and fails the next completed reclaim while OI rises at least 2% from the reset snapshot.",
+      "Upgrade only to conditional TREND_UP if BTC recovers the original breakout area near 86,570, ETH confirms, and breadth, taker flow or microprice provides an independent positive signal.",
+      "Escalate toward TREND_DOWN only if BTC breaks the rolling 24-hour open/low with negative breadth and sell-flow or liquidation confirmation.",
+      "Keep NO_EDGE if price remains inside the prior range and OI/funding/order-flow evidence stays mixed."
     ],
     "polymarket_context": {
       "relevant_market_titles": [],
       "probability_now": "No reliable fresh probability used.",
       "probability_change": "Unavailable",
       "horizon_of_change": "Not used",
-      "liquidity_spread_oi_volume_observations": "No point-in-time market-quality series was available for this update.",
+      "liquidity_spread_oi_volume_observations": "No trustworthy point-in-time probability and market-quality series was available for this reset.",
       "event_deadline": null,
-      "reliability_notes": "Polymarket was excluded from the directional update rather than treated as confirmation."
+      "reliability_notes": "Polymarket was excluded rather than treated as confirmation."
     },
     "derivatives_context": {
-      "BTC_OKX_last": 85684.4,
-      "BTC_OKX_24h_open": 84778.6,
+      "BTC_OKX_last": 86232.8,
+      "BTC_OKX_24h_open": 85092.7,
       "BTC_OKX_24h_high": 86963.7,
-      "BTC_OKX_24h_low": 84778.6,
-      "BTC_OKX_contract_OI": 2947587.33,
-      "BTC_OKX_OI_USD": 2534754143.73,
-      "BTC_OKX_current_funding": 0.0000389203829902,
+      "BTC_OKX_24h_low": 84995,
+      "BTC_OKX_contract_OI": 2892420.1,
+      "BTC_OKX_current_funding": 0.0000399322995041,
       "BTC_OKX_settled_funding": 0.0000705682759309,
-      "BTC_OKX_premium": -0.0005329621992486,
-      "ETH_OKX_last": 2706.75,
-      "ETH_OKX_24h_open": 2692.55,
+      "BTC_OKX_premium": -0.0003904969044139,
+      "ETH_OKX_last": 2723.18,
+      "ETH_OKX_24h_open": 2703.24,
       "ETH_OKX_24h_high": 2739.43,
-      "change_from_prior_packet": {
-        "BTC_price_pct": -1.02,
-        "BTC_contract_OI_pct": 3.1,
-        "ETH_price_pct": -0.9
+      "completed_15m_reclaim_observations": {
+        "support": 85900,
+        "representative_completed_closes": [
+          86292.8,
+          86250,
+          86343.4
+        ],
+        "all_above_support": true
       },
-      "observations": "Relative to the 2026-10-04T23:20:22Z packet snapshot, BTC and ETH fell while BTC contract OI rose materially. BTC also traded below the packet's declared 85,900 invalidation support. Funding declined and premium remained negative, so this invalidates the non-crowded continuation mechanism but does not establish a direct short."
+      "change_from_failed_breakout_packet": {
+        "BTC_price_pct": 0.64,
+        "BTC_contract_OI_pct": -1.87,
+        "ETH_price_pct": 0.61
+      },
+      "change_from_original_breakout_packet": {
+        "BTC_price_pct": -0.39,
+        "BTC_contract_OI_pct": 1.17,
+        "ETH_price_pct": -0.3
+      },
+      "observations": "The predeclared reversal-risk cancellation condition was met on completed one-minute data aggregated into consecutive 15-minute observations: BTC reclaimed and held above 85,900. OI simultaneously unwound materially from the failed-breakout snapshot, while BTC and ETH recovered. This cancels REVERSAL_RISK but does not prove renewed trend continuation."
     },
-    "macro_news_context": "No new official macro or regulatory catalyst was used. The change is a market-structure update, and absent an independent event catalyst confidence remains capped.",
+    "macro_news_context": "No new official macro or regulatory catalyst was used. This is a market-structure state reset, and the absence of an independent event catalyst caps confidence.",
     "expected_trade_expression": "NEUTRAL"
   }
 ]
