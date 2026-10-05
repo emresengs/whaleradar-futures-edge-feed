@@ -1,0 +1,460 @@
+{
+  "schema_version": "SUPERMAN_TECHNICAL_BIAS_V1",
+  "producer": "futures_4h_edge_scanner_v1",
+  "rule_version": "4h_equal25_last_closed_v1",
+  "scan_id": "eec6411df4a7b09acba5e8df43e01f73242dbf5d8d9b6ca419709b591de2f372",
+  "generated_at_utc": "2026-10-05T22:09:42.718000Z",
+  "fresh_scan_timestamp": "2026-10-05T22:09:42.718000Z",
+  "as_of_exchange_utc": "2026-10-05T22:05:23.824000Z",
+  "evidence_timestamp_utc": "2026-10-05T19:59:59.999000Z",
+  "valid_until_utc": "2026-10-06T00:00:00Z",
+  "scan_status": "COMPLETE_WITH_EXCLUSIONS",
+  "universe_counts": {
+    "active_base_assets": 504,
+    "selected_pairs": 503,
+    "attempted": 503,
+    "calculated": 421,
+    "insufficient_history": 82,
+    "data_errors": 0,
+    "unsupported_quote": 1
+  },
+  "coverage": {
+    "selected_pairs_calculated_pct": 83.7,
+    "active_base_assets_calculated_pct": 83.53,
+    "source_market": "SPOT",
+    "futures_coverage_verified": false
+  },
+  "failures": [
+    {
+      "symbol": "AAPLBUSDT",
+      "status": "INSUFFICIENT_HISTORY",
+      "candles": 410
+    },
+    {
+      "symbol": "AAOIBUSDT",
+      "status": "INSUFFICIENT_HISTORY",
+      "candles": 494
+    },
+    {
+      "symbol": "AEROUSDT",
+      "status": "INSUFFICIENT_HISTORY",
+      "candles": 481
+    },
+    {
+      "symbol": "AGPUBUSDT",
+      "status": "INSUFFICIENT_HISTORY",
+      "candles": 74
+    },
+    {
+      "symbol": "ADBEBUSDT",
+      "status": "INSUFFICIENT_HISTORY",
+      "candles": 32
+    },
+    {
+      "symbol": "ALABBUSDT",
+      "status": "INSUFFICIENT_HISTORY",
+      "candles": 368
+    },
+    {
+      "symbol": "ARMBUSDT",
+      "status": "INSUFFICIENT_HISTORY",
+      "candles": 494
+    },
+    {
+      "symbol": "AMATBUSDT",
+      "status": "INSUFFICIENT_HISTORY",
+      "candles": 410
+    },
+    {
+      "symbol": "AMCBUSDT",
+      "status": "INSUFFICIENT_HISTORY",
+      "candles": 74
+    },
+    {
+      "symbol": "AMZNBUSDT",
+      "status": "INSUFFICIENT_HISTORY",
+      "candles": 410
+    },
+    {
+      "symbol": "ASMLBUSDT",
+      "status": "INSUFFICIENT_HISTORY",
+      "candles": 368
+    },
+    {
+      "symbol": "AXTIBUSDT",
+      "status": "INSUFFICIENT_HISTORY",
+      "candles": 452
+    },
+    {
+      "symbol": "AVGOBUSDT",
+      "status": "INSUFFICIENT_HISTORY",
+      "candles": 494
+    },
+    {
+      "symbol": "BABABUSDT",
+      "status": "INSUFFICIENT_HISTORY",
+      "candles": 494
+    },
+    {
+      "symbol": "ASTSBUSDT",
+      "status": "INSUFFICIENT_HISTORY",
+      "candles": 368
+    },
+    {
+      "symbol": "BMNRBUSDT",
+      "status": "INSUFFICIENT_HISTORY",
+      "candles": 368
+    },
+    {
+      "symbol": "BNCBUSDT",
+      "status": "INSUFFICIENT_HISTORY",
+      "candles": 128
+    },
+    {
+      "symbol": "BEBUSDT",
+      "status": "INSUFFICIENT_HISTORY",
+      "candles": 410
+    },
+    {
+      "symbol": "COINBUSDT",
+      "status": "INSUFFICIENT_HISTORY",
+      "candles": 542
+    },
+    {
+      "symbol": "COHRBUSDT",
+      "status": "INSUFFICIENT_HISTORY",
+      "candles": 368
+    },
+    {
+      "symbol": "CRDOBUSDT",
+      "status": "INSUFFICIENT_HISTORY",
+      "candles": 368
+    },
+    {
+      "symbol": "CBRSBUSDT",
+      "status": "INSUFFICIENT_HISTORY",
+      "candles": 542
+    },
+    {
+      "symbol": "CRWDBUSDT",
+      "status": "INSUFFICIENT_HISTORY",
+      "candles": 200
+    },
+    {
+      "symbol": "DJTBUSDT",
+      "status": "INSUFFICIENT_HISTORY",
+      "candles": 242
+    },
+    {
+      "symbol": "CRWVBUSDT",
+      "status": "INSUFFICIENT_HISTORY",
+      "candles": 452
+    },
+    {
+      "symbol": "DRAMBUSDT",
+      "status": "INSUFFICIENT_HISTORY",
+      "candles": 542
+    },
+    {
+      "symbol": "CRMBUSDT",
+      "status": "INSUFFICIENT_HISTORY",
+      "candles": 158
+    },
+    {
+      "symbol": "CYPHBUSDT",
+      "status": "INSUFFICIENT_HISTORY",
+      "candles": 74
+    },
+    {
+      "symbol": "DELLBUSDT",
+      "status": "INSUFFICIENT_HISTORY",
+      "candles": 410
+    },
+    {
+      "symbol": "FLNCBUSDT",
+      "status": "INSUFFICIENT_HISTORY",
+      "candles": 410
+    },
+    {
+      "symbol": "GMEBUSDT",
+      "status": "INSUFFICIENT_HISTORY",
+      "candles": 326
+    },
+    {
+      "symbol": "FWDIBUSDT",
+      "status": "INSUFFICIENT_HISTORY",
+      "candles": 32
+    },
+    {
+      "symbol": "GLWBUSDT",
+      "status": "INSUFFICIENT_HISTORY",
+      "candles": 542
+    },
+    {
+      "symbol": "HIMSBUSDT",
+      "status": "INSUFFICIENT_HISTORY",
+      "candles": 158
+    },
+    {
+      "symbol": "HOODBUSDT",
+      "status": "INSUFFICIENT_HISTORY",
+      "candles": 494
+    },
+    {
+      "symbol": "GOOGLBUSDT",
+      "status": "INSUFFICIENT_HISTORY",
+      "candles": 542
+    },
+    {
+      "symbol": "GPROBUSDT",
+      "status": "INSUFFICIENT_HISTORY",
+      "candles": 116
+    },
+    {
+      "symbol": "GSBUSDT",
+      "status": "INSUFFICIENT_HISTORY",
+      "candles": 410
+    },
+    {
+      "symbol": "HPEBUSDT",
+      "status": "INSUFFICIENT_HISTORY",
+      "candles": 32
+    },
+    {
+      "symbol": "HYPEUSDT",
+      "status": "INSUFFICIENT_HISTORY",
+      "candles": 69
+    },
+    {
+      "symbol": "GRAMUSDT",
+      "status": "INSUFFICIENT_HISTORY",
+      "candles": 573
+    },
+    {
+      "symbol": "IBMBUSDT",
+      "status": "INSUFFICIENT_HISTORY",
+      "candles": 494
+    },
+    {
+      "symbol": "INTWBUSDT",
+      "status": "INSUFFICIENT_HISTORY",
+      "candles": 452
+    },
+    {
+      "symbol": "IRENBUSDT",
+      "status": "INSUFFICIENT_HISTORY",
+      "candles": 368
+    },
+    {
+      "symbol": "KORUBUSDT",
+      "status": "INSUFFICIENT_HISTORY",
+      "candles": 452
+    },
+    {
+      "symbol": "LITEBUSDT",
+      "status": "INSUFFICIENT_HISTORY",
+      "candles": 584
+    },
+    {
+      "symbol": "MRVLBUSDT",
+      "status": "INSUFFICIENT_HISTORY",
+      "candles": 494
+    },
+    {
+      "symbol": "MRNABUSDT",
+      "status": "INSUFFICIENT_HISTORY",
+      "candles": 200
+    },
+    {
+      "symbol": "MSFTBUSDT",
+      "status": "INSUFFICIENT_HISTORY",
+      "candles": 584
+    },
+    {
+      "symbol": "MARSCOINUSDT",
+      "status": "INSUFFICIENT_HISTORY",
+      "candles": 188
+    },
+    {
+      "symbol": "METABUSDT",
+      "status": "INSUFFICIENT_HISTORY",
+      "candles": 584
+    },
+    {
+      "symbol": "MUUBUSDT",
+      "status": "INSUFFICIENT_HISTORY",
+      "candles": 452
+    },
+    {
+      "symbol": "NOKBUSDT",
+      "status": "INSUFFICIENT_HISTORY",
+      "candles": 494
+    },
+    {
+      "symbol": "NBISBUSDT",
+      "status": "INSUFFICIENT_HISTORY",
+      "candles": 542
+    },
+    {
+      "symbol": "NFLXBUSDT",
+      "status": "INSUFFICIENT_HISTORY",
+      "candles": 368
+    },
+    {
+      "symbol": "MVLLBUSDT",
+      "status": "INSUFFICIENT_HISTORY",
+      "candles": 452
+    },
+    {
+      "symbol": "PDDBUSDT",
+      "status": "INSUFFICIENT_HISTORY",
+      "candles": 32
+    },
+    {
+      "symbol": "PLTRBUSDT",
+      "status": "INSUFFICIENT_HISTORY",
+      "candles": 584
+    },
+    {
+      "symbol": "ORCLBUSDT",
+      "status": "INSUFFICIENT_HISTORY",
+      "candles": 452
+    },
+    {
+      "symbol": "RDDTBUSDT",
+      "status": "INSUFFICIENT_HISTORY",
+      "candles": 116
+    },
+    {
+      "symbol": "QQQBUSDT",
+      "status": "INSUFFICIENT_HISTORY",
+      "candles": 584
+    },
+    {
+      "symbol": "PYPLBUSDT",
+      "status": "INSUFFICIENT_HISTORY",
+      "candles": 410
+    },
+    {
+      "symbol": "QNTBUSDT",
+      "status": "INSUFFICIENT_HISTORY",
+      "candles": 452
+    },
+    {
+      "symbol": "QCOMBUSDT",
+      "status": "INSUFFICIENT_HISTORY",
+      "candles": 542
+    },
+    {
+      "symbol": "RKLBBUSDT",
+      "status": "INSUFFICIENT_HISTORY",
+      "candles": 494
+    },
+    {
+      "symbol": "SHAZBUSDT",
+      "status": "INSUFFICIENT_HISTORY",
+      "candles": 32
+    },
+    {
+      "symbol": "SOXSBUSDT",
+      "status": "INSUFFICIENT_HISTORY",
+      "candles": 410
+    },
+    {
+      "symbol": "SOXLBUSDT",
+      "status": "INSUFFICIENT_HISTORY",
+      "candles": 542
+    },
+    {
+      "symbol": "SNXXBUSDT",
+      "status": "INSUFFICIENT_HISTORY",
+      "candles": 452
+    },
+    {
+      "symbol": "SPYBUSDT",
+      "status": "INSUFFICIENT_HISTORY",
+      "candles": 542
+    },
+    {
+      "symbol": "SMCIBUSDT",
+      "status": "INSUFFICIENT_HISTORY",
+      "candles": 368
+    },
+    {
+      "symbol": "SMHBUSDT",
+      "status": "INSUFFICIENT_HISTORY",
+      "candles": 410
+    },
+    {
+      "symbol": "SKHYBUSDT",
+      "status": "INSUFFICIENT_HISTORY",
+      "candles": 506
+    },
+    {
+      "symbol": "STXBUSDT",
+      "status": "INSUFFICIENT_HISTORY",
+      "candles": 200
+    },
+    {
+      "symbol": "SQQQBUSDT",
+      "status": "INSUFFICIENT_HISTORY",
+      "candles": 200
+    },
+    {
+      "symbol": "TQQQBUSDT",
+      "status": "INSUFFICIENT_HISTORY",
+      "candles": 452
+    },
+    {
+      "symbol": "USARBUSDT",
+      "status": "INSUFFICIENT_HISTORY",
+      "candles": 368
+    },
+    {
+      "symbol": "TSMBUSDT",
+      "status": "INSUFFICIENT_HISTORY",
+      "candles": 494
+    },
+    {
+      "symbol": "WENBUSDT",
+      "status": "INSUFFICIENT_HISTORY",
+      "candles": 32
+    },
+    {
+      "symbol": "WDCBUSDT",
+      "status": "INSUFFICIENT_HISTORY",
+      "candles": 542
+    },
+    {
+      "symbol": "ZMBUSDT",
+      "status": "INSUFFICIENT_HISTORY",
+      "candles": 32
+    },
+    {
+      "symbol": "牛来USDT",
+      "status": "INSUFFICIENT_HISTORY",
+      "candles": 158
+    }
+  ],
+  "unsupported_quote_assets": [
+    "USDT"
+  ],
+  "source_urls": [
+    "https://data-api.binance.vision/api/v3/exchangeInfo",
+    "https://data-api.binance.vision/api/v3/time",
+    "https://data-api.binance.vision/api/v3/klines"
+  ],
+  "decision_input_allowed": true,
+  "shadow_test_required": false,
+  "execution_command": false,
+  "symbol_signals": [],
+  "expired_or_retracted_signal_ids": [],
+  "integration_status": "INTEGRATION_PENDING",
+  "delivery_status": "DELIVERY_UNCONFIRMED",
+  "decision_effect_status": "DECISION_EFFECT_UNCONFIRMED",
+  "notes": [
+    "USD-M exchangeInfo timed out; COIN-M HTTP451. Authorized spot fallback used.",
+    "SMA and EMA signals are correlated; scores are not probabilities.",
+    "First technical scan: no prior latest.json existed; futures mapping requires consumer validation."
+  ]
+}
