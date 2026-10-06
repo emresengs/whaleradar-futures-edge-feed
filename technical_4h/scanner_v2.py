@@ -64,8 +64,9 @@ def get_json(base, endpoint, params=None):
         try:
             req = urllib.request.Request(url, headers={"User-Agent": "Futures-4H-Scanner/2.0", "Cache-Control": "no-cache"})
             with urllib.request.urlopen(req, timeout=20) as response:
-                raw = response.read(8 * 1024 * 1024 + 1)
-                if len(raw) > 8 * 1024 * 1024:
+                limit = (64 if endpoint.endswith("/exchangeInfo") else 8) * 1024 * 1024
+                raw = response.read(limit + 1)
+                if len(raw) > limit:
                     raise ValueError("RESPONSE_TOO_LARGE")
             return json.loads(raw)
         except urllib.error.HTTPError as error:
