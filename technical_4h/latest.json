@@ -3,9 +3,9 @@
   "producer": "futures_4h_edge_scanner_v1",
   "rule_version": "4h_equal25_last_closed_v1",
   "scanner_implementation_version": "2.0.0",
-  "generated_at_utc": "2026-10-07T09:11:19.424Z",
-  "fresh_scan_timestamp": "2026-10-07T09:11:19.424Z",
-  "as_of_exchange_utc": "2026-10-07T08:59:49.569Z",
+  "generated_at_utc": "2026-10-07T10:18:15.669Z",
+  "fresh_scan_timestamp": "2026-10-07T10:18:15.669Z",
+  "as_of_exchange_utc": "2026-10-07T10:06:29.313Z",
   "evidence_timestamp_utc": "2026-10-07T07:59:59.999Z",
   "valid_until_utc": "2026-10-07T12:00:00.000Z",
   "scan_status": "COMPLETE_WITH_EXCLUSIONS",
@@ -430,9 +430,7 @@
       "candles": 167
     }
   ],
-  "expired_or_retracted_signal_ids": [
-    "698efe292d548a08bb1d7ab7643e52de601e9558919785d0ea9344419a6e850d"
-  ],
+  "expired_or_retracted_signal_ids": [],
   "universe_counts": {
     "active_base_assets": 503,
     "selected_pairs": 502,
@@ -459,5 +457,5 @@
   "delivery_status": "DELIVERY_UNCONFIRMED",
   "decision_effect_status": "DECISION_EFFECT_UNCONFIRMED",
   "integration_status": "INTEGRATION_PENDING",
-  "scan_id": "04f1ffb2d8eb93f5137f18914a5fd4099a386f70ba18dbd6955166af9e296c7b"
+  "scan_id": "20fc894df5ee36c475efa9b2548e86867a27e4124eaff6fcd39c892b7a4a5568"
 }
