@@ -3,11 +3,11 @@
   "producer": "futures_4h_edge_scanner_v1",
   "rule_version": "4h_equal25_last_closed_v1",
   "scanner_implementation_version": "2.0.0",
-  "generated_at_utc": "2026-10-08T07:14:45.505Z",
-  "fresh_scan_timestamp": "2026-10-08T07:14:45.505Z",
-  "as_of_exchange_utc": "2026-10-08T07:06:14.584Z",
-  "evidence_timestamp_utc": "2026-10-08T03:59:59.999Z",
-  "valid_until_utc": "2026-10-08T08:00:00.000Z",
+  "generated_at_utc": "2026-10-08T08:08:30.311Z",
+  "fresh_scan_timestamp": "2026-10-08T08:08:30.311Z",
+  "as_of_exchange_utc": "2026-10-08T08:00:32.871Z",
+  "evidence_timestamp_utc": "2026-10-08T07:59:59.999Z",
+  "valid_until_utc": "2026-10-08T12:00:00.000Z",
   "scan_status": "COMPLETE_WITH_EXCLUSIONS",
   "source_mode": "SPOT",
   "decision_input_allowed": true,
@@ -16,40 +16,131 @@
   "symbol_signals": [
     {
       "source_market": "SPOT",
-      "source_symbol": "CHIPUSDT",
+      "source_symbol": "AWEUSDT",
       "source_quote_asset": "USDT",
-      "base_asset": "CHIP",
+      "base_asset": "AWE",
       "execution_market": "FUTURES",
       "futures_symbol": null,
       "mapping_status": "REQUIRES_CONSUMER_VALIDATION",
       "stablecoin_pair": false,
-      "source_candle_close_utc": "2026-10-08T03:59:59.999Z",
-      "source_close": 0.05498,
+      "source_candle_close_utc": "2026-10-08T07:59:59.999Z",
+      "source_close": 0.06317,
       "candles": 1000,
-      "sma50": 0.0468976,
-      "sma200": 0.046763700000000005,
-      "ema50": 0.04833664633439266,
-      "ema200": 0.04497271341950774,
-      "rsi14": 65.73232901423626,
+      "sma50": 0.0690316,
+      "sma200": 0.06474675,
+      "ema50": 0.0671424349790059,
+      "ema200": 0.0656511398144066,
+      "rsi14": 30.67755742367602,
       "previous": {
-        "close": 0.051,
-        "sma50": 0.046681400000000005,
-        "sma200": 0.04676675,
-        "ema50": 0.048065489041918895,
-        "ema200": 0.044872137674980175
+        "close": 0.06313,
+        "sma50": 0.069177,
+        "sma200": 0.06473835,
+        "ema50": 0.06730457518223064,
+        "ema200": 0.06567607589294334
       },
       "long_conditions": {
         "sma_cross": {
-          "met": true,
-          "points": 25
+          "met": false,
+          "points": 0
         },
         "ema_cross": {
           "met": false,
           "points": 0
         },
         "rsi_below40": {
+          "met": true,
+          "points": 25
+        },
+        "trend_break": {
+          "met": true,
+          "points": 25,
+          "evidence": {
+            "pivot_1": {
+              "open_time_utc": "2026-10-05T12:00:00.000Z",
+              "value": 0.06844
+            },
+            "pivot_2": {
+              "open_time_utc": "2026-10-06T12:00:00.000Z",
+              "value": 0.06644
+            },
+            "line_previous": 0.06344,
+            "line_last": 0.06310666666666666,
+            "prior_break": false
+          }
+        }
+      },
+      "short_conditions": {
+        "sma_cross": {
           "met": false,
           "points": 0
+        },
+        "ema_cross": {
+          "met": false,
+          "points": 0
+        },
+        "rsi_above90": {
+          "met": false,
+          "points": 0
+        },
+        "trend_break": {
+          "met": false,
+          "points": 0,
+          "evidence": {
+            "pivot_1": null,
+            "pivot_2": null,
+            "line_previous": null,
+            "line_last": null,
+            "prior_break": false
+          }
+        }
+      },
+      "long_score": 50,
+      "short_score": 0,
+      "direction": "LONG_BIAS",
+      "decision_bias": "LONG",
+      "conflict": false,
+      "bias_strength": 0.5,
+      "signal_id": "c324be2e18a3a17c797cc470e19ccac7155e5763774b2fab2e4e8debfe3c3bad",
+      "valid_until_utc": "2026-10-08T12:00:00.000Z",
+      "source_url": "https://data-api.binance.vision/api/v3/klines",
+      "spot_derived_futures_bias": true
+    },
+    {
+      "source_market": "SPOT",
+      "source_symbol": "GNSUSDT",
+      "source_quote_asset": "USDT",
+      "base_asset": "GNS",
+      "execution_market": "FUTURES",
+      "futures_symbol": null,
+      "mapping_status": "REQUIRES_CONSUMER_VALIDATION",
+      "stablecoin_pair": false,
+      "source_candle_close_utc": "2026-10-08T07:59:59.999Z",
+      "source_close": 0.387,
+      "candles": 1000,
+      "sma50": 0.43448,
+      "sma200": 0.451085,
+      "ema50": 0.4260263763770762,
+      "ema200": 0.4567785351705584,
+      "rsi14": 38.28714020723543,
+      "previous": {
+        "close": 0.379,
+        "sma50": 0.4364,
+        "sma200": 0.45152499999999995,
+        "ema50": 0.4276192896985895,
+        "ema200": 0.4574798269813178
+      },
+      "long_conditions": {
+        "sma_cross": {
+          "met": false,
+          "points": 0
+        },
+        "ema_cross": {
+          "met": false,
+          "points": 0
+        },
+        "rsi_below40": {
+          "met": true,
+          "points": 25
         },
         "trend_break": {
           "met": true,
@@ -57,14 +148,14 @@
           "evidence": {
             "pivot_1": {
               "open_time_utc": "2026-10-06T04:00:00.000Z",
-              "value": 0.05552
+              "value": 0.476
             },
             "pivot_2": {
-              "open_time_utc": "2026-10-06T20:00:00.000Z",
-              "value": 0.05504
+              "open_time_utc": "2026-10-07T04:00:00.000Z",
+              "value": 0.431
             },
-            "line_previous": 0.05431999999999999,
-            "line_last": 0.0542,
+            "line_previous": 0.3935,
+            "line_last": 0.386,
             "prior_break": false
           }
         }
@@ -100,34 +191,34 @@
       "decision_bias": "LONG",
       "conflict": false,
       "bias_strength": 0.5,
-      "signal_id": "397339a851f86b3cee3bef47c5f11fc427d03a7cb7a7475f3b121bbd454086c9",
-      "valid_until_utc": "2026-10-08T08:00:00.000Z",
+      "signal_id": "f9fdb342328df336057727f25ac752df88d46872166f41a1820f867a6063d570",
+      "valid_until_utc": "2026-10-08T12:00:00.000Z",
       "source_url": "https://data-api.binance.vision/api/v3/klines",
       "spot_derived_futures_bias": true
     },
     {
       "source_market": "SPOT",
-      "source_symbol": "TFUELUSDT",
+      "source_symbol": "LSKUSDT",
       "source_quote_asset": "USDT",
-      "base_asset": "TFUEL",
+      "base_asset": "LSK",
       "execution_market": "FUTURES",
       "futures_symbol": null,
       "mapping_status": "REQUIRES_CONSUMER_VALIDATION",
       "stablecoin_pair": false,
-      "source_candle_close_utc": "2026-10-08T03:59:59.999Z",
-      "source_close": 0.00964,
+      "source_candle_close_utc": "2026-10-08T07:59:59.999Z",
+      "source_close": 0.24,
       "candles": 1000,
-      "sma50": 0.010363599999999999,
-      "sma200": 0.010223649999999999,
-      "ema50": 0.010311104055960313,
-      "ema200": 0.010080261550574026,
-      "rsi14": 26.075603639072355,
+      "sma50": 0.270962,
+      "sma200": 0.319435,
+      "ema50": 0.2718174431173322,
+      "ema200": 0.2845552693728247,
+      "rsi14": 31.860161386489153,
       "previous": {
-        "close": 0.00966,
-        "sma50": 0.0103814,
-        "sma200": 0.01022195,
-        "ema50": 0.010338496058244407,
-        "ema200": 0.010084686289775775
+        "close": 0.2373,
+        "sma50": 0.272132,
+        "sma200": 0.318749,
+        "ema50": 0.2731161142649784,
+        "ema200": 0.2850030610248129
       },
       "long_conditions": {
         "sma_cross": {
@@ -147,15 +238,15 @@
           "points": 25,
           "evidence": {
             "pivot_1": {
-              "open_time_utc": "2026-10-06T12:00:00.000Z",
-              "value": 0.0115
+              "open_time_utc": "2026-10-05T12:00:00.000Z",
+              "value": 0.2852
             },
             "pivot_2": {
-              "open_time_utc": "2026-10-07T00:00:00.000Z",
-              "value": 0.01085
+              "open_time_utc": "2026-10-07T16:00:00.000Z",
+              "value": 0.2473
             },
-            "line_previous": 0.009766666666666668,
-            "line_last": 0.009550000000000001,
+            "line_previous": 0.24146923076923077,
+            "line_last": 0.23855384615384614,
             "prior_break": false
           }
         }
@@ -191,8 +282,8 @@
       "decision_bias": "LONG",
       "conflict": false,
       "bias_strength": 0.5,
-      "signal_id": "9e29bd31a52db5a3fd9f42b67bc118c0bb5ae997548b5db127fae30368a52411",
-      "valid_until_utc": "2026-10-08T08:00:00.000Z",
+      "signal_id": "2a04e18e384b77f57a3e45538913b2466f91707b368f23e360ec203b7e64c562",
+      "valid_until_utc": "2026-10-08T12:00:00.000Z",
       "source_url": "https://data-api.binance.vision/api/v3/klines",
       "spot_derived_futures_bias": true
     }
@@ -201,412 +292,412 @@
     {
       "status": "INSUFFICIENT_HISTORY",
       "symbol": "AAOIBUSDT",
-      "candles": 508
+      "candles": 509
     },
     {
       "status": "INSUFFICIENT_HISTORY",
       "symbol": "AAPLBUSDT",
-      "candles": 424
+      "candles": 425
     },
     {
       "status": "INSUFFICIENT_HISTORY",
       "symbol": "ADBEBUSDT",
-      "candles": 46
+      "candles": 47
     },
     {
       "status": "INSUFFICIENT_HISTORY",
       "symbol": "AEROUSDT",
-      "candles": 495
+      "candles": 496
     },
     {
       "status": "INSUFFICIENT_HISTORY",
       "symbol": "AGPUBUSDT",
-      "candles": 88
+      "candles": 89
     },
     {
       "status": "INSUFFICIENT_HISTORY",
       "symbol": "ALABBUSDT",
-      "candles": 382
+      "candles": 383
     },
     {
       "status": "INSUFFICIENT_HISTORY",
       "symbol": "AMATBUSDT",
-      "candles": 424
+      "candles": 425
     },
     {
       "status": "INSUFFICIENT_HISTORY",
       "symbol": "AMCBUSDT",
-      "candles": 88
+      "candles": 89
     },
     {
       "status": "INSUFFICIENT_HISTORY",
       "symbol": "AMZNBUSDT",
-      "candles": 424
+      "candles": 425
     },
     {
       "status": "INSUFFICIENT_HISTORY",
       "symbol": "ARMBUSDT",
-      "candles": 508
+      "candles": 509
     },
     {
       "status": "INSUFFICIENT_HISTORY",
       "symbol": "ASMLBUSDT",
-      "candles": 382
+      "candles": 383
     },
     {
       "status": "INSUFFICIENT_HISTORY",
       "symbol": "ASTSBUSDT",
-      "candles": 382
+      "candles": 383
     },
     {
       "status": "INSUFFICIENT_HISTORY",
       "symbol": "AVGOBUSDT",
-      "candles": 508
+      "candles": 509
     },
     {
       "status": "INSUFFICIENT_HISTORY",
       "symbol": "AXTIBUSDT",
-      "candles": 466
+      "candles": 467
     },
     {
       "status": "INSUFFICIENT_HISTORY",
       "symbol": "BABABUSDT",
-      "candles": 508
+      "candles": 509
     },
     {
       "status": "INSUFFICIENT_HISTORY",
       "symbol": "BEBUSDT",
-      "candles": 424
+      "candles": 425
     },
     {
       "status": "INSUFFICIENT_HISTORY",
       "symbol": "BMNRBUSDT",
-      "candles": 382
+      "candles": 383
     },
     {
       "status": "INSUFFICIENT_HISTORY",
       "symbol": "BNCBUSDT",
-      "candles": 142
+      "candles": 143
     },
     {
       "status": "INSUFFICIENT_HISTORY",
       "symbol": "CBRSBUSDT",
-      "candles": 556
+      "candles": 557
     },
     {
       "status": "INSUFFICIENT_HISTORY",
       "symbol": "COHRBUSDT",
-      "candles": 382
+      "candles": 383
     },
     {
       "status": "INSUFFICIENT_HISTORY",
       "symbol": "COINBUSDT",
-      "candles": 556
+      "candles": 557
     },
     {
       "status": "INSUFFICIENT_HISTORY",
       "symbol": "CRDOBUSDT",
-      "candles": 382
+      "candles": 383
     },
     {
       "status": "INSUFFICIENT_HISTORY",
       "symbol": "CRMBUSDT",
-      "candles": 172
+      "candles": 173
     },
     {
       "status": "INSUFFICIENT_HISTORY",
       "symbol": "CRWDBUSDT",
-      "candles": 214
+      "candles": 215
     },
     {
       "status": "INSUFFICIENT_HISTORY",
       "symbol": "CRWVBUSDT",
-      "candles": 466
+      "candles": 467
     },
     {
       "status": "INSUFFICIENT_HISTORY",
       "symbol": "CYPHBUSDT",
-      "candles": 88
+      "candles": 89
     },
     {
       "status": "INSUFFICIENT_HISTORY",
       "symbol": "DELLBUSDT",
-      "candles": 424
+      "candles": 425
     },
     {
       "status": "INSUFFICIENT_HISTORY",
       "symbol": "DJTBUSDT",
-      "candles": 256
+      "candles": 257
     },
     {
       "status": "INSUFFICIENT_HISTORY",
       "symbol": "DRAMBUSDT",
-      "candles": 556
+      "candles": 557
     },
     {
       "status": "INSUFFICIENT_HISTORY",
       "symbol": "FLNCBUSDT",
-      "candles": 424
+      "candles": 425
     },
     {
       "status": "INSUFFICIENT_HISTORY",
       "symbol": "FWDIBUSDT",
-      "candles": 46
+      "candles": 47
     },
     {
       "status": "INSUFFICIENT_HISTORY",
       "symbol": "GLWBUSDT",
-      "candles": 556
+      "candles": 557
     },
     {
       "status": "INSUFFICIENT_HISTORY",
       "symbol": "GMEBUSDT",
-      "candles": 340
+      "candles": 341
     },
     {
       "status": "INSUFFICIENT_HISTORY",
       "symbol": "GOOGLBUSDT",
-      "candles": 556
+      "candles": 557
     },
     {
       "status": "INSUFFICIENT_HISTORY",
       "symbol": "GPROBUSDT",
-      "candles": 130
+      "candles": 131
     },
     {
       "status": "INSUFFICIENT_HISTORY",
       "symbol": "GRAMUSDT",
-      "candles": 587
+      "candles": 588
     },
     {
       "status": "INSUFFICIENT_HISTORY",
       "symbol": "GSBUSDT",
-      "candles": 424
+      "candles": 425
     },
     {
       "status": "INSUFFICIENT_HISTORY",
       "symbol": "HIMSBUSDT",
-      "candles": 172
+      "candles": 173
     },
     {
       "status": "INSUFFICIENT_HISTORY",
       "symbol": "HOODBUSDT",
-      "candles": 508
+      "candles": 509
     },
     {
       "status": "INSUFFICIENT_HISTORY",
       "symbol": "HPEBUSDT",
-      "candles": 46
+      "candles": 47
     },
     {
       "status": "INSUFFICIENT_HISTORY",
       "symbol": "HYPEUSDT",
-      "candles": 83
+      "candles": 84
     },
     {
       "status": "INSUFFICIENT_HISTORY",
       "symbol": "IBMBUSDT",
-      "candles": 508
+      "candles": 509
     },
     {
       "status": "INSUFFICIENT_HISTORY",
       "symbol": "INTWBUSDT",
-      "candles": 466
+      "candles": 467
     },
     {
       "status": "INSUFFICIENT_HISTORY",
       "symbol": "IRENBUSDT",
-      "candles": 382
+      "candles": 383
     },
     {
       "status": "INSUFFICIENT_HISTORY",
       "symbol": "JPMBUSDT",
-      "candles": 4
+      "candles": 5
     },
     {
       "status": "INSUFFICIENT_HISTORY",
       "symbol": "KORUBUSDT",
-      "candles": 466
+      "candles": 467
     },
     {
       "status": "INSUFFICIENT_HISTORY",
       "symbol": "LITEBUSDT",
-      "candles": 598
+      "candles": 599
     },
     {
       "status": "INSUFFICIENT_HISTORY",
       "symbol": "LLYBUSDT",
-      "candles": 4
+      "candles": 5
     },
     {
       "status": "INSUFFICIENT_HISTORY",
       "symbol": "MARSCOINUSDT",
-      "candles": 202
+      "candles": 203
     },
     {
       "status": "INSUFFICIENT_HISTORY",
       "symbol": "METABUSDT",
-      "candles": 598
+      "candles": 599
     },
     {
       "status": "INSUFFICIENT_HISTORY",
       "symbol": "MRNABUSDT",
-      "candles": 214
+      "candles": 215
     },
     {
       "status": "INSUFFICIENT_HISTORY",
       "symbol": "MRVLBUSDT",
-      "candles": 508
+      "candles": 509
     },
     {
       "status": "INSUFFICIENT_HISTORY",
       "symbol": "MSFTBUSDT",
-      "candles": 598
+      "candles": 599
     },
     {
       "status": "INSUFFICIENT_HISTORY",
       "symbol": "MUUBUSDT",
-      "candles": 466
+      "candles": 467
     },
     {
       "status": "INSUFFICIENT_HISTORY",
       "symbol": "MVLLBUSDT",
-      "candles": 466
+      "candles": 467
     },
     {
       "status": "INSUFFICIENT_HISTORY",
       "symbol": "NBISBUSDT",
-      "candles": 556
+      "candles": 557
     },
     {
       "status": "INSUFFICIENT_HISTORY",
       "symbol": "NFLXBUSDT",
-      "candles": 382
+      "candles": 383
     },
     {
       "status": "INSUFFICIENT_HISTORY",
       "symbol": "NOKBUSDT",
-      "candles": 508
+      "candles": 509
     },
     {
       "status": "INSUFFICIENT_HISTORY",
       "symbol": "ORCLBUSDT",
-      "candles": 466
+      "candles": 467
     },
     {
       "status": "INSUFFICIENT_HISTORY",
       "symbol": "PDDBUSDT",
-      "candles": 46
+      "candles": 47
     },
     {
       "status": "INSUFFICIENT_HISTORY",
       "symbol": "PLTRBUSDT",
-      "candles": 598
+      "candles": 599
     },
     {
       "status": "INSUFFICIENT_HISTORY",
       "symbol": "PYPLBUSDT",
-      "candles": 424
+      "candles": 425
     },
     {
       "status": "INSUFFICIENT_HISTORY",
       "symbol": "QCOMBUSDT",
-      "candles": 556
+      "candles": 557
     },
     {
       "status": "INSUFFICIENT_HISTORY",
       "symbol": "QNTBUSDT",
-      "candles": 466
+      "candles": 467
     },
     {
       "status": "INSUFFICIENT_HISTORY",
       "symbol": "QQQBUSDT",
-      "candles": 598
+      "candles": 599
     },
     {
       "status": "INSUFFICIENT_HISTORY",
       "symbol": "RDDTBUSDT",
-      "candles": 130
+      "candles": 131
     },
     {
       "status": "INSUFFICIENT_HISTORY",
       "symbol": "RKLBBUSDT",
-      "candles": 508
+      "candles": 509
     },
     {
       "status": "INSUFFICIENT_HISTORY",
       "symbol": "SECZBUSDT",
-      "candles": 4
+      "candles": 5
     },
     {
       "status": "INSUFFICIENT_HISTORY",
       "symbol": "SHAZBUSDT",
-      "candles": 46
+      "candles": 47
     },
     {
       "status": "INSUFFICIENT_HISTORY",
       "symbol": "SKHYBUSDT",
-      "candles": 520
+      "candles": 521
     },
     {
       "status": "INSUFFICIENT_HISTORY",
       "symbol": "SMCIBUSDT",
-      "candles": 382
+      "candles": 383
     },
     {
       "status": "INSUFFICIENT_HISTORY",
       "symbol": "SMHBUSDT",
-      "candles": 424
+      "candles": 425
     },
     {
       "status": "INSUFFICIENT_HISTORY",
       "symbol": "SNXXBUSDT",
-      "candles": 466
+      "candles": 467
     },
     {
       "status": "INSUFFICIENT_HISTORY",
       "symbol": "SOXLBUSDT",
-      "candles": 556
+      "candles": 557
     },
     {
       "status": "INSUFFICIENT_HISTORY",
       "symbol": "SOXSBUSDT",
-      "candles": 424
+      "candles": 425
     },
     {
       "status": "INSUFFICIENT_HISTORY",
       "symbol": "SPYBUSDT",
-      "candles": 556
+      "candles": 557
     },
     {
       "status": "INSUFFICIENT_HISTORY",
       "symbol": "SQQQBUSDT",
-      "candles": 214
+      "candles": 215
     },
     {
       "status": "INSUFFICIENT_HISTORY",
       "symbol": "STXBUSDT",
-      "candles": 214
+      "candles": 215
     },
     {
       "status": "INSUFFICIENT_HISTORY",
       "symbol": "TQQQBUSDT",
-      "candles": 466
+      "candles": 467
     },
     {
       "status": "INSUFFICIENT_HISTORY",
       "symbol": "TSMBUSDT",
-      "candles": 508
+      "candles": 509
     },
     {
       "status": "INSUFFICIENT_HISTORY",
       "symbol": "USARBUSDT",
-      "candles": 382
+      "candles": 383
     },
     {
       "status": "INSUFFICIENT_HISTORY",
       "symbol": "USDEBUSDT",
-      "candles": 4
+      "candles": 5
     },
     {
       "symbol": "USDT",
@@ -615,25 +706,28 @@
     {
       "status": "INSUFFICIENT_HISTORY",
       "symbol": "WDCBUSDT",
-      "candles": 556
+      "candles": 557
     },
     {
       "status": "INSUFFICIENT_HISTORY",
       "symbol": "WENBUSDT",
-      "candles": 46
+      "candles": 47
     },
     {
       "status": "INSUFFICIENT_HISTORY",
       "symbol": "ZMBUSDT",
-      "candles": 46
+      "candles": 47
     },
     {
       "status": "INSUFFICIENT_HISTORY",
       "symbol": "牛来USDT",
-      "candles": 172
+      "candles": 173
     }
   ],
-  "expired_or_retracted_signal_ids": [],
+  "expired_or_retracted_signal_ids": [
+    "397339a851f86b3cee3bef47c5f11fc427d03a7cb7a7475f3b121bbd454086c9",
+    "9e29bd31a52db5a3fd9f42b67bc118c0bb5ae997548b5db127fae30368a52411"
+  ],
   "universe_counts": {
     "active_base_assets": 507,
     "selected_pairs": 506,
@@ -660,5 +754,5 @@
   "delivery_status": "DELIVERY_UNCONFIRMED",
   "decision_effect_status": "DECISION_EFFECT_UNCONFIRMED",
   "integration_status": "INTEGRATION_PENDING",
-  "scan_id": "1d632f647f72af15f143ad526f6f54ec34ccf266fec5371b6c19d6d143f4c74f"
+  "scan_id": "6035c1dc0d8965569a9630a7fa3f8b1a1a43c2b0485fc31247e964d5e92b68b6"
 }
