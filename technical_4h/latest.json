@@ -3,12 +3,12 @@
   "producer": "futures_4h_edge_scanner_v1",
   "rule_version": "4h_equal25_last_closed_v1",
   "scanner_implementation_version": "2.0.0",
-  "generated_at_utc": "2026-10-08T02:13:36.989Z",
-  "fresh_scan_timestamp": "2026-10-08T02:13:36.989Z",
-  "as_of_exchange_utc": "2026-10-08T01:59:56.144Z",
+  "generated_at_utc": "2026-10-08T03:07:48.457Z",
+  "fresh_scan_timestamp": "2026-10-08T03:07:48.457Z",
+  "as_of_exchange_utc": "2026-10-08T03:00:55.081Z",
   "evidence_timestamp_utc": "2026-10-07T23:59:59.999Z",
   "valid_until_utc": "2026-10-08T04:00:00.000Z",
-  "scan_status": "PARTIAL",
+  "scan_status": "COMPLETE_WITH_EXCLUSIONS",
   "source_mode": "SPOT",
   "decision_input_allowed": true,
   "shadow_test_required": false,
@@ -230,44 +230,14 @@
       "candles": 87
     },
     {
-      "symbol": "AIXBTUSDT",
-      "status": "DATA_UNAVAILABLE",
-      "reason": "URLError:<urlopen error timed out>"
-    },
-    {
+      "status": "INSUFFICIENT_HISTORY",
       "symbol": "ALABBUSDT",
-      "status": "DATA_UNAVAILABLE",
-      "reason": "URLError:<urlopen error timed out>"
+      "candles": 381
     },
     {
-      "symbol": "ALGOUSDT",
-      "status": "DATA_UNAVAILABLE",
-      "reason": "URLError:<urlopen error timed out>"
-    },
-    {
-      "symbol": "ALICEUSDT",
-      "status": "DATA_UNAVAILABLE",
-      "reason": "URLError:<urlopen error timed out>"
-    },
-    {
-      "symbol": "ALLOUSDT",
-      "status": "DATA_UNAVAILABLE",
-      "reason": "URLError:<urlopen error timed out>"
-    },
-    {
-      "symbol": "ALPINEUSDT",
-      "status": "DATA_UNAVAILABLE",
-      "reason": "URLError:<urlopen error timed out>"
-    },
-    {
-      "symbol": "ALTUSDT",
-      "status": "DATA_UNAVAILABLE",
-      "reason": "URLError:<urlopen error timed out>"
-    },
-    {
+      "status": "INSUFFICIENT_HISTORY",
       "symbol": "AMATBUSDT",
-      "status": "DATA_UNAVAILABLE",
-      "reason": "URLError:<urlopen error timed out>"
+      "candles": 423
     },
     {
       "status": "INSUFFICIENT_HISTORY",
@@ -674,13 +644,13 @@
     "active_base_assets": 507,
     "selected_pairs": 506,
     "attempted": 506,
-    "calculated": 414,
-    "insufficient_history": 84,
-    "data_errors": 8,
+    "calculated": 420,
+    "insufficient_history": 86,
+    "data_errors": 0,
     "unsupported_quote": 1
   },
   "coverage": {
-    "selected_pairs_calculated_pct": 81.8182,
+    "selected_pairs_calculated_pct": 83.004,
     "source_market": "SPOT",
     "futures_coverage_verified": false,
     "scope": "ALL_ACTIVE_SPOT_BASES_WITH_AVAILABLE_USD_STABLE_QUOTE"
@@ -696,5 +666,5 @@
   "delivery_status": "DELIVERY_UNCONFIRMED",
   "decision_effect_status": "DECISION_EFFECT_UNCONFIRMED",
   "integration_status": "INTEGRATION_PENDING",
-  "scan_id": "71271d7cc8cbd35d72d7115b0599e46ca239094b86c94a063a4a761b91b95d92"
+  "scan_id": "3bbd0451901a4a4687095816bd6a3cf69efd9b03a45eb8ef8b23900a71f8e9ca"
 }
