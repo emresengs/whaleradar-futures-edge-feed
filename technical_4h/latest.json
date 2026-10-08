@@ -5,9 +5,9 @@
   "scanner_implementation_version": "3.0.0",
   "max_score": 75,
   "minimum_candidate_score": 25,
-  "generated_at_utc": "2026-10-08T13:02:03.585Z",
-  "fresh_scan_timestamp": "2026-10-08T13:02:03.585Z",
-  "as_of_exchange_utc": "2026-10-08T12:50:59.615Z",
+  "generated_at_utc": "2026-10-08T14:10:24.407Z",
+  "fresh_scan_timestamp": "2026-10-08T14:10:24.407Z",
+  "as_of_exchange_utc": "2026-10-08T14:00:17.848Z",
   "evidence_timestamp_utc": "2026-10-08T11:59:59.999Z",
   "valid_until_utc": "2026-10-08T16:00:00.000Z",
   "scan_status": "COMPLETE_WITH_EXCLUSIONS",
@@ -12146,11 +12146,7 @@
       "candles": 174
     }
   ],
-  "expired_or_retracted_signal_ids": [
-    "2a04e18e384b77f57a3e45538913b2466f91707b368f23e360ec203b7e64c562",
-    "c324be2e18a3a17c797cc470e19ccac7155e5763774b2fab2e4e8debfe3c3bad",
-    "f9fdb342328df336057727f25ac752df88d46872166f41a1820f867a6063d570"
-  ],
+  "expired_or_retracted_signal_ids": [],
   "universe_counts": {
     "active_base_assets": 507,
     "selected_pairs": 506,
@@ -12177,5 +12173,5 @@
   "delivery_status": "DELIVERY_UNCONFIRMED",
   "decision_effect_status": "DECISION_EFFECT_UNCONFIRMED",
   "integration_status": "RULE_UPDATE_REQUIRES_CONSUMER_V3",
-  "scan_id": "af57165b1b6a3d81151e79fe334d51dfc262fb10d93a72491ff3bedc821d8f0d"
+  "scan_id": "ffd94ce6d19a4f749da56b18fbcb207ef062a5eb8212ed1de45a93f85230265a"
 }
