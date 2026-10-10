@@ -1,0 +1,127 @@
+name: Superman 4H Technical Scanner
+
+on:
+  schedule:
+    - cron: "7 * * * *"
+  workflow_dispatch:
+  push:
+    paths:
+      - ".github/workflows/technical_4h_scan.yml"
+
+permissions:
+  contents: write
+
+concurrency:
+  group: superman-technical-4h
+  cancel-in-progress: false
+
+jobs:
+  scan:
+    runs-on: ubuntu-latest
+    timeout-minutes: 12
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Verify frozen scanner
+        shell: bash
+        run: |
+          set -euo pipefail
+          EXPECTED="13bf17ff8e682c0093b8f94afe4116e48a20853c0790115b556b3a1a69fc8c45"
+          ACTUAL="$(sha256sum technical_4h/scanner_v3.py | awk '{print $1}')"
+          echo "SCANNER_SHA256=$ACTUAL"
+          test "$ACTUAL" = "$EXPECTED"
+
+      - name: Run fresh 4H scan
+        env:
+          PYTHONUTF8: "1"
+        shell: bash
+        run: |
+          set -euo pipefail
+          python3 technical_4h/scanner_v3.py             --out /tmp/latest_scan.json             --previous technical_4h/latest.json
+
+      - name: Validate scan
+        shell: bash
+        run: |
+          set -euo pipefail
+          python3 - <<'PY'
+          import json
+          from datetime import datetime, timezone
+          from pathlib import Path
+
+          p=Path("/tmp/latest_scan.json")
+          d=json.loads(p.read_text(encoding="utf-8"))
+
+          assert d.get("schema_version") == "SUPERMAN_TECHNICAL_BIAS_V1"
+          assert d.get("producer") == "futures_4h_edge_scanner_v1"
+          assert d.get("rule_version") == "4h_equal25_max75_rsi40_80_last_closed_v2"
+          assert d.get("scanner_implementation_version") == "3.0.0"
+          assert d.get("decision_input_allowed") is True
+          assert d.get("execution_command") is False
+          assert d.get("scan_status") in {"COMPLETE","COMPLETE_WITH_EXCLUSIONS","PARTIAL"}
+
+          generated=datetime.fromisoformat(d["generated_at_utc"].replace("Z","+00:00"))
+          valid=datetime.fromisoformat(d["valid_until_utc"].replace("Z","+00:00"))
+          now=datetime.now(timezone.utc)
+
+          assert generated <= now
+          assert valid > now
+          assert (now-generated).total_seconds() < 1800
+
+          print("SCAN_ID="+str(d.get("scan_id")))
+          print("SCAN_STATUS="+str(d.get("scan_status")))
+          print("SOURCE_MODE="+str(d.get("source_mode")))
+          print("GENERATED_AT_UTC="+str(d.get("generated_at_utc")))
+          print("VALID_UNTIL_UTC="+str(d.get("valid_until_utc")))
+          print("SIGNAL_COUNT="+str(len(d.get("symbol_signals") or [])))
+          print("FAILURE_COUNT="+str(len(d.get("failures") or [])))
+          PY
+
+      - name: Publish only if this scan is newer
+        shell: bash
+        run: |
+          set -euo pipefail
+
+          git config user.name "Superman 4H Scanner"
+          git config user.email "actions@users.noreply.github.com"
+
+          git pull --rebase origin main
+
+          ACTION="publish"
+          if [ -f technical_4h/latest.json ]; then
+            ACTION="$(python3 - <<'PY'
+          import json
+          from datetime import datetime
+          from pathlib import Path
+
+          fresh=json.loads(Path("/tmp/latest_scan.json").read_text(encoding="utf-8"))
+          current=json.loads(Path("technical_4h/latest.json").read_text(encoding="utf-8"))
+
+          def dt(s):
+              return datetime.fromisoformat(str(s).replace("Z","+00:00"))
+
+          print("publish" if dt(fresh["generated_at_utc"]) > dt(current["generated_at_utc"]) else "skip")
+          PY
+          )"
+          fi
+
+          echo "PUBLISH_ACTION=$ACTION"
+
+          if [ "$ACTION" = "skip" ]; then
+            echo "A newer or equal feed already exists; nothing to publish."
+            exit 0
+          fi
+
+          cp /tmp/latest_scan.json technical_4h/latest.json
+          git add technical_4h/latest.json
+
+          if git diff --cached --quiet; then
+            echo "NO_CONTENT_CHANGE=true"
+            exit 0
+          fi
+
+          SCAN_ID="$(python3 -c 'import json; print(json.load(open("/tmp/latest_scan.json"))["scan_id"][:12])')"
+          git commit -m "Publish 4H technical scan $SCAN_ID"
+          git push origin HEAD:main
