@@ -1,0 +1,116 @@
+{
+  "version": "SUPERMAN_X_RESEARCH_BATCH_V1",
+  "created_at_utc": "2026-10-10T20:30:00Z",
+  "batch_name": "X batch 2026-10-10",
+  "principles": [
+    "Social-media PnL claims are unverified unless independently corroborated.",
+    "Affiliate/referral-heavy posts are treated as idea sources, not performance evidence.",
+    "Only causal/as-of, cost-aware, falsifiable hypotheses may flow into Superman research.",
+    "No production/live/real-money change is authorized by this batch."
+  ],
+  "themes": [
+    {
+      "theme": "cost_aware_cross_sectional_rotation",
+      "usefulness": "HIGH",
+      "status": "RESEARCH",
+      "evidence_sources": [
+        "https://x.com/laoyingkhq/status/2105507244733321250?s=48",
+        "https://x.com/laoyingkhq/status/2108266174043787691?s=52"
+      ],
+      "takeaway": "Continuously rank symbols and allow re-entry/rotation without attachment to the prior position, but rotate only when the new expected net edge exceeds switching costs plus a safety margin.",
+      "caution": "Extreme $50->$3,532 claim is not independently verified."
+    },
+    {
+      "theme": "funding_conditioned_short_plus_depth_guard",
+      "usefulness": "HIGH",
+      "status": "TEST_NOW",
+      "evidence_sources": [
+        "https://x.com/0xtenzo/status/2107894013755883898?s=52"
+      ],
+      "takeaway": "For existing SHORT candidates, test favorable funding carry only together with supportive downside momentum and adequate depth/spread. Funding alone must never create a short.",
+      "caution": "Claimed $43->$5,843 and 85% win rate are unverified."
+    },
+    {
+      "theme": "liquidity_and_risk_veto_before_entry",
+      "usefulness": "HIGH",
+      "status": "TEST_NOW_OR_KEEP",
+      "evidence_sources": [
+        "https://x.com/0xboan/status/2107908956194816278?s=52",
+        "https://x.com/0xcristal/status/2107920324750922042?s=52",
+        "https://x.com/tgweb3333/status/2106062994904137992?s=52",
+        "https://x.com/laoyingkhq/status/2107005837268930859?s=48"
+      ],
+      "takeaway": "Reject low-depth/high-spread or structurally unsafe candidates before entry; a veto layer can be more valuable than adding more entry signals.",
+      "caution": "Many examples are memecoin/spot-specific and include promotional links, so only the generic liquidity/risk principle transfers to futures."
+    },
+    {
+      "theme": "wallet_provenance_cluster_and_exit_flow",
+      "usefulness": "MEDIUM_HIGH",
+      "status": "NEEDS_IMPLEMENTATION",
+      "evidence_sources": [
+        "https://x.com/crbpite8/status/2108696006523277676?s=52",
+        "https://x.com/crbpite8/status/2108709848032375099?s=52",
+        "https://x.com/crbpite8/status/2108668827412341014?s=52",
+        "https://x.com/laoyingkhq/status/2105908388508897412?s=52",
+        "https://x.com/laoyingkhq/status/2107699943347560611?s=52",
+        "https://x.com/kyliaspeijcken/status/2106983416923353456?s=48"
+      ],
+      "takeaway": "Track provenance-scored wallets, clustered entries, holding times and exits; require multiple independent wallets and point-in-time data. Avoid simple copy-trading.",
+      "verified_external_context": "Bitquery documents a read-only MCP with DEX trades, transfers, wallet history, labels and near-real-time data; free tier exists but is metered.",
+      "caution": "Wallet PnL and no-loss claims in the posts are unverified and highly exposed to survivorship/manipulation bias."
+    },
+    {
+      "theme": "polymarket_microstructure_and_lead_lag",
+      "usefulness": "HIGH_FOR_SEPARATE_RESEARCH",
+      "status": "RESEARCH",
+      "evidence_sources": [
+        "https://x.com/dan1ro0/status/2106130713489932700?s=52",
+        "https://x.com/laoyingkhq/status/2108910419628655063?s=52",
+        "https://x.com/waseema85756651/status/2106949614104715459?s=48",
+        "https://x.com/kyliaspeijcken/status/2106983416923353456?s=48",
+        "https://x.com/silvanrec/status/2106055368174448654?s=52"
+      ],
+      "takeaway": "Research BTC short-horizon Polymarket order-book lead/lag versus spot/futures, EMA/RSI as simple baselines, and mispricing/arbitrage only with realistic latency, fill probability and fees.",
+      "verified_external_context": "Open-source Polymarket historical dataset and backtesting frameworks exist.",
+      "caution": "Claims of zero-loss wallets, 100ms arbitrage and huge PnL are not verified."
+    },
+    {
+      "theme": "multi_agent_role_separation",
+      "usefulness": "MEDIUM",
+      "status": "ARCHITECTURE_REFERENCE",
+      "evidence_sources": [
+        "https://x.com/igus_ai/status/2108248430682247349?s=52",
+        "https://x.com/0xcristal/status/2107920324750922042?s=52",
+        "https://x.com/0xpink3/status/2107782677667652058?s=52"
+      ],
+      "takeaway": "Separate scanner, thesis, sizing, execution and veto/risk roles. Superman already follows much of this separation through Guardian/R&D/shadow gates.",
+      "verified_external_context": "Alook is a real Apache-2.0 open-source local-first agent collaboration project.",
+      "caution": "The trading-profit examples are unverified."
+    }
+  ],
+  "non_superman_opportunities": [
+    {
+      "idea": "AI viral-content reverse-engineering/content factory",
+      "sources": [
+        "https://x.com/soniacuts/status/2107155943595368770?s=48",
+        "https://x.com/saidstetic/status/2105649769146130933?s=52",
+        "https://x.com/0xforce_/status/2107654476693749803?s=52"
+      ],
+      "assessment": "Potential separate content/marketing automation project; unrelated to Superman trading edge. Revenue claims need independent validation and platform-policy review."
+    },
+    {
+      "idea": "AI product sourcing/e-commerce research agent",
+      "sources": [
+        "https://x.com/theo_louro/status/2108180567472636396?s=52"
+      ],
+      "assessment": "Potential standalone SaaS/service idea; unrelated to Superman."
+    },
+    {
+      "idea": "Token-launch fee business",
+      "sources": [
+        "https://x.com/laoyingkhq/status/2107795321644273670?s=52"
+      ],
+      "assessment": "Separate high-risk crypto business model, not a Superman trading feature; do not mix into Futures Bot."
+    }
+  ]
+}
