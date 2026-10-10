@@ -1,7 +1,1 @@
-{
-  "schema_version": "SUPERMAN_RESEARCH_STAGE_V1",
-  "agent": "exchange_official",
-  "created_at_utc": null,
-  "status": "EMPTY",
-  "findings": []
-}
+{"schema_version":"SUPERMAN_RESEARCH_STAGE_V1","agent":"exchange_official","created_at_utc":"2026-10-10T21:30:54.961Z","status":"UPDATED","findings":[{"finding_id":"kucoin-xmr-wallet-20261010","title":"KuCoin XMR deposits and withdrawals suspended","source_urls":["https://www.kucoin.com/announcement/en-kucoin-has-temporarily-closed-the-deposit-service-of-monero-xmr-20261010"],"source_timestamp_utc":null,"reliability":"HIGH","affected_assets":["XMR"],"market_scope":["KuCoin XMR funding"],"horizon":"Until restoration","observation":"Official Oct 10 notice reports XMR wallet maintenance and suspended deposits/withdrawals.","mechanism":"Transfer constraints may affect venue-specific liquidity; direction unknown.","exact_features":["XMR venue spread","deposit and withdrawal availability"],"exact_rule_or_model_spec":"Research-only comparison of venue spreads during suspension versus historical baseline.","required_data":["official notice","public orderbooks","funding status"],"transaction_cost_implications":"Transfers unavailable; include slippage and fees.","falsification_criteria":"No abnormal spread change or restoration confirmed.","recommended_action":"TEST","event_deadline_or_effective_time":null,"expected_market_effect":"CONDITIONAL"}]}
