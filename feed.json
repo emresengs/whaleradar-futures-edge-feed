@@ -1,62 +1,49 @@
 [
   {
     "schema_version": "EDGE_RESEARCH_PACKET_V1",
-    "packet_id": "764a5c01d170b95b546990e09ad2c4998a7a3357d835937b951a54cdf9d12565",
-    "created_at_utc": "2026-10-09T12:19:15Z",
+    "packet_id": "49d474c8e5253141aa77c66bb47ee1dff9111b5ee77ab95573bc0e255b81dcbf",
+    "created_at_utc": "2026-10-10T20:30:00Z",
     "source_urls": [
-      "https://www.okx.com/api/v5/market/ticker?instId=BTC-USDT-SWAP",
-      "https://www.okx.com/api/v5/market/ticker?instId=ETH-USDT-SWAP",
-      "https://www.okx.com/api/v5/public/open-interest?instType=SWAP&instId=BTC-USDT-SWAP",
-      "https://www.okx.com/api/v5/public/funding-rate?instId=BTC-USDT-SWAP",
-      "https://www.okx.com/api/v5/market/candles?instId=BTC-USDT-SWAP",
-      "https://www.okx.com/api/v5/market/books?instId=BTC-USDT-SWAP",
-      "https://www.reuters.com/business/energy/oil-falls-trump-comments-iran-talks-ease-supply-concerns-2026-10-09/",
-      "https://www.bls.gov/schedule/2026/10_sched_list.htm",
-      "https://polymarket.com/event/fed-decision-in-october-20260617190323537/will-there-be-no-change-in-fed-interest-rates-after-the-october-2026-meeting-20260617190324031"
+      "https://x.com/0xtenzo/status/2107894013755883898?s=52",
+      "https://x.com/0xboan/status/2107908956194816278?s=52",
+      "https://x.com/0xcristal/status/2107920324750922042?s=52",
+      "https://x.com/crbpite8/status/2108696006523277676?s=52",
+      "https://x.com/crbpite8/status/2108709848032375099?s=52",
+      "https://docs.bitquery.io/docs/mcp/mcp-server/",
+      "https://github.com/evan-kolberg/prediction-market-backtesting",
+      "https://github.com/SII-WANGZJ/Polymarket_data"
     ],
-    "source_type": "official_exchange_public_api_official_macro_calendar_original_news_wire_public_prediction_market",
+    "source_type": "public_social_claims_plus_official_docs_and_open_source_research",
     "source_reliability": "MEDIUM",
-    "extraordinary_claim_unverified": false,
-    "title": "BTC rebound above 83k with lower OI and indicative funding sign flip; ETH 24h divergence",
-    "hypothesis": "After a sharp deleveraging episode, BTC rebound with falling OI and a change from positive to negative indicative funding may be a short-covering or position-unwind regime, but persistent ETH 24h underperformance can make broad risk-on inference unreliable. Test whether an ETH/breadth/flow confirmation guard improves same-frequency net trade quality over price+OI-only rebound detection.",
-    "mechanism": "As-of OKX observations: BTC last 83322.7 at 12:08:25 UTC, +1.92% versus Oct 8 19:32 packet and +1.12% versus rolling 24h open; ETH last 2503.36 at 11:57:54 UTC, +1.88% versus Oct 8 19:26 packet but -1.30% versus rolling 24h open. BTC contract OI 2954481.61 at 11:51:11 UTC, -1.96% versus Oct 8 19:25 packet. Current-period indicative BTC funding -0.000025876 at 11:58:09 UTC versus prior packet +0.000032963, while premium remains negative (-0.000537258). These are asynchronous 16h-apart comparisons, not synchronized 4h measurements, and do not prove short liquidations. Reuters Oct 9 reports Brent easing to about $102.60 amid reduced near-term Iran strike fears; no causal timestamp alignment to BTC was established.",
+    "extraordinary_claim_unverified": true,
+    "title": "Funding-conditioned shorts + liquidity/depth guard; rotation and wallet-flow ideas retained as secondary research tracks",
+    "hypothesis": "For existing futures SHORT candidates, requiring positive or improving side-aligned funding together with negative momentum and acceptable depth/spread may improve net risk-adjusted results by avoiding crowded short squeezes and compensating carry, while preserving most trade frequency. Separately, cost-aware cross-sectional rotation and provenance-scored wallet-cluster flow may add value but require broader implementation/validation.",
+    "mechanism": "Several public X posts repeat extraordinary unverified PnL claims, so their results are not evidence. The reusable mechanism is narrower: positive funding means longs pay shorts; combine carry direction with already-negative momentum and sufficient depth/liquidity so the short thesis is not based on funding alone. Posts also repeatedly emphasize rejecting low-liquidity setups, cross-symbol rotation without position attachment, and multi-wallet clustering/provenance. Official Bitquery docs confirm read-only multi-chain wallet/trade/flow data is available through its MCP with a free tier; open-source Polymarket datasets/backtesting tooling also exist. Treat these as research inputs, not live signals.",
     "exact_features": [
-      "momentum",
-      "EMA",
       "funding",
-      "basis",
-      "openinterest",
-      "OI",
-      "taker",
-      "flow",
-      "orderbook",
+      "momentum",
+      "depth",
       "liquidity",
       "spread",
-      "depth",
-      "positioning",
-      "liquidation",
-      "ETH_BTC_relative_return",
-      "funding_sign_flip",
-      "OI_price_divergence",
-      "cross_sectional_breadth",
-      "asof_data_age"
+      "flow",
+      "positioning"
     ],
-    "exact_rule_or_model_spec": "PAPER-ONLY FUNDING_FLIP_BREADTH_GUARD_V1; NOT TRIGGERED BY CURRENT SNAPSHOT. At completed 15m t, require BTC_4h_close_return>=+1%, BTC_contract_OI_4h_change<=-1.5% from timestamp-matched snapshots (each <=5m old, same contract units), indicative_funding_now<0 and indicative_funding_4h_ago>0 for same funding interval; otherwise NO_EDGE. Set BTC_REBOUND_CANDIDATE only, not LONG. Set BROAD_CONFIRMED_REBOUND only if ETH_4h_return-BTC_4h_return>=-0.25 percentage points AND either top50_positive_breadth_share_15m>=0.60 OR independently observed BTC_taker_buy_share_5m>=0.55, with full L2 spread/depth within rolling prior 30d 75th-percentile cost. Otherwise keep broad_crypto=NO_EDGE. Compare BASELINE and price+OI-only to paper-only confidence recalibration and same-side candidate rotation; alternative must preserve side, score>=0.95*baseline, and modeled net edge>=baseline+2bps after actual fees, funding, Q-sized entry walk and 25%-depth-haircut exit walk. Retain baseline when no eligible alternative. No live execution, hard veto, side flip, sizing, routing or production change.",
+    "exact_rule_or_model_spec": "PAPER-ONLY SHORT_FUNDING_DEPTH_GUARD_V1. On an existing baseline SHORT candidate only, test a gate requiring side-aligned funding to be favorable to the short (positive underlying funding / shorts receive carry under the exchange convention), side-aligned short momentum to remain supportive, and spread/depth to be within historically acceptable cost bands. Do not create a SHORT from funding alone, do not alter LONG logic, and do not increase leverage or notional. Compare baseline vs funding-only vs momentum-only vs funding×momentum vs funding×momentum×depth/spread. Preserve the baseline trade when the guard is unavailable. Secondary non-production research: cost-aware cross-sectional rotation where a new symbol must exceed the current position's expected net edge by switching cost+safety margin; wallet-cluster/provenance signals remain NEEDS_IMPLEMENTATION until point-in-time data and anti-copycat leakage controls exist.",
     "required_data": [
-      "Point-in-time completed BTC/ETH 15m candles and comparable exchange prices",
-      "BTC/ETH OI snapshots at <=5m intervals with observedAt, ingestedAt and contract multiplier",
-      "Indicative and settled funding timestamps plus mark-index premium",
-      "Independent BTC taker buy/sell flow and top-50 futures breadth",
-      "Sequence-validated L2 depth, Q-sized book walks and liquidation events if public",
-      "Frozen Superman candidate side/score/notional, fees, funding and paper fills",
-      "Polymarket Gamma/CLOB probability histories, spreads, OI and deadlines only when causally matched"
+      "Point-in-time funding and settled funding per symbol with exchange convention normalized",
+      "Existing side-aligned momentum features",
+      "L2 spread/depth and modeled entry/exit slippage",
+      "Baseline candidate side/score/notional and realized paper outcome",
+      "Fees and funding charged/received",
+      "Optional wallet-flow cluster/provenance data for later implementation",
+      "Optional Polymarket order-book/history datasets for separate prediction-market research"
     ],
-    "transaction_cost_implications": "Funding flip changes carry but current-period indicative funding can revise before settlement. Model actual funding schedule, entry/exit fees, Q-sized spread/depth walk, 25% shaved exit-side liquidity, markout, missed-move opportunity cost, and 1.5x/2x slippage; do not infer execution quality from 0.1 USDT top-of-book spread.",
-    "expected_benefit": "Potentially distinguish BTC-only relief rebounds from broad confirmed recovery and improve net PnL/profit factor/max drawdown and tail shortfall at >=98% trade retention; benefit is unproven.",
-    "risks": "BTC and ETH/OI/funding snapshots are 11-28 minutes old at packet creation and differ by up to 17 minutes; previous reference is ~16 hours old. OI decline is side-ambiguous, indicative funding is not settled, ETH still negative over rolling 24h, and Binance/OKX cross-exchange OI, taker, liquidations and synchronized Polymarket velocity were not independently verified. Short-covering and macro causation are hypotheses only.",
-    "falsification_criteria": "REJECT if the funding-flip and breadth interaction does not add incremental predictive/calibration value over price-only, price+OI, funding-only and ETH-relative-only controls; if matched-frequency net PnL, PF or max drawdown do not improve on two locked OOS segments; if retention<98%; if benefit disappears under 1.5x execution costs; if affected 99th-percentile adverse shortfall fails to improve >=10%; or if <5 independent stress clusters support the effect.",
-    "validation_plan": "As-of usableAt<=decision_time only, completed bars and first-observed funding snapshots; never backfill future OI or news. Develop 2024-25, validate Jan-Jun 2026, locked test Jul-Sep 2026 only if true point-in-time series exist; otherwise collect prospectively instead. Freeze parameters and run >=90 future-only paper days. Compare BASELINE, PRICE_ONLY, PRICE_X_OI, FUNDING_ONLY, PRICE_X_OI_X_FUNDING, ETH_BREADTH_GUARD, FLOW_GUARD, FULL_GUARD, SAME_SIDE_ROTATION and matched-frequency random controls. Report net PnL, PF, max DD, Brier/log loss by horizon, retention, trade count, utilization, MAE/MFE, implementation shortfall, 1.5x/2x costs and event-block bootstrap.",
-    "minimum_sample": "At least 2000 baseline decisions, 250 rebound/OI-down states, 150 true 4h funding-sign-flip states, 100 breadth/flow-confirmed states, 100 eligible same-side rotations, five independent clusters and >=90 frozen future paper days; extend until met.",
+    "transaction_cost_implications": "A funding filter can reduce trade count and opportunity capture; positive carry is small relative to adverse price movement. Evaluate actual fees, slippage, funding timing, spread/depth deterioration, missed-trade opportunity cost and 1.5x/2x execution-cost stress. Rotation must pay the full switching cost before replacing a position.",
+    "expected_benefit": "Potentially improve short-side profit factor and drawdown by avoiding crowded or illiquid shorts while preserving useful frequency. Secondary rotation/wallet-flow tracks could improve symbol selection if validated.",
+    "risks": "The social-media profit figures are extraordinary and unverified, many posts contain affiliate/referral links, and survivorship/selection bias is likely. Positive funding can precede both continuation and violent squeezes. Wallet-following can be stale, manipulated, or non-causal. Prediction-market latency claims may disappear after realistic latency and fees.",
+    "falsification_criteria": "Reject the short funding/depth guard if locked chronological OOS and future-only paper tests do not improve net PnL/PF/max drawdown versus baseline, if retention falls below 85%, if results vanish under 1.5x costs, or if improvements are concentrated in one regime/cluster. Reject rotation if incremental net edge does not exceed measured switching costs. Reject wallet signals if point-in-time provenance does not add value over price/flow controls.",
+    "validation_plan": "Use existing as-of feature dataset only. Chronological train/validation/test with frozen thresholds, then a fresh future-only shadow. Run ablations: baseline, funding-only, momentum-only, funding×momentum, depth/spread-only, full interaction. Report net PnL, PF, max DD, retention, trade count, side-specific results and cost sensitivity. Wallet and Polymarket extensions require separate datasets and must not be mixed into the current feature test until timestamps/provenance are verified.",
+    "minimum_sample": "At least 200 SHORT baseline decisions with >=50 funding-favorable states across multiple regimes for offline screening, then >=60 new future-covered trades for any frozen candidate; extend if regime concentration is high.",
     "recommended_action": "TEST",
     "paper_only": true,
     "production_change_allowed": false,
@@ -65,194 +52,45 @@
     "market_scope": [
       "BTC",
       "ETH",
-      "broad_crypto"
+      "broad_crypto",
+      "configured_futures_symbols"
     ],
-    "regime": "REVERSAL_RISK",
-    "directional_assessment": {
-      "15m": {
-        "up_probability": 0.33,
-        "down_probability": 0.29,
-        "range_probability": 0.38,
-        "confidence": "LOW",
-        "primary_drivers": [
-          "BTC rebound but no fresh completed 15m confirmation",
-          "OI and funding data stale"
-        ]
-      },
-      "1h": {
-        "up_probability": 0.39,
-        "down_probability": 0.27,
-        "range_probability": 0.34,
-        "confidence": "LOW",
-        "primary_drivers": [
-          "BTC recovery versus prior packet",
-          "no verified 1h OI/taker alignment"
-        ]
-      },
-      "4h": {
-        "up_probability": 0.46,
-        "down_probability": 0.28,
-        "range_probability": 0.26,
-        "confidence": "LOW",
-        "primary_drivers": [
-          "BTC price higher with lower long-gap OI",
-          "negative indicative funding may increase squeeze sensitivity",
-          "ETH 24h still weak"
-        ]
-      },
-      "24h": {
-        "up_probability": 0.43,
-        "down_probability": 0.31,
-        "range_probability": 0.26,
-        "confidence": "LOW",
-        "primary_drivers": [
-          "BTC +1.12% versus rolling 24h open",
-          "oil retreat reported",
-          "ETH -1.30% versus rolling 24h open"
-        ]
-      }
-    },
-    "eth_directional_assessment": {
-      "15m": {
-        "up_probability": 0.31,
-        "down_probability": 0.33,
-        "range_probability": 0.36,
-        "confidence": "LOW",
-        "primary_drivers": [
-          "ETH ticker >20m old",
-          "no taker flow"
-        ]
-      },
-      "1h": {
-        "up_probability": 0.36,
-        "down_probability": 0.32,
-        "range_probability": 0.32,
-        "confidence": "LOW",
-        "primary_drivers": [
-          "ETH recovered versus prior packet",
-          "1h candle/flow unavailable"
-        ]
-      },
-      "4h": {
-        "up_probability": 0.39,
-        "down_probability": 0.35,
-        "range_probability": 0.26,
-        "confidence": "LOW",
-        "primary_drivers": [
-          "rebound from prior low",
-          "ETH 24h underperforms BTC"
-        ]
-      },
-      "24h": {
-        "up_probability": 0.31,
-        "down_probability": 0.42,
-        "range_probability": 0.27,
-        "confidence": "LOW",
-        "primary_drivers": [
-          "ETH -1.30% versus rolling 24h open",
-          "cross-sectional recovery not confirmed"
-        ]
-      }
-    },
-    "broad_crypto_directional_assessment": {
-      "15m": {
-        "up_probability": 0.32,
-        "down_probability": 0.3,
-        "range_probability": 0.38,
-        "confidence": "LOW",
-        "primary_drivers": [
-          "no verified alt breadth",
-          "BTC and ETH disagree on 24h returns"
-        ]
-      },
-      "1h": {
-        "up_probability": 0.37,
-        "down_probability": 0.3,
-        "range_probability": 0.33,
-        "confidence": "LOW",
-        "primary_drivers": [
-          "BTC recovery",
-          "missing top50 flow/breadth"
-        ]
-      },
-      "4h": {
-        "up_probability": 0.41,
-        "down_probability": 0.33,
-        "range_probability": 0.26,
-        "confidence": "LOW",
-        "primary_drivers": [
-          "macro oil relief",
-          "ETH underperformance"
-        ]
-      },
-      "24h": {
-        "up_probability": 0.35,
-        "down_probability": 0.38,
-        "range_probability": 0.27,
-        "confidence": "LOW",
-        "primary_drivers": [
-          "BTC positive but ETH negative 24h",
-          "risk-on breadth unverified"
-        ]
-      }
-    },
-    "evidence_timestamp_utc": "2026-10-09T12:08:25.966Z",
-    "evidence_freshness_minutes": 28,
+    "regime": "NO_EDGE",
+    "evidence_timestamp_utc": "2026-10-10T20:30:00Z",
+    "evidence_freshness_minutes": 0,
     "evidence_buckets_used": [
-      "OKX_price",
-      "OKX_OI_funding_premium",
-      "BTC_ETH_relative_strength",
-      "macro_original_news",
-      "official_event_calendar",
-      "polymarket_reliability_screen",
-      "microstructure_top_of_book_only"
+      "public_X_claims",
+      "official_Bitquery_docs",
+      "open_source_Polymarket_data",
+      "open_source_backtesting"
     ],
     "contradictions": [
-      "BTC +1.12% over rolling 24h while ETH -1.30%; broad risk-on unconfirmed.",
-      "BTC price higher versus Oct 8 prior packet while OI ~1.96% lower, but side of position closures unknown.",
-      "Indicative funding switched from positive to negative while premium remained negative; current-period estimate may revise.",
-      "Reported oil relief is not synchronized with crypto prices; Polymarket odds history and order-book quality are missing."
+      "Social posts report extreme returns without independently verifiable complete trade ledgers.",
+      "The same marketing/referral ecosystems recur across several posts, increasing promotional-bias risk.",
+      "Funding-positive shorts may earn carry but can still be exposed to squeeze risk; direction must come from independent price/flow evidence."
     ],
     "invalidation_triggers": [
-      "Reduce BTC rebound bias if two completed 15m BTC closes below 81711 and independently observed sell-flow dominates.",
-      "Raise BTC rebound confidence only if two completed 15m closes above 83499 with aligned OI/funding, taker buy flow and improving ETH relative strength.",
-      "Keep broad crypto NO_EDGE until top50 breadth and ETH 4h relative return corroborate BTC.",
-      "Invalidate funding-flip state if as-of snapshots do not show a same-interval positive-to-negative flip over exactly 4h or data age>5m."
+      "Funding normalization or exchange convention cannot be verified as-of.",
+      "Depth/spread data are stale or unavailable.",
+      "Locked OOS or prospective results underperform baseline after costs.",
+      "Trade retention or capital utilization degrades materially."
     ],
     "polymarket_context": {
       "relevant_market_titles": [
-        "Fed Decision in October?",
-        "Israel x Iran ceasefire continues through October 31"
+        "BTC Up/Down short-horizon markets (research family, not a verified winning strategy)"
       ],
       "probability_now": null,
       "probability_change": null,
       "horizon_of_change": null,
-      "liquidity_spread_oi_volume_observations": "Fed page search snapshot 3 days old and ceasefire page stale; no reliable synchronized official Gamma/CLOB probability history, OI, spread or trade-flow observations.",
-      "event_deadline": "Fed 2026-10-28; ceasefire contract 2026-10-31",
-      "reliability_notes": "LOW for this run; excluded from directional scoring. Political event odds are not trade signals."
+      "liquidity_spread_oi_volume_observations": "No synchronized market-level Polymarket snapshot is asserted by this packet.",
+      "event_deadline": "varies",
+      "reliability_notes": "Social claims about zero-loss wallets/latency arbitrage are unverified. Use official/order-book historical data and realistic fees/latency before any conclusion."
     },
     "derivatives_context": {
-      "exchange": "OKX",
-      "BTC_last": 83322.7,
-      "BTC_last_ts_utc": "2026-10-09T12:08:25.966Z",
-      "BTC_open24h": 82402.9,
-      "BTC_return24h_pct": 1.12,
-      "BTC_high24h": 83499,
-      "BTC_low24h": 80351,
-      "ETH_last": 2503.36,
-      "ETH_last_ts_utc": "2026-10-09T11:57:54.338Z",
-      "ETH_open24h": 2536.41,
-      "ETH_return24h_pct": -1.3,
-      "BTC_contract_OI": 2954481.61,
-      "BTC_OI_ts_utc": "2026-10-09T11:51:11.767Z",
-      "BTC_OI_change_from_prior_packet_pct": -1.96,
-      "BTC_indicative_funding": -0.0000258761756752,
-      "BTC_settled_funding": 0.0000067299443332,
-      "BTC_premium": -0.0005372576781575,
-      "orderbook": "Only one level each side observed at 12:04 UTC; no reliable depth/slippage estimate.",
-      "notes": "Binance API and relevant Polymarket live historical endpoints inaccessible; no verified liquidation/taker side. OI comparison is ~16h, not a 4h synchronized window."
+      "research_rule": "existing SHORT candidate + favorable funding carry + supportive momentum + acceptable depth/spread",
+      "notes": "No current directional trade instruction. This packet proposes an offline/paper hypothesis only."
     },
-    "macro_news_context": "Reuters 2026-10-09 reports Brent around $102.60 after Iran strike-risk relief; oil still elevated. BLS official calendar schedules September CPI on Oct 14 08:30 ET. Neither supplies a synchronized crypto event-study trigger.",
+    "macro_news_context": "Not used in this packet.",
     "expected_trade_expression": "CONDITIONAL"
   }
 ]
