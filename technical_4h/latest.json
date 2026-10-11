@@ -5,9 +5,9 @@
   "scanner_implementation_version": "3.0.0",
   "max_score": 75,
   "minimum_candidate_score": 25,
-  "generated_at_utc": "2026-10-11T20:04:50.534Z",
-  "fresh_scan_timestamp": "2026-10-11T20:04:50.534Z",
-  "as_of_exchange_utc": "2026-10-11T20:00:22.024Z",
+  "generated_at_utc": "2026-10-11T21:10:00.103Z",
+  "fresh_scan_timestamp": "2026-10-11T21:10:00.103Z",
+  "as_of_exchange_utc": "2026-10-11T21:04:54.351Z",
   "evidence_timestamp_utc": "2026-10-11T19:59:59.999Z",
   "valid_until_utc": "2026-10-12T00:00:00.000Z",
   "scan_status": "COMPLETE_WITH_EXCLUSIONS",
@@ -1935,26 +1935,7 @@
       "candles": 194
     }
   ],
-  "expired_or_retracted_signal_ids": [
-    "239174937952203076e2fe704b8535b85eb82a94fc5a7920db4897b2fd57d0a8",
-    "2dc6b29edae841d4a61145440e5959163bb99e450ca9f130b813b373ffb65666",
-    "337dce51185752d8f589b820a3975dfdfc557a9cd4806ff138c781c852f502a5",
-    "3d99e18ac29b72da9a4da0377ffacf5cfec34591732c58c3a9e304f13fd8b611",
-    "663b5d51092cfc9b165f6870b4f51bb2612b4f67ecbd2a3d609ce5742a3c59cb",
-    "71c7694ad42d36a7472e5de8d9e53165473d2ea3f972318f3af1fecc65c6c437",
-    "887e92131262b472b5d89db71cae91ef3acff69c066d6686430846f865377172",
-    "8c5719b9401d2332346e4f63a4d9da5f76e312bd74b97728f9c3976eefcac154",
-    "963137d69a4cb43e469443238db77dafa7b711a5994a15a2687fab211ed9d729",
-    "9f6199277d130ea0764effeb9de1c3d9ff05f7094450cfca4dadee5f64a2bfa1",
-    "a8ce5acb2054123356cc41415cee0d0e5eae21c5b0005798f85d4938d95c79e5",
-    "affdbb9d3cad43c418390c84a4d7c4c18550fbd081993db763ff3ae220e3da7d",
-    "b1bc05638ff0c01e6b8564beae076feee20f549214f78e1a4055b19babf5ff7f",
-    "bd91325290f8f891ae85dc7abc0b945c88c2de5b89f4307c6f81a9d1099dc62f",
-    "c0d471e6b231813b7adfc533ebb6228f0c7eae55bd6d9fa8cfca9a96b55e0c74",
-    "d436d7af873e9720c06aa3c49d38078d46286d29db832b6e9184a997513960ac",
-    "e4878c29514aa678f8780127697bc319d8eef0d29ac514fcf8e65ed1eb7778dd",
-    "f598fc0047e5c24a743f3564ab7141970a449a49beb8a434e9338c9038cf680a"
-  ],
+  "expired_or_retracted_signal_ids": [],
   "universe_counts": {
     "active_base_assets": 507,
     "selected_pairs": 506,
@@ -1981,5 +1962,5 @@
   "delivery_status": "DELIVERY_UNCONFIRMED",
   "decision_effect_status": "DECISION_EFFECT_UNCONFIRMED",
   "integration_status": "RULE_UPDATE_REQUIRES_CONSUMER_V3",
-  "scan_id": "cc765de5ba5e3cf06ab912d9d355fc88cb8f991c5233a27c406b2173617c02a3"
+  "scan_id": "0cc7475f2c7c96e59c0a6b893c0b91a7551e8dd551be7d56229dd9b00f9043bb"
 }
