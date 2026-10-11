@@ -5,80 +5,17 @@
   "scanner_implementation_version": "3.0.0",
   "max_score": 75,
   "minimum_candidate_score": 25,
-  "generated_at_utc": "2026-10-11T19:13:11.894Z",
-  "fresh_scan_timestamp": "2026-10-11T19:13:11.894Z",
-  "as_of_exchange_utc": "2026-10-11T19:05:08.982Z",
-  "evidence_timestamp_utc": "2026-10-11T15:59:59.999Z",
-  "valid_until_utc": "2026-10-11T20:00:00.000Z",
+  "generated_at_utc": "2026-10-11T20:04:50.534Z",
+  "fresh_scan_timestamp": "2026-10-11T20:04:50.534Z",
+  "as_of_exchange_utc": "2026-10-11T20:00:22.024Z",
+  "evidence_timestamp_utc": "2026-10-11T19:59:59.999Z",
+  "valid_until_utc": "2026-10-12T00:00:00.000Z",
   "scan_status": "COMPLETE_WITH_EXCLUSIONS",
   "source_mode": "SPOT",
   "decision_input_allowed": true,
   "shadow_test_required": false,
   "execution_command": false,
   "symbol_signals": [
-    {
-      "source_market": "SPOT",
-      "source_symbol": "INTCBUSDT",
-      "source_quote_asset": "USDT",
-      "base_asset": "INTCB",
-      "execution_market": "FUTURES",
-      "futures_symbol": null,
-      "mapping_status": "REQUIRES_CONSUMER_VALIDATION",
-      "stablecoin_pair": false,
-      "source_candle_close_utc": "2026-10-11T15:59:59.999Z",
-      "source_close": 105.86,
-      "candles": 661,
-      "sma50": 111.97139999999999,
-      "sma200": 112.1576,
-      "ema50": 110.66048249477429,
-      "ema200": 111.03972150420272,
-      "rsi14": 38.14354593550443,
-      "previous": {
-        "close": 105.04,
-        "sma50": 112.2166,
-        "sma200": 112.12195,
-        "ema50": 110.85642055578548,
-        "ema200": 111.09177900675752
-      },
-      "long_conditions": {
-        "sma_cross": {
-          "met": false,
-          "points": 0
-        },
-        "ema_cross": {
-          "met": false,
-          "points": 0
-        },
-        "rsi_below40": {
-          "met": true,
-          "points": 25
-        }
-      },
-      "short_conditions": {
-        "sma_cross": {
-          "met": true,
-          "points": 25
-        },
-        "ema_cross": {
-          "met": false,
-          "points": 0
-        },
-        "rsi_above80": {
-          "met": false,
-          "points": 0
-        }
-      },
-      "long_score": 25,
-      "short_score": 25,
-      "direction": "CONFLICT_NEUTRAL",
-      "decision_bias": "NEUTRAL",
-      "conflict": true,
-      "bias_strength": 0.3333333333333333,
-      "signal_id": "c0d471e6b231813b7adfc533ebb6228f0c7eae55bd6d9fa8cfca9a96b55e0c74",
-      "valid_until_utc": "2026-10-11T20:00:00.000Z",
-      "source_url": "https://data-api.binance.vision/api/v3/klines",
-      "spot_derived_futures_bias": true
-    },
     {
       "source_market": "SPOT",
       "source_symbol": "ARKUSDT",
@@ -88,20 +25,20 @@
       "futures_symbol": null,
       "mapping_status": "REQUIRES_CONSUMER_VALIDATION",
       "stablecoin_pair": false,
-      "source_candle_close_utc": "2026-10-11T15:59:59.999Z",
-      "source_close": 0.2091,
+      "source_candle_close_utc": "2026-10-11T19:59:59.999Z",
+      "source_close": 0.2073,
       "candles": 1000,
-      "sma50": 0.21743200000000001,
-      "sma200": 0.188336,
-      "ema50": 0.2180364054399387,
-      "ema200": 0.19325063975997858,
-      "rsi14": 39.41693934866094,
+      "sma50": 0.217182,
+      "sma200": 0.18879100000000001,
+      "ema50": 0.21761536993249014,
+      "ema200": 0.19339044873723074,
+      "rsi14": 37.18501888876363,
       "previous": {
         "close": 0.2091,
-        "sma50": 0.217546,
-        "sma200": 0.18787199999999998,
-        "ema50": 0.2184011566823852,
-        "ema200": 0.19309134970731506
+        "sma50": 0.21743200000000001,
+        "sma200": 0.188336,
+        "ema50": 0.2180364054399387,
+        "ema200": 0.19325065425217777
       },
       "long_conditions": {
         "sma_cross": {
@@ -137,8 +74,134 @@
       "decision_bias": "LONG",
       "conflict": false,
       "bias_strength": 0.3333333333333333,
-      "signal_id": "b1bc05638ff0c01e6b8564beae076feee20f549214f78e1a4055b19babf5ff7f",
-      "valid_until_utc": "2026-10-11T20:00:00.000Z",
+      "signal_id": "5b43b4462f3d55babe9b940400452a5639cd12e3051b0c119fc5dc9204753509",
+      "valid_until_utc": "2026-10-12T00:00:00.000Z",
+      "source_url": "https://data-api.binance.vision/api/v3/klines",
+      "spot_derived_futures_bias": true
+    },
+    {
+      "source_market": "SPOT",
+      "source_symbol": "BICOUSDT",
+      "source_quote_asset": "USDT",
+      "base_asset": "BICO",
+      "execution_market": "FUTURES",
+      "futures_symbol": null,
+      "mapping_status": "REQUIRES_CONSUMER_VALIDATION",
+      "stablecoin_pair": false,
+      "source_candle_close_utc": "2026-10-11T19:59:59.999Z",
+      "source_close": 0.01863,
+      "candles": 1000,
+      "sma50": 0.0203226,
+      "sma200": 0.02090655,
+      "ema50": 0.020079708254377954,
+      "ema200": 0.021109329623946252,
+      "rsi14": 38.18813603431748,
+      "previous": {
+        "close": 0.01896,
+        "sma50": 0.020390199999999997,
+        "sma200": 0.020935199999999998,
+        "ema50": 0.02013888001986277,
+        "ema200": 0.021134247509614054
+      },
+      "long_conditions": {
+        "sma_cross": {
+          "met": false,
+          "points": 0
+        },
+        "ema_cross": {
+          "met": false,
+          "points": 0
+        },
+        "rsi_below40": {
+          "met": true,
+          "points": 25
+        }
+      },
+      "short_conditions": {
+        "sma_cross": {
+          "met": false,
+          "points": 0
+        },
+        "ema_cross": {
+          "met": false,
+          "points": 0
+        },
+        "rsi_above80": {
+          "met": false,
+          "points": 0
+        }
+      },
+      "long_score": 25,
+      "short_score": 0,
+      "direction": "LONG_BIAS",
+      "decision_bias": "LONG",
+      "conflict": false,
+      "bias_strength": 0.3333333333333333,
+      "signal_id": "3f7a0ba37c1ce20b977b692aabb0011d9bf1eb8f317d1fd0238b50d833606e7e",
+      "valid_until_utc": "2026-10-12T00:00:00.000Z",
+      "source_url": "https://data-api.binance.vision/api/v3/klines",
+      "spot_derived_futures_bias": true
+    },
+    {
+      "source_market": "SPOT",
+      "source_symbol": "CVCUSDT",
+      "source_quote_asset": "USDT",
+      "base_asset": "CVC",
+      "execution_market": "FUTURES",
+      "futures_symbol": null,
+      "mapping_status": "REQUIRES_CONSUMER_VALIDATION",
+      "stablecoin_pair": false,
+      "source_candle_close_utc": "2026-10-11T19:59:59.999Z",
+      "source_close": 0.02577,
+      "candles": 1000,
+      "sma50": 0.0281872,
+      "sma200": 0.028037299999999998,
+      "ema50": 0.027526279293951822,
+      "ema200": 0.027266427876782698,
+      "rsi14": 39.624397198254535,
+      "previous": {
+        "close": 0.02603,
+        "sma50": 0.028264,
+        "sma200": 0.02801615,
+        "ema50": 0.027597964163092712,
+        "ema200": 0.027281467352931268
+      },
+      "long_conditions": {
+        "sma_cross": {
+          "met": false,
+          "points": 0
+        },
+        "ema_cross": {
+          "met": false,
+          "points": 0
+        },
+        "rsi_below40": {
+          "met": true,
+          "points": 25
+        }
+      },
+      "short_conditions": {
+        "sma_cross": {
+          "met": false,
+          "points": 0
+        },
+        "ema_cross": {
+          "met": false,
+          "points": 0
+        },
+        "rsi_above80": {
+          "met": false,
+          "points": 0
+        }
+      },
+      "long_score": 25,
+      "short_score": 0,
+      "direction": "LONG_BIAS",
+      "decision_bias": "LONG",
+      "conflict": false,
+      "bias_strength": 0.3333333333333333,
+      "signal_id": "6bb25969ed9f3d29c5a1a0b076ece0c3489e57aa36f48dafab2c0ef007098d3a",
+      "valid_until_utc": "2026-10-12T00:00:00.000Z",
       "source_url": "https://data-api.binance.vision/api/v3/klines",
       "spot_derived_futures_bias": true
     },
@@ -151,20 +214,20 @@
       "futures_symbol": null,
       "mapping_status": "REQUIRES_CONSUMER_VALIDATION",
       "stablecoin_pair": false,
-      "source_candle_close_utc": "2026-10-11T15:59:59.999Z",
-      "source_close": 16.69,
+      "source_candle_close_utc": "2026-10-11T19:59:59.999Z",
+      "source_close": 16.73,
       "candles": 1000,
-      "sma50": 17.8556,
-      "sma200": 17.4816,
-      "ema50": 17.634772595228718,
-      "ema200": 17.202464340786243,
-      "rsi14": 34.64480000870695,
+      "sma50": 17.816200000000002,
+      "sma200": 17.4848,
+      "ema50": 17.599291316984456,
+      "ema200": 17.197764596896356,
+      "rsi14": 35.80941658439768,
       "previous": {
-        "close": 16.59,
-        "sma50": 17.8886,
-        "sma200": 17.4774,
-        "ema50": 17.67333474197275,
-        "ema200": 17.207614736171028
+        "close": 16.69,
+        "sma50": 17.8556,
+        "sma200": 17.4816,
+        "ema50": 17.634772595228718,
+        "ema200": 17.202465748623958
       },
       "long_conditions": {
         "sma_cross": {
@@ -200,8 +263,8 @@
       "decision_bias": "LONG",
       "conflict": false,
       "bias_strength": 0.3333333333333333,
-      "signal_id": "71c7694ad42d36a7472e5de8d9e53165473d2ea3f972318f3af1fecc65c6c437",
-      "valid_until_utc": "2026-10-11T20:00:00.000Z",
+      "signal_id": "684ffde11fda37f452a21ed012d6cd8b613899290621a496a21a4b7fb0a60ccc",
+      "valid_until_utc": "2026-10-12T00:00:00.000Z",
       "source_url": "https://data-api.binance.vision/api/v3/klines",
       "spot_derived_futures_bias": true
     },
@@ -214,20 +277,20 @@
       "futures_symbol": null,
       "mapping_status": "REQUIRES_CONSUMER_VALIDATION",
       "stablecoin_pair": false,
-      "source_candle_close_utc": "2026-10-11T15:59:59.999Z",
-      "source_close": 0.00356,
+      "source_candle_close_utc": "2026-10-11T19:59:59.999Z",
+      "source_close": 0.00358,
       "candles": 1000,
-      "sma50": 0.003986,
-      "sma200": 0.00430765,
-      "ema50": 0.003904683599388598,
-      "ema200": 0.004227354721710991,
-      "rsi14": 37.5766085927649,
+      "sma50": 0.0039728,
+      "sma200": 0.00430135,
+      "ema50": 0.0038919509092164963,
+      "ema200": 0.004220913772042771,
+      "rsi14": 39.279005282006096,
       "previous": {
-        "close": 0.00349,
-        "sma50": 0.0039994,
-        "sma200": 0.0043138,
-        "ema50": 0.00391875231773099,
-        "ema200": 0.004234061804341252
+        "close": 0.00356,
+        "sma50": 0.003986,
+        "sma200": 0.00430765,
+        "ema50": 0.003904683599388598,
+        "ema200": 0.004227355116485412
       },
       "long_conditions": {
         "sma_cross": {
@@ -263,8 +326,8 @@
       "decision_bias": "LONG",
       "conflict": false,
       "bias_strength": 0.3333333333333333,
-      "signal_id": "663b5d51092cfc9b165f6870b4f51bb2612b4f67ecbd2a3d609ce5742a3c59cb",
-      "valid_until_utc": "2026-10-11T20:00:00.000Z",
+      "signal_id": "88f0ee83d581768e05fa1903c7c1a42b143f5d7910185f6b5ebd685609213d3d",
+      "valid_until_utc": "2026-10-12T00:00:00.000Z",
       "source_url": "https://data-api.binance.vision/api/v3/klines",
       "spot_derived_futures_bias": true
     },
@@ -277,20 +340,20 @@
       "futures_symbol": null,
       "mapping_status": "REQUIRES_CONSUMER_VALIDATION",
       "stablecoin_pair": false,
-      "source_candle_close_utc": "2026-10-11T15:59:59.999Z",
-      "source_close": 178.54,
-      "candles": 661,
-      "sma50": 184.36,
-      "sma200": 184.89579999999998,
-      "ema50": 182.11416351631638,
-      "ema200": 183.84046315382432,
-      "rsi14": 39.70890209425264,
+      "source_candle_close_utc": "2026-10-11T19:59:59.999Z",
+      "source_close": 178.38,
+      "candles": 662,
+      "sma50": 184.10479999999998,
+      "sma200": 184.8398,
+      "ema50": 181.9677257313628,
+      "ema200": 183.7861301871196,
+      "rsi14": 38.78826628029749,
       "previous": {
-        "close": 177.88,
-        "sma50": 184.6088,
-        "sma200": 184.9475,
-        "ema50": 182.26004774147216,
-        "ema200": 183.89373414029492
+        "close": 178.54,
+        "sma50": 184.36,
+        "sma200": 184.89579999999998,
+        "ema50": 182.11416351631638,
+        "ema200": 183.84046315382432
       },
       "long_conditions": {
         "sma_cross": {
@@ -326,97 +389,34 @@
       "decision_bias": "LONG",
       "conflict": false,
       "bias_strength": 0.3333333333333333,
-      "signal_id": "337dce51185752d8f589b820a3975dfdfc557a9cd4806ff138c781c852f502a5",
-      "valid_until_utc": "2026-10-11T20:00:00.000Z",
+      "signal_id": "6466e0d467542cb7036c885ac88521ea04bc89e4bfefce7e288a153ea9f85777",
+      "valid_until_utc": "2026-10-12T00:00:00.000Z",
       "source_url": "https://data-api.binance.vision/api/v3/klines",
       "spot_derived_futures_bias": true
     },
     {
       "source_market": "SPOT",
-      "source_symbol": "HYPERUSDT",
+      "source_symbol": "INTCBUSDT",
       "source_quote_asset": "USDT",
-      "base_asset": "HYPER",
+      "base_asset": "INTCB",
       "execution_market": "FUTURES",
       "futures_symbol": null,
       "mapping_status": "REQUIRES_CONSUMER_VALIDATION",
       "stablecoin_pair": false,
-      "source_candle_close_utc": "2026-10-11T15:59:59.999Z",
-      "source_close": 0.0737,
-      "candles": 1000,
-      "sma50": 0.070712,
-      "sma200": 0.07138950000000001,
-      "ema50": 0.07088955409825477,
-      "ema200": 0.07081687164628096,
-      "rsi14": 61.690548301652484,
+      "source_candle_close_utc": "2026-10-11T19:59:59.999Z",
+      "source_close": 105.8,
+      "candles": 662,
+      "sma50": 111.7234,
+      "sma200": 112.18375,
+      "ema50": 110.46987533811647,
+      "ema200": 110.98758497182259,
+      "rsi14": 37.87702109058784,
       "previous": {
-        "close": 0.0709,
-        "sma50": 0.07065400000000001,
-        "sma200": 0.0713785,
-        "ema50": 0.07077484202063251,
-        "ema200": 0.07078789548192198
-      },
-      "long_conditions": {
-        "sma_cross": {
-          "met": false,
-          "points": 0
-        },
-        "ema_cross": {
-          "met": true,
-          "points": 25
-        },
-        "rsi_below40": {
-          "met": false,
-          "points": 0
-        }
-      },
-      "short_conditions": {
-        "sma_cross": {
-          "met": false,
-          "points": 0
-        },
-        "ema_cross": {
-          "met": false,
-          "points": 0
-        },
-        "rsi_above80": {
-          "met": false,
-          "points": 0
-        }
-      },
-      "long_score": 25,
-      "short_score": 0,
-      "direction": "LONG_BIAS",
-      "decision_bias": "LONG",
-      "conflict": false,
-      "bias_strength": 0.3333333333333333,
-      "signal_id": "887e92131262b472b5d89db71cae91ef3acff69c066d6686430846f865377172",
-      "valid_until_utc": "2026-10-11T20:00:00.000Z",
-      "source_url": "https://data-api.binance.vision/api/v3/klines",
-      "spot_derived_futures_bias": true
-    },
-    {
-      "source_market": "SPOT",
-      "source_symbol": "JSTUSDT",
-      "source_quote_asset": "USDT",
-      "base_asset": "JST",
-      "execution_market": "FUTURES",
-      "futures_symbol": null,
-      "mapping_status": "REQUIRES_CONSUMER_VALIDATION",
-      "stablecoin_pair": false,
-      "source_candle_close_utc": "2026-10-11T15:59:59.999Z",
-      "source_close": 0.13557,
-      "candles": 1000,
-      "sma50": 0.13929360000000002,
-      "sma200": 0.1226906,
-      "ema50": 0.1376336919242577,
-      "ema200": 0.12563561753237812,
-      "rsi14": 39.0530683476036,
-      "previous": {
-        "close": 0.13666,
-        "sma50": 0.13931280000000001,
-        "sma200": 0.12253615,
-        "ema50": 0.1377179242476968,
-        "ema200": 0.12553577449250253
+        "close": 105.86,
+        "sma50": 111.97139999999999,
+        "sma200": 112.1576,
+        "ema50": 110.66048249477429,
+        "ema200": 111.03972150420272
       },
       "long_conditions": {
         "sma_cross": {
@@ -452,8 +452,8 @@
       "decision_bias": "LONG",
       "conflict": false,
       "bias_strength": 0.3333333333333333,
-      "signal_id": "239174937952203076e2fe704b8535b85eb82a94fc5a7920db4897b2fd57d0a8",
-      "valid_until_utc": "2026-10-11T20:00:00.000Z",
+      "signal_id": "571ede288c13e22ddcaf4c1cd47c3d3c48d575755f6322901d99747412bbd5b3",
+      "valid_until_utc": "2026-10-12T00:00:00.000Z",
       "source_url": "https://data-api.binance.vision/api/v3/klines",
       "spot_derived_futures_bias": true
     },
@@ -466,20 +466,20 @@
       "futures_symbol": null,
       "mapping_status": "REQUIRES_CONSUMER_VALIDATION",
       "stablecoin_pair": false,
-      "source_candle_close_utc": "2026-10-11T15:59:59.999Z",
-      "source_close": 0.0857,
+      "source_candle_close_utc": "2026-10-11T19:59:59.999Z",
+      "source_close": 0.0867,
       "candles": 1000,
-      "sma50": 0.1153,
-      "sma200": 0.118921,
-      "ema50": 0.10591075565014164,
-      "ema200": 0.11302113297186314,
-      "rsi14": 35.16104534319206,
+      "sma50": 0.113838,
+      "sma200": 0.1189385,
+      "ema50": 0.10515739268346942,
+      "ema200": 0.11275923702645876,
+      "rsi14": 37.735235537635624,
       "previous": {
         "close": 0.0857,
-        "sma50": 0.116876,
-        "sma200": 0.1189055,
-        "ema50": 0.10673568445218824,
-        "ema200": 0.11329571722283664
+        "sma50": 0.1153,
+        "sma200": 0.118921,
+        "ema50": 0.10591075565014164,
+        "ema200": 0.11302113890612167
       },
       "long_conditions": {
         "sma_cross": {
@@ -515,8 +515,8 @@
       "decision_bias": "LONG",
       "conflict": false,
       "bias_strength": 0.3333333333333333,
-      "signal_id": "e4878c29514aa678f8780127697bc319d8eef0d29ac514fcf8e65ed1eb7778dd",
-      "valid_until_utc": "2026-10-11T20:00:00.000Z",
+      "signal_id": "19e74d151db3989f963b5589a36e17a6c10366b7627db5d85da4ea97fa107861",
+      "valid_until_utc": "2026-10-12T00:00:00.000Z",
       "source_url": "https://data-api.binance.vision/api/v3/klines",
       "spot_derived_futures_bias": true
     },
@@ -529,20 +529,20 @@
       "futures_symbol": null,
       "mapping_status": "REQUIRES_CONSUMER_VALIDATION",
       "stablecoin_pair": false,
-      "source_candle_close_utc": "2026-10-11T15:59:59.999Z",
-      "source_close": 1.726,
+      "source_candle_close_utc": "2026-10-11T19:59:59.999Z",
+      "source_close": 1.688,
       "candles": 1000,
-      "sma50": 1.86202,
-      "sma200": 1.2479900000000002,
-      "ema50": 1.8141351137951587,
-      "ema200": 1.417409816327009,
-      "rsi14": 39.703274422192614,
+      "sma50": 1.8586600000000002,
+      "sma200": 1.25206,
+      "ema50": 1.809188638744368,
+      "ema200": 1.420103221908343,
+      "rsi14": 36.59473568915923,
       "previous": {
-        "close": 1.734,
-        "sma50": 1.8651200000000001,
-        "sma200": 1.2437099999999999,
-        "ema50": 1.8177324653786346,
-        "ema200": 1.4143084074458734
+        "close": 1.726,
+        "sma50": 1.86202,
+        "sma200": 1.2479900000000002,
+        "ema50": 1.8141351137951587,
+        "ema200": 1.4174107919777734
       },
       "long_conditions": {
         "sma_cross": {
@@ -578,8 +578,8 @@
       "decision_bias": "LONG",
       "conflict": false,
       "bias_strength": 0.3333333333333333,
-      "signal_id": "f598fc0047e5c24a743f3564ab7141970a449a49beb8a434e9338c9038cf680a",
-      "valid_until_utc": "2026-10-11T20:00:00.000Z",
+      "signal_id": "f315f1a955e6e899aa1f90b21875142f1550b4f4fe5e3d1b506ce7d326241d5f",
+      "valid_until_utc": "2026-10-12T00:00:00.000Z",
       "source_url": "https://data-api.binance.vision/api/v3/klines",
       "spot_derived_futures_bias": true
     },
@@ -592,20 +592,20 @@
       "futures_symbol": null,
       "mapping_status": "REQUIRES_CONSUMER_VALIDATION",
       "stablecoin_pair": false,
-      "source_candle_close_utc": "2026-10-11T15:59:59.999Z",
-      "source_close": 0.00205,
+      "source_candle_close_utc": "2026-10-11T19:59:59.999Z",
+      "source_close": 0.002011,
       "candles": 1000,
-      "sma50": 0.0022486200000000002,
-      "sma200": 0.002034875,
-      "ema50": 0.0021916186551935563,
-      "ema200": 0.002031595090050551,
-      "rsi14": 35.80623271028024,
+      "sma50": 0.00223722,
+      "sma200": 0.00204132,
+      "ema50": 0.0021845355706761617,
+      "ema200": 0.002031390572234151,
+      "rsi14": 31.214665522666706,
       "previous": {
-        "close": 0.002052,
-        "sma50": 0.0022545,
-        "sma200": 0.00202831,
-        "ema50": 0.0021973990084667625,
-        "ema200": 0.0020314101160812097
+        "close": 0.00205,
+        "sma50": 0.0022486200000000002,
+        "sma200": 0.002034875,
+        "ema50": 0.0021916186551935563,
+        "ema200": 0.0020315955026083635
       },
       "long_conditions": {
         "sma_cross": {
@@ -641,34 +641,34 @@
       "decision_bias": "LONG",
       "conflict": false,
       "bias_strength": 0.3333333333333333,
-      "signal_id": "3d99e18ac29b72da9a4da0377ffacf5cfec34591732c58c3a9e304f13fd8b611",
-      "valid_until_utc": "2026-10-11T20:00:00.000Z",
+      "signal_id": "cd7427850ff978adb117147dbc2c4d1f8b8efd93d4e8d4c6407b2d91582e59d7",
+      "valid_until_utc": "2026-10-12T00:00:00.000Z",
       "source_url": "https://data-api.binance.vision/api/v3/klines",
       "spot_derived_futures_bias": true
     },
     {
       "source_market": "SPOT",
-      "source_symbol": "QUICKUSDT",
+      "source_symbol": "PHAUSDT",
       "source_quote_asset": "USDT",
-      "base_asset": "QUICK",
+      "base_asset": "PHA",
       "execution_market": "FUTURES",
       "futures_symbol": null,
       "mapping_status": "REQUIRES_CONSUMER_VALIDATION",
       "stablecoin_pair": false,
-      "source_candle_close_utc": "2026-10-11T15:59:59.999Z",
-      "source_close": 0.01009,
+      "source_candle_close_utc": "2026-10-11T19:59:59.999Z",
+      "source_close": 0.059,
       "candles": 1000,
-      "sma50": 0.010643800000000002,
-      "sma200": 0.0099937,
-      "ema50": 0.010594205857429914,
-      "ema200": 0.010087554885366943,
-      "rsi14": 35.97497300057759,
+      "sma50": 0.066248,
+      "sma200": 0.051319,
+      "ema50": 0.06380178442882244,
+      "ema200": 0.05454579796242587,
+      "rsi14": 39.60353782876219,
       "previous": {
-        "close": 0.01051,
-        "sma50": 0.0106576,
-        "sma200": 0.00998955,
-        "ema50": 0.01061478568834542,
-        "ema200": 0.010087530311350531
+        "close": 0.0592,
+        "sma50": 0.066456,
+        "sma200": 0.0511545,
+        "ema50": 0.06399777562999887,
+        "ema200": 0.05450103211280201
       },
       "long_conditions": {
         "sma_cross": {
@@ -704,8 +704,8 @@
       "decision_bias": "LONG",
       "conflict": false,
       "bias_strength": 0.3333333333333333,
-      "signal_id": "9f6199277d130ea0764effeb9de1c3d9ff05f7094450cfca4dadee5f64a2bfa1",
-      "valid_until_utc": "2026-10-11T20:00:00.000Z",
+      "signal_id": "cf9253d659e1c408d49512d1df9577507c9bdec76bc3082f0925fa4571c52c99",
+      "valid_until_utc": "2026-10-12T00:00:00.000Z",
       "source_url": "https://data-api.binance.vision/api/v3/klines",
       "spot_derived_futures_bias": true
     },
@@ -718,20 +718,20 @@
       "futures_symbol": null,
       "mapping_status": "REQUIRES_CONSUMER_VALIDATION",
       "stablecoin_pair": false,
-      "source_candle_close_utc": "2026-10-11T15:59:59.999Z",
-      "source_close": 0.001946,
+      "source_candle_close_utc": "2026-10-11T19:59:59.999Z",
+      "source_close": 0.00196,
       "candles": 1000,
-      "sma50": 0.00227186,
-      "sma200": 0.002336615,
-      "ema50": 0.002239278733630135,
-      "ema200": 0.0024245665483545818,
-      "rsi14": 26.7186044912999,
+      "sma50": 0.00226478,
+      "sma200": 0.002331115,
+      "ema50": 0.002228326626428953,
+      "ema200": 0.0024199445950880824,
+      "rsi14": 28.676898207197112,
       "previous": {
-        "close": 0.002007,
-        "sma50": 0.0022791400000000002,
-        "sma200": 0.002342135,
-        "ema50": 0.0022512492941864667,
-        "ema200": 0.0024293762624083967
+        "close": 0.001946,
+        "sma50": 0.00227186,
+        "sma200": 0.002336615,
+        "ema50": 0.002239278733630135,
+        "ema200": 0.002424567153832686
       },
       "long_conditions": {
         "sma_cross": {
@@ -767,8 +767,71 @@
       "decision_bias": "LONG",
       "conflict": false,
       "bias_strength": 0.3333333333333333,
-      "signal_id": "d436d7af873e9720c06aa3c49d38078d46286d29db832b6e9184a997513960ac",
-      "valid_until_utc": "2026-10-11T20:00:00.000Z",
+      "signal_id": "23df7bc8ea4fe16edd2c80e9f09d0f72b0127c3548da4bacf93bea6a2d5dde10",
+      "valid_until_utc": "2026-10-12T00:00:00.000Z",
+      "source_url": "https://data-api.binance.vision/api/v3/klines",
+      "spot_derived_futures_bias": true
+    },
+    {
+      "source_market": "SPOT",
+      "source_symbol": "SOPHUSDT",
+      "source_quote_asset": "USDT",
+      "base_asset": "SOPH",
+      "execution_market": "FUTURES",
+      "futures_symbol": null,
+      "mapping_status": "REQUIRES_CONSUMER_VALIDATION",
+      "stablecoin_pair": false,
+      "source_candle_close_utc": "2026-10-11T19:59:59.999Z",
+      "source_close": 0.00355,
+      "candles": 1000,
+      "sma50": 0.0036975999999999997,
+      "sma200": 0.00397795,
+      "ema50": 0.003670680141783413,
+      "ema200": 0.0038697413176401185,
+      "rsi14": 39.954537931474256,
+      "previous": {
+        "close": 0.00362,
+        "sma50": 0.003701,
+        "sma200": 0.0040055,
+        "ema50": 0.0036756058618562055,
+        "ema200": 0.0038729547982194164
+      },
+      "long_conditions": {
+        "sma_cross": {
+          "met": false,
+          "points": 0
+        },
+        "ema_cross": {
+          "met": false,
+          "points": 0
+        },
+        "rsi_below40": {
+          "met": true,
+          "points": 25
+        }
+      },
+      "short_conditions": {
+        "sma_cross": {
+          "met": false,
+          "points": 0
+        },
+        "ema_cross": {
+          "met": false,
+          "points": 0
+        },
+        "rsi_above80": {
+          "met": false,
+          "points": 0
+        }
+      },
+      "long_score": 25,
+      "short_score": 0,
+      "direction": "LONG_BIAS",
+      "decision_bias": "LONG",
+      "conflict": false,
+      "bias_strength": 0.3333333333333333,
+      "signal_id": "328f32de1e9009100f4e379ece5926482849dcd94655c7a6ca63a2d9b429ef75",
+      "valid_until_utc": "2026-10-12T00:00:00.000Z",
       "source_url": "https://data-api.binance.vision/api/v3/klines",
       "spot_derived_futures_bias": true
     },
@@ -781,20 +844,20 @@
       "futures_symbol": null,
       "mapping_status": "REQUIRES_CONSUMER_VALIDATION",
       "stablecoin_pair": false,
-      "source_candle_close_utc": "2026-10-11T15:59:59.999Z",
+      "source_candle_close_utc": "2026-10-11T19:59:59.999Z",
       "source_close": 0.3306,
       "candles": 1000,
-      "sma50": 0.334066,
-      "sma200": 0.3372285,
-      "ema50": 0.33341902164063825,
-      "ema200": 0.33564741336530496,
+      "sma50": 0.333948,
+      "sma200": 0.33718850000000006,
+      "ema50": 0.33330847177237793,
+      "ema200": 0.33559723405494507,
       "rsi14": 35.16460315928346,
       "previous": {
         "close": 0.3306,
-        "sma50": 0.33415999999999996,
-        "sma200": 0.33726550000000005,
-        "ema50": 0.3335340837484194,
-        "ema200": 0.3356981411378206
+        "sma50": 0.334066,
+        "sma200": 0.3372285,
+        "ema50": 0.33341902164063825,
+        "ema200": 0.33564745751278374
       },
       "long_conditions": {
         "sma_cross": {
@@ -830,8 +893,8 @@
       "decision_bias": "LONG",
       "conflict": false,
       "bias_strength": 0.3333333333333333,
-      "signal_id": "2dc6b29edae841d4a61145440e5959163bb99e450ca9f130b813b373ffb65666",
-      "valid_until_utc": "2026-10-11T20:00:00.000Z",
+      "signal_id": "5b64bf383d92bb16d7c0679f73329b6932a9e2ecfde168ef53cf17b05d718a7c",
+      "valid_until_utc": "2026-10-12T00:00:00.000Z",
       "source_url": "https://data-api.binance.vision/api/v3/klines",
       "spot_derived_futures_bias": true
     },
@@ -844,20 +907,20 @@
       "futures_symbol": null,
       "mapping_status": "REQUIRES_CONSUMER_VALIDATION",
       "stablecoin_pair": false,
-      "source_candle_close_utc": "2026-10-11T15:59:59.999Z",
-      "source_close": 0.5134,
+      "source_candle_close_utc": "2026-10-11T19:59:59.999Z",
+      "source_close": 0.5105,
       "candles": 1000,
-      "sma50": 0.544262,
-      "sma200": 0.560107,
-      "ema50": 0.538228842235551,
-      "ema200": 0.5465855270034043,
-      "rsi14": 36.637653622014575,
+      "sma50": 0.5432,
+      "sma200": 0.5598295,
+      "ema50": 0.5371414366576862,
+      "ema200": 0.5462265155076771,
+      "rsi14": 34.351054874235786,
       "previous": {
-        "close": 0.5133,
-        "sma50": 0.545292,
-        "sma200": 0.5604505000000001,
-        "ema50": 0.5392422643676144,
-        "ema200": 0.5469190498878607
+        "close": 0.5134,
+        "sma50": 0.544262,
+        "sma200": 0.560107,
+        "ema50": 0.538228842235551,
+        "ema200": 0.5465855759650406
       },
       "long_conditions": {
         "sma_cross": {
@@ -893,34 +956,97 @@
       "decision_bias": "LONG",
       "conflict": false,
       "bias_strength": 0.3333333333333333,
-      "signal_id": "8c5719b9401d2332346e4f63a4d9da5f76e312bd74b97728f9c3976eefcac154",
-      "valid_until_utc": "2026-10-11T20:00:00.000Z",
+      "signal_id": "84e8eda73159a01c364ed4aed075a791fe01df22a66032140965ed136ea5f21e",
+      "valid_until_utc": "2026-10-12T00:00:00.000Z",
       "source_url": "https://data-api.binance.vision/api/v3/klines",
       "spot_derived_futures_bias": true
     },
     {
       "source_market": "SPOT",
-      "source_symbol": "1MBABYDOGEUSDT",
+      "source_symbol": "USD1USDT",
       "source_quote_asset": "USDT",
-      "base_asset": "1MBABYDOGE",
+      "base_asset": "USD1",
+      "execution_market": "FUTURES",
+      "futures_symbol": null,
+      "mapping_status": "REQUIRES_CONSUMER_VALIDATION",
+      "stablecoin_pair": true,
+      "source_candle_close_utc": "2026-10-11T19:59:59.999Z",
+      "source_close": 0.99998,
+      "candles": 1000,
+      "sma50": 0.9998138,
+      "sma200": 0.9998109,
+      "ema50": 0.9998499751610429,
+      "ema200": 0.9998072880103434,
+      "rsi14": 54.51090626765902,
+      "previous": {
+        "close": 0.99999,
+        "sma50": 0.999806,
+        "sma200": 0.9998107500000001,
+        "ema50": 0.9998446680247589,
+        "ema200": 0.9998055522114523
+      },
+      "long_conditions": {
+        "sma_cross": {
+          "met": true,
+          "points": 25
+        },
+        "ema_cross": {
+          "met": false,
+          "points": 0
+        },
+        "rsi_below40": {
+          "met": false,
+          "points": 0
+        }
+      },
+      "short_conditions": {
+        "sma_cross": {
+          "met": false,
+          "points": 0
+        },
+        "ema_cross": {
+          "met": false,
+          "points": 0
+        },
+        "rsi_above80": {
+          "met": false,
+          "points": 0
+        }
+      },
+      "long_score": 25,
+      "short_score": 0,
+      "direction": "LONG_BIAS",
+      "decision_bias": "LONG",
+      "conflict": false,
+      "bias_strength": 0.3333333333333333,
+      "signal_id": "3936778ea547caaeaa845cea9361ea6218a59c143d965b66afce0146a3b885a4",
+      "valid_until_utc": "2026-10-12T00:00:00.000Z",
+      "source_url": "https://data-api.binance.vision/api/v3/klines",
+      "spot_derived_futures_bias": true
+    },
+    {
+      "source_market": "SPOT",
+      "source_symbol": "1000CATUSDT",
+      "source_quote_asset": "USDT",
+      "base_asset": "1000CAT",
       "execution_market": "FUTURES",
       "futures_symbol": null,
       "mapping_status": "REQUIRES_CONSUMER_VALIDATION",
       "stablecoin_pair": false,
-      "source_candle_close_utc": "2026-10-11T15:59:59.999Z",
-      "source_close": 0.0003931,
+      "source_candle_close_utc": "2026-10-11T19:59:59.999Z",
+      "source_close": 0.002035,
       "candles": 1000,
-      "sma50": 0.000398166,
-      "sma200": 0.0003981755,
-      "ema50": 0.0003948619529290721,
-      "ema200": 0.0003954518647847905,
-      "rsi14": 54.00250388580706,
+      "sma50": 0.00215108,
+      "sma200": 0.00215354,
+      "ema50": 0.002120575205003096,
+      "ema200": 0.0021255358799993304,
+      "rsi14": 41.2928855984656,
       "previous": {
-        "close": 0.0003857,
-        "sma50": 0.00039842,
-        "sma200": 0.00039824650000000006,
-        "ema50": 0.0003949338693751567,
-        "ema200": 0.00039547550161679845
+        "close": 0.00205,
+        "sma50": 0.0021546399999999998,
+        "sma200": 0.00215399,
+        "ema50": 0.0021240680705134265,
+        "ema200": 0.002126445788341032
       },
       "long_conditions": {
         "sma_cross": {
@@ -956,8 +1082,71 @@
       "decision_bias": "SHORT",
       "conflict": false,
       "bias_strength": 0.3333333333333333,
-      "signal_id": "963137d69a4cb43e469443238db77dafa7b711a5994a15a2687fab211ed9d729",
-      "valid_until_utc": "2026-10-11T20:00:00.000Z",
+      "signal_id": "464faa156f3ac131f92c20991bf9bfc163de69a21220ea1333bbb6dd3ab99114",
+      "valid_until_utc": "2026-10-12T00:00:00.000Z",
+      "source_url": "https://data-api.binance.vision/api/v3/klines",
+      "spot_derived_futures_bias": true
+    },
+    {
+      "source_market": "SPOT",
+      "source_symbol": "ETHUSDT",
+      "source_quote_asset": "USDT",
+      "base_asset": "ETH",
+      "execution_market": "FUTURES",
+      "futures_symbol": null,
+      "mapping_status": "REQUIRES_CONSUMER_VALIDATION",
+      "stablecoin_pair": false,
+      "source_candle_close_utc": "2026-10-11T19:59:59.999Z",
+      "source_close": 2536.64,
+      "candles": 1000,
+      "sma50": 2597.8906,
+      "sma200": 2600.8765,
+      "ema50": 2571.7688268200486,
+      "ema200": 2568.7286833657913,
+      "rsi14": 50.726721662081836,
+      "previous": {
+        "close": 2535.73,
+        "sma50": 2600.8488,
+        "sma200": 2600.5670999999998,
+        "ema50": 2573.202656486173,
+        "ema200": 2569.0511826961006
+      },
+      "long_conditions": {
+        "sma_cross": {
+          "met": false,
+          "points": 0
+        },
+        "ema_cross": {
+          "met": false,
+          "points": 0
+        },
+        "rsi_below40": {
+          "met": false,
+          "points": 0
+        }
+      },
+      "short_conditions": {
+        "sma_cross": {
+          "met": true,
+          "points": 25
+        },
+        "ema_cross": {
+          "met": false,
+          "points": 0
+        },
+        "rsi_above80": {
+          "met": false,
+          "points": 0
+        }
+      },
+      "long_score": 0,
+      "short_score": 25,
+      "direction": "SHORT_BIAS",
+      "decision_bias": "SHORT",
+      "conflict": false,
+      "bias_strength": 0.3333333333333333,
+      "signal_id": "16ea6b95d72268e4b0521b76cfec096b6eedc8b4bbd872dded887386a36fcaa0",
+      "valid_until_utc": "2026-10-12T00:00:00.000Z",
       "source_url": "https://data-api.binance.vision/api/v3/klines",
       "spot_derived_futures_bias": true
     },
@@ -970,20 +1159,20 @@
       "futures_symbol": null,
       "mapping_status": "REQUIRES_CONSUMER_VALIDATION",
       "stablecoin_pair": false,
-      "source_candle_close_utc": "2026-10-11T15:59:59.999Z",
-      "source_close": 209.49,
-      "candles": 619,
-      "sma50": 196.6032,
-      "sma200": 183.98555,
-      "ema50": 199.1590549969513,
-      "ema200": 187.23480810020044,
-      "rsi14": 85.12573234702901,
+      "source_candle_close_utc": "2026-10-11T19:59:59.999Z",
+      "source_close": 210.37,
+      "candles": 620,
+      "sma50": 197.02880000000002,
+      "sma200": 184.16514999999998,
+      "ema50": 199.59869989903166,
+      "ema200": 187.4650090146263,
+      "rsi14": 86.52474989293196,
       "previous": {
-        "close": 209.34,
-        "sma50": 196.19400000000002,
-        "sma200": 183.80470000000003,
-        "ema50": 198.73738377233707,
-        "ema200": 187.0111378298507
+        "close": 209.49,
+        "sma50": 196.6032,
+        "sma200": 183.98555,
+        "ema50": 199.1590549969513,
+        "ema200": 187.23480810020044
       },
       "long_conditions": {
         "sma_cross": {
@@ -1019,8 +1208,8 @@
       "decision_bias": "SHORT",
       "conflict": false,
       "bias_strength": 0.3333333333333333,
-      "signal_id": "bd91325290f8f891ae85dc7abc0b945c88c2de5b89f4307c6f81a9d1099dc62f",
-      "valid_until_utc": "2026-10-11T20:00:00.000Z",
+      "signal_id": "571ea2dd8193ad92c94a06cb27142afcd78aaa91f3d62790699eae940f18f59c",
+      "valid_until_utc": "2026-10-12T00:00:00.000Z",
       "source_url": "https://data-api.binance.vision/api/v3/klines",
       "spot_derived_futures_bias": true
     },
@@ -1033,20 +1222,20 @@
       "futures_symbol": null,
       "mapping_status": "REQUIRES_CONSUMER_VALIDATION",
       "stablecoin_pair": false,
-      "source_candle_close_utc": "2026-10-11T15:59:59.999Z",
-      "source_close": 0.11933,
+      "source_candle_close_utc": "2026-10-11T19:59:59.999Z",
+      "source_close": 0.12002,
       "candles": 1000,
-      "sma50": 0.06388200000000001,
-      "sma200": 0.0436294,
-      "ema50": 0.06898300213842747,
-      "ema200": 0.04798655900481981,
-      "rsi14": 88.27070636177068,
+      "sma50": 0.0654014,
+      "sma200": 0.044075949999999996,
+      "ema50": 0.07098445303495972,
+      "ema200": 0.048703325100919154,
+      "rsi14": 88.42718301370095,
       "previous": {
-        "close": 0.11317,
-        "sma50": 0.06235,
-        "sma200": 0.04318785,
-        "ema50": 0.06692802263387349,
-        "ema200": 0.04726953949733056
+        "close": 0.11933,
+        "sma50": 0.06388200000000001,
+        "sma200": 0.0436294,
+        "ema50": 0.06898300213842747,
+        "ema200": 0.04798657459942085
       },
       "long_conditions": {
         "sma_cross": {
@@ -1082,8 +1271,8 @@
       "decision_bias": "SHORT",
       "conflict": false,
       "bias_strength": 0.3333333333333333,
-      "signal_id": "a8ce5acb2054123356cc41415cee0d0e5eae21c5b0005798f85d4938d95c79e5",
-      "valid_until_utc": "2026-10-11T20:00:00.000Z",
+      "signal_id": "9862412d25db3876d53ac84b3f65fdb9d2045649337562d4a700fbe5cb75ef3e",
+      "valid_until_utc": "2026-10-12T00:00:00.000Z",
       "source_url": "https://data-api.binance.vision/api/v3/klines",
       "spot_derived_futures_bias": true
     },
@@ -1096,20 +1285,20 @@
       "futures_symbol": null,
       "mapping_status": "REQUIRES_CONSUMER_VALIDATION",
       "stablecoin_pair": false,
-      "source_candle_close_utc": "2026-10-11T15:59:59.999Z",
-      "source_close": 0.05519,
+      "source_candle_close_utc": "2026-10-11T19:59:59.999Z",
+      "source_close": 0.0652,
       "candles": 1000,
-      "sma50": 0.0425154,
-      "sma200": 0.036311300000000005,
-      "ema50": 0.043009621876325586,
-      "ema200": 0.037591632941934475,
-      "rsi14": 80.75392069053042,
+      "sma50": 0.043055399999999994,
+      "sma200": 0.03648635,
+      "ema50": 0.04387983278313635,
+      "ema200": 0.03786635458896113,
+      "rsi14": 87.80731669247405,
       "previous": {
-        "close": 0.0482,
-        "sma50": 0.0421694,
-        "sma200": 0.03618435,
-        "ema50": 0.04251246358556336,
-        "ema200": 0.03741476493130065
+        "close": 0.05519,
+        "sma50": 0.0425154,
+        "sma200": 0.036311300000000005,
+        "ema50": 0.043009621876325586,
+        "ema200": 0.03759164458483008
       },
       "long_conditions": {
         "sma_cross": {
@@ -1145,8 +1334,197 @@
       "decision_bias": "SHORT",
       "conflict": false,
       "bias_strength": 0.3333333333333333,
-      "signal_id": "affdbb9d3cad43c418390c84a4d7c4c18550fbd081993db763ff3ae220e3da7d",
-      "valid_until_utc": "2026-10-11T20:00:00.000Z",
+      "signal_id": "2574be8465dfb5d3bbf1e309537145d8e87517250454efa39ead189e5bd87b7a",
+      "valid_until_utc": "2026-10-12T00:00:00.000Z",
+      "source_url": "https://data-api.binance.vision/api/v3/klines",
+      "spot_derived_futures_bias": true
+    },
+    {
+      "source_market": "SPOT",
+      "source_symbol": "WBETHUSDT",
+      "source_quote_asset": "USDT",
+      "base_asset": "WBETH",
+      "execution_market": "FUTURES",
+      "futures_symbol": null,
+      "mapping_status": "REQUIRES_CONSUMER_VALIDATION",
+      "stablecoin_pair": false,
+      "source_candle_close_utc": "2026-10-11T19:59:59.999Z",
+      "source_close": 2809.61,
+      "candles": 1000,
+      "sma50": 2875.8421999999996,
+      "sma200": 2876.93875,
+      "ema50": 2847.1643606380703,
+      "ema200": 2841.5994957608445,
+      "rsi14": 50.99116172387866,
+      "previous": {
+        "close": 2809.79,
+        "sma50": 2879.0934,
+        "sma200": 2876.56145,
+        "ema50": 2848.6971916845223,
+        "ema200": 2841.920998230803
+      },
+      "long_conditions": {
+        "sma_cross": {
+          "met": false,
+          "points": 0
+        },
+        "ema_cross": {
+          "met": false,
+          "points": 0
+        },
+        "rsi_below40": {
+          "met": false,
+          "points": 0
+        }
+      },
+      "short_conditions": {
+        "sma_cross": {
+          "met": true,
+          "points": 25
+        },
+        "ema_cross": {
+          "met": false,
+          "points": 0
+        },
+        "rsi_above80": {
+          "met": false,
+          "points": 0
+        }
+      },
+      "long_score": 0,
+      "short_score": 25,
+      "direction": "SHORT_BIAS",
+      "decision_bias": "SHORT",
+      "conflict": false,
+      "bias_strength": 0.3333333333333333,
+      "signal_id": "e321378c313b2572b685566423ace417a22d92944184e9ee6f58d58ad017680a",
+      "valid_until_utc": "2026-10-12T00:00:00.000Z",
+      "source_url": "https://data-api.binance.vision/api/v3/klines",
+      "spot_derived_futures_bias": true
+    },
+    {
+      "source_market": "SPOT",
+      "source_symbol": "WUSDT",
+      "source_quote_asset": "USDT",
+      "base_asset": "W",
+      "execution_market": "FUTURES",
+      "futures_symbol": null,
+      "mapping_status": "REQUIRES_CONSUMER_VALIDATION",
+      "stablecoin_pair": false,
+      "source_candle_close_utc": "2026-10-11T19:59:59.999Z",
+      "source_close": 0.02291,
+      "candles": 1000,
+      "sma50": 0.0157108,
+      "sma200": 0.0125438,
+      "ema50": 0.016117587814851106,
+      "ema200": 0.013250887960860836,
+      "rsi14": 81.52028159548422,
+      "previous": {
+        "close": 0.0178,
+        "sma50": 0.0155254,
+        "sma200": 0.0124807,
+        "ema50": 0.01584034650117156,
+        "ema200": 0.013153811457954915
+      },
+      "long_conditions": {
+        "sma_cross": {
+          "met": false,
+          "points": 0
+        },
+        "ema_cross": {
+          "met": false,
+          "points": 0
+        },
+        "rsi_below40": {
+          "met": false,
+          "points": 0
+        }
+      },
+      "short_conditions": {
+        "sma_cross": {
+          "met": false,
+          "points": 0
+        },
+        "ema_cross": {
+          "met": false,
+          "points": 0
+        },
+        "rsi_above80": {
+          "met": true,
+          "points": 25
+        }
+      },
+      "long_score": 0,
+      "short_score": 25,
+      "direction": "SHORT_BIAS",
+      "decision_bias": "SHORT",
+      "conflict": false,
+      "bias_strength": 0.3333333333333333,
+      "signal_id": "7f1b1d4db93daba4925f240581ee007b4b913ca9ae684aea6462b255decb33a3",
+      "valid_until_utc": "2026-10-12T00:00:00.000Z",
+      "source_url": "https://data-api.binance.vision/api/v3/klines",
+      "spot_derived_futures_bias": true
+    },
+    {
+      "source_market": "SPOT",
+      "source_symbol": "XVSUSDT",
+      "source_quote_asset": "USDT",
+      "base_asset": "XVS",
+      "execution_market": "FUTURES",
+      "futures_symbol": null,
+      "mapping_status": "REQUIRES_CONSUMER_VALIDATION",
+      "stablecoin_pair": false,
+      "source_candle_close_utc": "2026-10-11T19:59:59.999Z",
+      "source_close": 3.187,
+      "candles": 1000,
+      "sma50": 3.2377800000000003,
+      "sma200": 3.2406900000000003,
+      "ema50": 3.212394280682277,
+      "ema200": 3.2336128050713033,
+      "rsi14": 54.328140202286406,
+      "previous": {
+        "close": 3.191,
+        "sma50": 3.24232,
+        "sma200": 3.2413049999999997,
+        "ema50": 3.213430781934615,
+        "ema200": 3.23408127547403
+      },
+      "long_conditions": {
+        "sma_cross": {
+          "met": false,
+          "points": 0
+        },
+        "ema_cross": {
+          "met": false,
+          "points": 0
+        },
+        "rsi_below40": {
+          "met": false,
+          "points": 0
+        }
+      },
+      "short_conditions": {
+        "sma_cross": {
+          "met": true,
+          "points": 25
+        },
+        "ema_cross": {
+          "met": false,
+          "points": 0
+        },
+        "rsi_above80": {
+          "met": false,
+          "points": 0
+        }
+      },
+      "long_score": 0,
+      "short_score": 25,
+      "direction": "SHORT_BIAS",
+      "decision_bias": "SHORT",
+      "conflict": false,
+      "bias_strength": 0.3333333333333333,
+      "signal_id": "1e0dec01bc811e52bd85b3a4b84e4db441aec510a26136833e60695d9d2c8eac",
+      "valid_until_utc": "2026-10-12T00:00:00.000Z",
       "source_url": "https://data-api.binance.vision/api/v3/klines",
       "spot_derived_futures_bias": true
     }
@@ -1155,382 +1533,382 @@
     {
       "status": "INSUFFICIENT_HISTORY",
       "symbol": "AAOIBUSDT",
-      "candles": 529
+      "candles": 530
     },
     {
       "status": "INSUFFICIENT_HISTORY",
       "symbol": "AAPLBUSDT",
-      "candles": 445
+      "candles": 446
     },
     {
       "status": "INSUFFICIENT_HISTORY",
       "symbol": "ADBEBUSDT",
-      "candles": 67
+      "candles": 68
     },
     {
       "status": "INSUFFICIENT_HISTORY",
       "symbol": "AEROUSDT",
-      "candles": 516
+      "candles": 517
     },
     {
       "status": "INSUFFICIENT_HISTORY",
       "symbol": "AGPUBUSDT",
-      "candles": 109
+      "candles": 110
     },
     {
       "status": "INSUFFICIENT_HISTORY",
       "symbol": "ALABBUSDT",
-      "candles": 403
+      "candles": 404
     },
     {
       "status": "INSUFFICIENT_HISTORY",
       "symbol": "AMATBUSDT",
-      "candles": 445
+      "candles": 446
     },
     {
       "status": "INSUFFICIENT_HISTORY",
       "symbol": "AMCBUSDT",
-      "candles": 109
+      "candles": 110
     },
     {
       "status": "INSUFFICIENT_HISTORY",
       "symbol": "AMZNBUSDT",
-      "candles": 445
+      "candles": 446
     },
     {
       "status": "INSUFFICIENT_HISTORY",
       "symbol": "ARMBUSDT",
-      "candles": 529
+      "candles": 530
     },
     {
       "status": "INSUFFICIENT_HISTORY",
       "symbol": "ASMLBUSDT",
-      "candles": 403
+      "candles": 404
     },
     {
       "status": "INSUFFICIENT_HISTORY",
       "symbol": "ASTSBUSDT",
-      "candles": 403
+      "candles": 404
     },
     {
       "status": "INSUFFICIENT_HISTORY",
       "symbol": "AVGOBUSDT",
-      "candles": 529
+      "candles": 530
     },
     {
       "status": "INSUFFICIENT_HISTORY",
       "symbol": "AXTIBUSDT",
-      "candles": 487
+      "candles": 488
     },
     {
       "status": "INSUFFICIENT_HISTORY",
       "symbol": "BABABUSDT",
-      "candles": 529
+      "candles": 530
     },
     {
       "status": "INSUFFICIENT_HISTORY",
       "symbol": "BEBUSDT",
-      "candles": 445
+      "candles": 446
     },
     {
       "status": "INSUFFICIENT_HISTORY",
       "symbol": "BMNRBUSDT",
-      "candles": 403
+      "candles": 404
     },
     {
       "status": "INSUFFICIENT_HISTORY",
       "symbol": "BNCBUSDT",
-      "candles": 163
+      "candles": 164
     },
     {
       "status": "INSUFFICIENT_HISTORY",
       "symbol": "CBRSBUSDT",
-      "candles": 577
+      "candles": 578
     },
     {
       "status": "INSUFFICIENT_HISTORY",
       "symbol": "COHRBUSDT",
-      "candles": 403
+      "candles": 404
     },
     {
       "status": "INSUFFICIENT_HISTORY",
       "symbol": "COINBUSDT",
-      "candles": 577
+      "candles": 578
     },
     {
       "status": "INSUFFICIENT_HISTORY",
       "symbol": "CRDOBUSDT",
-      "candles": 403
+      "candles": 404
     },
     {
       "status": "INSUFFICIENT_HISTORY",
       "symbol": "CRMBUSDT",
-      "candles": 193
+      "candles": 194
     },
     {
       "status": "INSUFFICIENT_HISTORY",
       "symbol": "CRWDBUSDT",
-      "candles": 235
+      "candles": 236
     },
     {
       "status": "INSUFFICIENT_HISTORY",
       "symbol": "CRWVBUSDT",
-      "candles": 487
+      "candles": 488
     },
     {
       "status": "INSUFFICIENT_HISTORY",
       "symbol": "CYPHBUSDT",
-      "candles": 109
+      "candles": 110
     },
     {
       "status": "INSUFFICIENT_HISTORY",
       "symbol": "DELLBUSDT",
-      "candles": 445
+      "candles": 446
     },
     {
       "status": "INSUFFICIENT_HISTORY",
       "symbol": "DJTBUSDT",
-      "candles": 277
+      "candles": 278
     },
     {
       "status": "INSUFFICIENT_HISTORY",
       "symbol": "DRAMBUSDT",
-      "candles": 577
+      "candles": 578
     },
     {
       "status": "INSUFFICIENT_HISTORY",
       "symbol": "FLNCBUSDT",
-      "candles": 445
+      "candles": 446
     },
     {
       "status": "INSUFFICIENT_HISTORY",
       "symbol": "FWDIBUSDT",
-      "candles": 67
+      "candles": 68
     },
     {
       "status": "INSUFFICIENT_HISTORY",
       "symbol": "GLWBUSDT",
-      "candles": 577
+      "candles": 578
     },
     {
       "status": "INSUFFICIENT_HISTORY",
       "symbol": "GMEBUSDT",
-      "candles": 361
+      "candles": 362
     },
     {
       "status": "INSUFFICIENT_HISTORY",
       "symbol": "GOOGLBUSDT",
-      "candles": 577
+      "candles": 578
     },
     {
       "status": "INSUFFICIENT_HISTORY",
       "symbol": "GPROBUSDT",
-      "candles": 151
+      "candles": 152
     },
     {
       "status": "INSUFFICIENT_HISTORY",
       "symbol": "GSBUSDT",
-      "candles": 445
+      "candles": 446
     },
     {
       "status": "INSUFFICIENT_HISTORY",
       "symbol": "HIMSBUSDT",
-      "candles": 193
+      "candles": 194
     },
     {
       "status": "INSUFFICIENT_HISTORY",
       "symbol": "HOODBUSDT",
-      "candles": 529
+      "candles": 530
     },
     {
       "status": "INSUFFICIENT_HISTORY",
       "symbol": "HPEBUSDT",
-      "candles": 67
+      "candles": 68
     },
     {
       "status": "INSUFFICIENT_HISTORY",
       "symbol": "HYPEUSDT",
-      "candles": 104
+      "candles": 105
     },
     {
       "status": "INSUFFICIENT_HISTORY",
       "symbol": "IBMBUSDT",
-      "candles": 529
+      "candles": 530
     },
     {
       "status": "INSUFFICIENT_HISTORY",
       "symbol": "INTWBUSDT",
-      "candles": 487
+      "candles": 488
     },
     {
       "status": "INSUFFICIENT_HISTORY",
       "symbol": "IRENBUSDT",
-      "candles": 403
+      "candles": 404
     },
     {
       "status": "INSUFFICIENT_HISTORY",
       "symbol": "JPMBUSDT",
-      "candles": 25
+      "candles": 26
     },
     {
       "status": "INSUFFICIENT_HISTORY",
       "symbol": "KORUBUSDT",
-      "candles": 487
+      "candles": 488
     },
     {
       "status": "INSUFFICIENT_HISTORY",
       "symbol": "LLYBUSDT",
-      "candles": 25
+      "candles": 26
     },
     {
       "status": "INSUFFICIENT_HISTORY",
       "symbol": "MARSCOINUSDT",
-      "candles": 223
+      "candles": 224
     },
     {
       "status": "INSUFFICIENT_HISTORY",
       "symbol": "MRNABUSDT",
-      "candles": 235
+      "candles": 236
     },
     {
       "status": "INSUFFICIENT_HISTORY",
       "symbol": "MRVLBUSDT",
-      "candles": 529
+      "candles": 530
     },
     {
       "status": "INSUFFICIENT_HISTORY",
       "symbol": "MUUBUSDT",
-      "candles": 487
+      "candles": 488
     },
     {
       "status": "INSUFFICIENT_HISTORY",
       "symbol": "MVLLBUSDT",
-      "candles": 487
+      "candles": 488
     },
     {
       "status": "INSUFFICIENT_HISTORY",
       "symbol": "NBISBUSDT",
-      "candles": 577
+      "candles": 578
     },
     {
       "status": "INSUFFICIENT_HISTORY",
       "symbol": "NFLXBUSDT",
-      "candles": 403
+      "candles": 404
     },
     {
       "status": "INSUFFICIENT_HISTORY",
       "symbol": "NOKBUSDT",
-      "candles": 529
+      "candles": 530
     },
     {
       "status": "INSUFFICIENT_HISTORY",
       "symbol": "ORCLBUSDT",
-      "candles": 487
+      "candles": 488
     },
     {
       "status": "INSUFFICIENT_HISTORY",
       "symbol": "PDDBUSDT",
-      "candles": 67
+      "candles": 68
     },
     {
       "status": "INSUFFICIENT_HISTORY",
       "symbol": "PYPLBUSDT",
-      "candles": 445
+      "candles": 446
     },
     {
       "status": "INSUFFICIENT_HISTORY",
       "symbol": "QCOMBUSDT",
-      "candles": 577
+      "candles": 578
     },
     {
       "status": "INSUFFICIENT_HISTORY",
       "symbol": "QNTBUSDT",
-      "candles": 487
+      "candles": 488
     },
     {
       "status": "INSUFFICIENT_HISTORY",
       "symbol": "RDDTBUSDT",
-      "candles": 151
+      "candles": 152
     },
     {
       "status": "INSUFFICIENT_HISTORY",
       "symbol": "RKLBBUSDT",
-      "candles": 529
+      "candles": 530
     },
     {
       "status": "INSUFFICIENT_HISTORY",
       "symbol": "SECZBUSDT",
-      "candles": 25
+      "candles": 26
     },
     {
       "status": "INSUFFICIENT_HISTORY",
       "symbol": "SHAZBUSDT",
-      "candles": 67
+      "candles": 68
     },
     {
       "status": "INSUFFICIENT_HISTORY",
       "symbol": "SKHYBUSDT",
-      "candles": 541
+      "candles": 542
     },
     {
       "status": "INSUFFICIENT_HISTORY",
       "symbol": "SMCIBUSDT",
-      "candles": 403
+      "candles": 404
     },
     {
       "status": "INSUFFICIENT_HISTORY",
       "symbol": "SMHBUSDT",
-      "candles": 445
+      "candles": 446
     },
     {
       "status": "INSUFFICIENT_HISTORY",
       "symbol": "SNXXBUSDT",
-      "candles": 487
+      "candles": 488
     },
     {
       "status": "INSUFFICIENT_HISTORY",
       "symbol": "SOXLBUSDT",
-      "candles": 577
+      "candles": 578
     },
     {
       "status": "INSUFFICIENT_HISTORY",
       "symbol": "SOXSBUSDT",
-      "candles": 445
+      "candles": 446
     },
     {
       "status": "INSUFFICIENT_HISTORY",
       "symbol": "SPYBUSDT",
-      "candles": 577
+      "candles": 578
     },
     {
       "status": "INSUFFICIENT_HISTORY",
       "symbol": "SQQQBUSDT",
-      "candles": 235
+      "candles": 236
     },
     {
       "status": "INSUFFICIENT_HISTORY",
       "symbol": "STXBUSDT",
-      "candles": 235
+      "candles": 236
     },
     {
       "status": "INSUFFICIENT_HISTORY",
       "symbol": "TQQQBUSDT",
-      "candles": 487
+      "candles": 488
     },
     {
       "status": "INSUFFICIENT_HISTORY",
       "symbol": "TSMBUSDT",
-      "candles": 529
+      "candles": 530
     },
     {
       "status": "INSUFFICIENT_HISTORY",
       "symbol": "USARBUSDT",
-      "candles": 403
+      "candles": 404
     },
     {
       "status": "INSUFFICIENT_HISTORY",
       "symbol": "USDEBUSDT",
-      "candles": 25
+      "candles": 26
     },
     {
       "symbol": "USDT",
@@ -1539,25 +1917,44 @@
     {
       "status": "INSUFFICIENT_HISTORY",
       "symbol": "WDCBUSDT",
-      "candles": 577
+      "candles": 578
     },
     {
       "status": "INSUFFICIENT_HISTORY",
       "symbol": "WENBUSDT",
-      "candles": 67
+      "candles": 68
     },
     {
       "status": "INSUFFICIENT_HISTORY",
       "symbol": "ZMBUSDT",
-      "candles": 67
+      "candles": 68
     },
     {
       "status": "INSUFFICIENT_HISTORY",
       "symbol": "牛来USDT",
-      "candles": 193
+      "candles": 194
     }
   ],
-  "expired_or_retracted_signal_ids": [],
+  "expired_or_retracted_signal_ids": [
+    "239174937952203076e2fe704b8535b85eb82a94fc5a7920db4897b2fd57d0a8",
+    "2dc6b29edae841d4a61145440e5959163bb99e450ca9f130b813b373ffb65666",
+    "337dce51185752d8f589b820a3975dfdfc557a9cd4806ff138c781c852f502a5",
+    "3d99e18ac29b72da9a4da0377ffacf5cfec34591732c58c3a9e304f13fd8b611",
+    "663b5d51092cfc9b165f6870b4f51bb2612b4f67ecbd2a3d609ce5742a3c59cb",
+    "71c7694ad42d36a7472e5de8d9e53165473d2ea3f972318f3af1fecc65c6c437",
+    "887e92131262b472b5d89db71cae91ef3acff69c066d6686430846f865377172",
+    "8c5719b9401d2332346e4f63a4d9da5f76e312bd74b97728f9c3976eefcac154",
+    "963137d69a4cb43e469443238db77dafa7b711a5994a15a2687fab211ed9d729",
+    "9f6199277d130ea0764effeb9de1c3d9ff05f7094450cfca4dadee5f64a2bfa1",
+    "a8ce5acb2054123356cc41415cee0d0e5eae21c5b0005798f85d4938d95c79e5",
+    "affdbb9d3cad43c418390c84a4d7c4c18550fbd081993db763ff3ae220e3da7d",
+    "b1bc05638ff0c01e6b8564beae076feee20f549214f78e1a4055b19babf5ff7f",
+    "bd91325290f8f891ae85dc7abc0b945c88c2de5b89f4307c6f81a9d1099dc62f",
+    "c0d471e6b231813b7adfc533ebb6228f0c7eae55bd6d9fa8cfca9a96b55e0c74",
+    "d436d7af873e9720c06aa3c49d38078d46286d29db832b6e9184a997513960ac",
+    "e4878c29514aa678f8780127697bc319d8eef0d29ac514fcf8e65ed1eb7778dd",
+    "f598fc0047e5c24a743f3564ab7141970a449a49beb8a434e9338c9038cf680a"
+  ],
   "universe_counts": {
     "active_base_assets": 507,
     "selected_pairs": 506,
@@ -1584,5 +1981,5 @@
   "delivery_status": "DELIVERY_UNCONFIRMED",
   "decision_effect_status": "DECISION_EFFECT_UNCONFIRMED",
   "integration_status": "RULE_UPDATE_REQUIRES_CONSUMER_V3",
-  "scan_id": "165fc8af09d365ee15b917188834df63302abd8ff942ea82e3e1cca0b8c3758b"
+  "scan_id": "cc765de5ba5e3cf06ab912d9d355fc88cb8f991c5233a27c406b2173617c02a3"
 }
