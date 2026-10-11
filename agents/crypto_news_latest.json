@@ -1,7 +1,68 @@
 {
   "schema_version": "SUPERMAN_RESEARCH_STAGE_V1",
-  "agent": "crypto_news",
-  "created_at_utc": null,
-  "status": "EMPTY",
-  "findings": []
+  "agent": "social_crypto_news",
+  "created_at_utc": "2026-10-11T17:43:04Z",
+  "status": "UPDATED",
+  "scan_scope": "PUBLIC_X_AND_PUBLIC_CRYPTO_NEWS_NO_PAID_API",
+  "findings": [
+    {
+      "finding_id": "news-ledger-cryptobilis-hardware-implant-confirmed-20261010",
+      "category": "NEWS",
+      "title": "Ledger confirms unauthorized implant in one reseller-distributed hardware wallet; extent of reported drains remains unverified",
+      "source_urls": [
+        "https://x.com/Ledger_Support/status/2108968264055345381",
+        "https://x.com/Ledger_Support/status/2108551100613714002",
+        "https://www.theblock.co/news/business/2026-10-09-ledger-cryptobilis-fund-losses-418163",
+        "https://news.bitcoin.com/security/ledger-confirms-hidden-hardware-implant-in-affected-users-wallet/"
+      ],
+      "source_timestamp_utc": "2026-10-10",
+      "reliability": "HIGH",
+      "extraordinary_claim_unverified": true,
+      "affected_assets": [
+        "BTC",
+        "ETH",
+        "TRX",
+        "USDT",
+        "BNB",
+        "SOL"
+      ],
+      "horizon": "EVENT_STUDY_1H_24H_72H",
+      "observation": "On Oct 10 Ledger Support confirmed an unauthorized hardware implant in one affected customer's device sold through reseller CryptoBilis; the reseller paused sales. The broader loss estimates ($86m-$94m), affected wallet counts, and causality for every reported drain are not verified by Ledger. Ledger states its own infrastructure and services show no evidence of compromise.",
+      "hypothesis": "A verified supply-chain security event may temporarily alter cross-asset realized volatility, stablecoin transfer behavior and exchange deposits, but provides no reliable standalone directional edge.",
+      "mechanism": "Security concerns may prompt affected users to migrate funds or transfer to exchanges; these effects could change flows and liquidity without predicting price direction.",
+      "exact_features": [
+        "event_time_utc_from_primary_statement",
+        "1h_6h_24h_realized_volatility_bps",
+        "1h_6h_24h_volume_zscore",
+        "spread_bps",
+        "top_of_book_depth_usdt",
+        "exchange_netflow_usdt_asof",
+        "stablecoin_netflow_asof",
+        "btc_eth_trx_returns_bps",
+        "btc_eth_trx_perp_funding_asof",
+        "open_interest_change_pct_asof"
+      ],
+      "exact_rule_or_model_spec": "RESEARCH_ONLY_SECURITY_EVENT_STUDY_V1: freeze event timestamp at first official Ledger Support statement; compute pre-event 24h baseline and post-event 1h/6h/24h windows for BTC/ETH/TRX; compare to matched non-event controls by UTC hour, day-of-week and market-volatility regime; require positive net benefit after fees and slippage and independent confirmation of any hypothesized transfer-flow anomaly; never trade on headline alone.",
+      "required_data": [
+        "Primary official Ledger statements and timestamp",
+        "Point-in-time 1m/5m candles and volume",
+        "As-of funding and OI snapshots",
+        "Exchange L2 spread and depth",
+        "Verified on-chain netflows with entity attribution and non-duplicated wallet movements",
+        "Taker fees and modeled slippage"
+      ],
+      "transaction_cost_implications": "During event shocks, spreads and slippage may widen. Evaluate baseline, 1.5x and 2x execution costs; avoid stale on-chain data or retroactively tagged addresses.",
+      "falsification_criteria": "REJECT if matched-control abnormal return/volatility/flow effects are not statistically or economically significant, if timestamps or wallet attribution are uncertain, or if post-cost future-only shadow results do not improve baseline.",
+      "contradictions": [
+        "Third-party losses and address counts differ and may double count transfers.",
+        "A confirmed implant in one device does not establish a platform-wide Ledger compromise.",
+        "The news may have been priced in before the official confirmation; event-time leakage is material."
+      ],
+      "recommended_action": "TEST",
+      "expected_market_effect": "CONDITIONAL"
+    }
+  ],
+  "social_scout_summary": "No independently verifiable, materially new strategy/algorithm thread beyond the already staged funding-depth hypothesis was found; promotional PnL claims were not promoted.",
+  "news_scout_summary": "One material newly corroborated security finding. Previously reported ETF/liquidation developments, Oct 3 HYPE AQAv2 and Oct 10 XMR KuCoin suspension were deduplicated; conflicting APT unlock calendar estimates were not promoted.",
+  "dedup_basis": "Compared against existing agents/crypto_news_latest.json, agents/exchange_official_latest.json and feed.json; distinct primary-source event key."
 }
