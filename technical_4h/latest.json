@@ -5,9 +5,9 @@
   "scanner_implementation_version": "3.0.0",
   "max_score": 75,
   "minimum_candidate_score": 25,
-  "generated_at_utc": "2026-10-12T17:12:32.921Z",
-  "fresh_scan_timestamp": "2026-10-12T17:12:32.921Z",
-  "as_of_exchange_utc": "2026-10-12T17:06:06.901Z",
+  "generated_at_utc": "2026-10-12T18:05:15.062Z",
+  "fresh_scan_timestamp": "2026-10-12T18:05:15.062Z",
+  "as_of_exchange_utc": "2026-10-12T17:59:29.142Z",
   "evidence_timestamp_utc": "2026-10-12T15:59:59.999Z",
   "valid_until_utc": "2026-10-12T20:00:00.000Z",
   "scan_status": "COMPLETE_WITH_EXCLUSIONS",
@@ -7632,5 +7632,5 @@
   "delivery_status": "DELIVERY_UNCONFIRMED",
   "decision_effect_status": "DECISION_EFFECT_UNCONFIRMED",
   "integration_status": "RULE_UPDATE_REQUIRES_CONSUMER_V3",
-  "scan_id": "2ba998701400f290c9fa3e6e2f05fea4afb5327ce8a9a7085417e65c77f06fdc"
+  "scan_id": "8530301598ff90f4b1d02c58cf805e06668286f3df3368fb68c08c6abdba2e37"
 }
