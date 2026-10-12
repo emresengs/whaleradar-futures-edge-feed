@@ -5,9 +5,9 @@
   "scanner_implementation_version": "3.0.0",
   "max_score": 75,
   "minimum_candidate_score": 25,
-  "generated_at_utc": "2026-10-12T08:22:10.908Z",
-  "fresh_scan_timestamp": "2026-10-12T08:22:10.908Z",
-  "as_of_exchange_utc": "2026-10-12T08:11:12.122Z",
+  "generated_at_utc": "2026-10-12T09:16:42.221Z",
+  "fresh_scan_timestamp": "2026-10-12T09:16:42.221Z",
+  "as_of_exchange_utc": "2026-10-12T09:06:07.277Z",
   "evidence_timestamp_utc": "2026-10-12T07:59:59.999Z",
   "valid_until_utc": "2026-10-12T12:00:00.000Z",
   "scan_status": "COMPLETE_WITH_EXCLUSIONS",
@@ -2565,33 +2565,7 @@
       "candles": 197
     }
   ],
-  "expired_or_retracted_signal_ids": [
-    "00a6620100dc97ff4a3c7dc20c782126fd1ff8b6b171785890033ab13e5622d2",
-    "04d0c8befaadf718c831d55eefdcace06ff870e4d7c180a7b1748a88ef8061cf",
-    "11c62212ad34a8f529fe8a52fd38d89bb20e991f164d685e18d4b9b197aa6368",
-    "1bc46f13ce72703921bf1d942e0277a5f7129e781723ff145f1a87edb7b7f811",
-    "298cc6d7f6a95c6692a3d237eb7f02c58f2905204138e7223447fb5879071024",
-    "35fabd54a5cc0ac784d9fe10d8a50cf85907be63be469263d27db07b687be8ff",
-    "375f7c354eab7490167cded479b3a675a937cdabfc83e3bc9e50dbc4a904521e",
-    "535e378ce8213bb2234a44c72873ab9dcbeb159d07e81a6e859fce5737db3670",
-    "561729a4198faca8fe135c8b3bd577f9926480266a6aaf044989da5e182f43c7",
-    "580ea1b6000ba398ae3adb800772fe1042a9ba7ceecdd49093b4e2c5aa5c27d3",
-    "5e62bd728a924502df7a4255d74720d6e41cdc5896d89ce88449968ef7bd8bee",
-    "5f9418eef54734147c4cd3f55569c0447e3887313b8f50fc8ceb2794b89c36dc",
-    "6167d283df9bf86a83bbae2367b8e92f65af120e7a2dbc79d777adc5b9933801",
-    "61bedf7697f10f6d8affed05e40771aa0983dbaa0b293382cab315daa90b62ef",
-    "6e592f86ac3e4149016b39f8bd171c69ac9e02e45a7b6a4d353dd7257db44f74",
-    "80a94dbfe9d5269029e0ff511fb6e8df4724dbd7acc0833b793c4c89abcbf339",
-    "9b934e0e65bd58a9469e7cd831de55399094521a9efda9f1b046b87b32f15fde",
-    "a459fc6a3b1a216a44c9723d628c07588f5b6e8b5f5c31cd3a746f8cdbe83e83",
-    "b7f3b1bd95350da4b0e73cbd243d7349a4a89e8f75d0c97ae1565356f3c2caa1",
-    "c8d615091a5d574557c7c2ec2ef3a033212b4ba2c2f14ab597cdd20d7976d0c0",
-    "cee1c98cbc43caa77581460f785d9dd7c7a734387c9c116835b5a12b978d7283",
-    "d9f6f5e644a3142bb8225d2a9e7abf0c32a5dde89b22cddeb2129734217f8dc3",
-    "e2688e632cb258882a0a2ef4ea583eb820ea6e85b83caaf06970b16d675f9ece",
-    "e621ff12bae64d06c1d2022a103aafbf2dd7867aba2f0686c1229005edaf3826",
-    "f4124fa12eec35ac1435f77693ca592b0fff0fc8a64d6e09ca605d73f706b3c2"
-  ],
+  "expired_or_retracted_signal_ids": [],
   "universe_counts": {
     "active_base_assets": 507,
     "selected_pairs": 506,
@@ -2618,5 +2592,5 @@
   "delivery_status": "DELIVERY_UNCONFIRMED",
   "decision_effect_status": "DECISION_EFFECT_UNCONFIRMED",
   "integration_status": "RULE_UPDATE_REQUIRES_CONSUMER_V3",
-  "scan_id": "065b0bf3736d6a6842095d19948e7925d2257b69b0f335722c345ad30ee092ba"
+  "scan_id": "084711090b7a673b34ee53d4b0870b7ce92d16d9e7f75b70424a6ff197980901"
 }
