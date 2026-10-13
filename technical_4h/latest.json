@@ -5,12 +5,12 @@
   "scanner_implementation_version": "3.0.0",
   "max_score": 75,
   "minimum_candidate_score": 25,
-  "generated_at_utc": "2026-10-13T22:41:55.148Z",
-  "fresh_scan_timestamp": "2026-10-13T22:41:55.148Z",
-  "as_of_exchange_utc": "2026-10-13T22:39:47.692Z",
+  "generated_at_utc": "2026-10-13T23:06:05.522Z",
+  "fresh_scan_timestamp": "2026-10-13T23:06:05.522Z",
+  "as_of_exchange_utc": "2026-10-13T22:59:05.045Z",
   "evidence_timestamp_utc": "2026-10-13T19:59:59.999Z",
   "valid_until_utc": "2026-10-14T00:00:00.000Z",
-  "scan_status": "COMPLETE_WITH_EXCLUSIONS",
+  "scan_status": "PARTIAL",
   "source_mode": "SPOT",
   "decision_input_allowed": true,
   "shadow_test_required": false,
@@ -1524,132 +1524,6 @@
       "conflict": false,
       "bias_strength": 0.3333333333333333,
       "signal_id": "26c03c82316a0c78d7be2383537b8bc9ea740dba2da339b34ce4957baad1ed06",
-      "valid_until_utc": "2026-10-14T00:00:00.000Z",
-      "source_url": "https://data-api.binance.vision/api/v3/klines",
-      "spot_derived_futures_bias": true
-    },
-    {
-      "source_market": "SPOT",
-      "source_symbol": "BROCCOLI714USDT",
-      "source_quote_asset": "USDT",
-      "base_asset": "BROCCOLI714",
-      "execution_market": "FUTURES",
-      "futures_symbol": null,
-      "mapping_status": "REQUIRES_CONSUMER_VALIDATION",
-      "stablecoin_pair": false,
-      "source_candle_close_utc": "2026-10-13T19:59:59.999Z",
-      "source_close": 0.02154,
-      "candles": 1000,
-      "sma50": 0.0241194,
-      "sma200": 0.023154249999999998,
-      "ema50": 0.02396646267449536,
-      "ema200": 0.023275396127871415,
-      "rsi14": 28.636152535571725,
-      "previous": {
-        "close": 0.02168,
-        "sma50": 0.024231199999999998,
-        "sma200": 0.0231279,
-        "ema50": 0.024065501967331905,
-        "ema200": 0.0232928372949857
-      },
-      "long_conditions": {
-        "sma_cross": {
-          "met": false,
-          "points": 0
-        },
-        "ema_cross": {
-          "met": false,
-          "points": 0
-        },
-        "rsi_below40": {
-          "met": true,
-          "points": 25
-        }
-      },
-      "short_conditions": {
-        "sma_cross": {
-          "met": false,
-          "points": 0
-        },
-        "ema_cross": {
-          "met": false,
-          "points": 0
-        },
-        "rsi_above80": {
-          "met": false,
-          "points": 0
-        }
-      },
-      "long_score": 25,
-      "short_score": 0,
-      "direction": "LONG_BIAS",
-      "decision_bias": "LONG",
-      "conflict": false,
-      "bias_strength": 0.3333333333333333,
-      "signal_id": "cfcaf88e602d5443e2424a73084d801e86471c43059e8515212cfc7c57696411",
-      "valid_until_utc": "2026-10-14T00:00:00.000Z",
-      "source_url": "https://data-api.binance.vision/api/v3/klines",
-      "spot_derived_futures_bias": true
-    },
-    {
-      "source_market": "SPOT",
-      "source_symbol": "BTTCUSDT",
-      "source_quote_asset": "USDT",
-      "base_asset": "BTTC",
-      "execution_market": "FUTURES",
-      "futures_symbol": null,
-      "mapping_status": "REQUIRES_CONSUMER_VALIDATION",
-      "stablecoin_pair": false,
-      "source_candle_close_utc": "2026-10-13T19:59:59.999Z",
-      "source_close": 3.6e-07,
-      "candles": 1000,
-      "sma50": 3.7200000000000005e-07,
-      "sma200": 3.596e-07,
-      "ema50": 3.7284208862883234e-07,
-      "ema200": 3.575386210297226e-07,
-      "rsi14": 29.87820369399519,
-      "previous": {
-        "close": 3.8e-07,
-        "sma50": 3.722e-07,
-        "sma200": 3.5945e-07,
-        "ema50": 3.733662555116418e-07,
-        "ema200": 3.5751388355263434e-07
-      },
-      "long_conditions": {
-        "sma_cross": {
-          "met": false,
-          "points": 0
-        },
-        "ema_cross": {
-          "met": false,
-          "points": 0
-        },
-        "rsi_below40": {
-          "met": true,
-          "points": 25
-        }
-      },
-      "short_conditions": {
-        "sma_cross": {
-          "met": false,
-          "points": 0
-        },
-        "ema_cross": {
-          "met": false,
-          "points": 0
-        },
-        "rsi_above80": {
-          "met": false,
-          "points": 0
-        }
-      },
-      "long_score": 25,
-      "short_score": 0,
-      "direction": "LONG_BIAS",
-      "decision_bias": "LONG",
-      "conflict": false,
-      "bias_strength": 0.3333333333333333,
-      "signal_id": "af172550006619e0b4fdfadc6846403bc6765c6b53adcf3bb2fd433a906dc394",
       "valid_until_utc": "2026-10-14T00:00:00.000Z",
       "source_url": "https://data-api.binance.vision/api/v3/klines",
       "spot_derived_futures_bias": true
@@ -8299,9 +8173,34 @@
       "candles": 176
     },
     {
-      "status": "INSUFFICIENT_HISTORY",
+      "symbol": "BROCCOLI714USDT",
+      "status": "DATA_UNAVAILABLE",
+      "reason": "URLError:<urlopen error timed out>"
+    },
+    {
+      "symbol": "BTCUSDT",
+      "status": "DATA_UNAVAILABLE",
+      "reason": "URLError:<urlopen error timed out>"
+    },
+    {
+      "symbol": "BTTCUSDT",
+      "status": "DATA_UNAVAILABLE",
+      "reason": "URLError:<urlopen error timed out>"
+    },
+    {
+      "symbol": "C98USDT",
+      "status": "DATA_UNAVAILABLE",
+      "reason": "URLError:<urlopen error timed out>"
+    },
+    {
+      "symbol": "CAKEUSDT",
+      "status": "DATA_UNAVAILABLE",
+      "reason": "URLError:<urlopen error timed out>"
+    },
+    {
       "symbol": "CBRSBUSDT",
-      "candles": 590
+      "status": "DATA_UNAVAILABLE",
+      "reason": "URLError:<urlopen error timed out>"
     },
     {
       "status": "INSUFFICIENT_HISTORY",
@@ -8332,6 +8231,11 @@
       "status": "INSUFFICIENT_HISTORY",
       "symbol": "CRWVBUSDT",
       "candles": 500
+    },
+    {
+      "symbol": "CUSDT",
+      "status": "DATA_UNAVAILABLE",
+      "reason": "URLError:<urlopen error timed out>"
     },
     {
       "status": "INSUFFICIENT_HISTORY",
@@ -8618,18 +8522,21 @@
       "candles": 206
     }
   ],
-  "expired_or_retracted_signal_ids": [],
+  "expired_or_retracted_signal_ids": [
+    "af172550006619e0b4fdfadc6846403bc6765c6b53adcf3bb2fd433a906dc394",
+    "cfcaf88e602d5443e2424a73084d801e86471c43059e8515212cfc7c57696411"
+  ],
   "universe_counts": {
     "active_base_assets": 508,
     "selected_pairs": 507,
     "attempted": 507,
-    "calculated": 426,
-    "insufficient_history": 81,
-    "data_errors": 0,
+    "calculated": 420,
+    "insufficient_history": 80,
+    "data_errors": 7,
     "unsupported_quote": 1
   },
   "coverage": {
-    "selected_pairs_calculated_pct": 84.0237,
+    "selected_pairs_calculated_pct": 82.8402,
     "source_market": "SPOT",
     "futures_coverage_verified": false,
     "scope": "ALL_ACTIVE_SPOT_BASES_WITH_AVAILABLE_USD_STABLE_QUOTE"
@@ -8645,5 +8552,5 @@
   "delivery_status": "DELIVERY_UNCONFIRMED",
   "decision_effect_status": "DECISION_EFFECT_UNCONFIRMED",
   "integration_status": "RULE_UPDATE_REQUIRES_CONSUMER_V3",
-  "scan_id": "b8b42b771b8f61c85c2409c721ffc0ce63a6b40bb338415e6dce2362c07fb7c0"
+  "scan_id": "5c44d336a2058a2473bd96226e4634be762b67a8164551b9b6d80fe43630a510"
 }
