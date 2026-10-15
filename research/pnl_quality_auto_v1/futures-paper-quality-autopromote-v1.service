@@ -1,0 +1,16 @@
+[Unit]
+Description=Scientific Paper-only Quality Auto Promotion and Rollback Monitor
+ConditionPathExists=/opt/futures-flow-bot/data/paper_quality_auto_v1/ACTIVATED.json
+After=futures-flow-bot.service
+
+[Service]
+Type=oneshot
+WorkingDirectory=/opt/futures-flow-bot
+ExecStart=/usr/bin/python3 -B /opt/futures-flow-bot/tools/pnl_quality_auto_v1_20261015/pnl_quality_auto_promoter_v1.py
+UMask=0077
+NoNewPrivileges=true
+PrivateTmp=true
+PrivateNetwork=true
+ProtectSystem=strict
+ReadWritePaths=/var/lib/futures-guardian-v1/pnl_quality_shadow_v1 /opt/futures-flow-bot/data/paper_quality_auto_v1
+TimeoutStartSec=45
