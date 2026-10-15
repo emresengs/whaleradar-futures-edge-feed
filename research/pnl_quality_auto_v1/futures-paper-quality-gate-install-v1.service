@@ -1,0 +1,10 @@
+[Unit]
+Description=One-time Superman Paper-only Quality Auto Gate Safe Install
+After=network.target
+
+[Service]
+Type=oneshot
+WorkingDirectory=/opt/futures-flow-bot
+ExecStart=/usr/bin/python3 -B /opt/futures-flow-bot/tools/pnl_quality_auto_v1_20261015/install_paper_quality_gate_v1.py
+TimeoutStartSec=90
+UMask=0077
