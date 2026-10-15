@@ -1,0 +1,127 @@
+name: Superman BTC-Confirmed Daily RSI Advisory
+
+on:
+  schedule:
+    - cron: "15 0 * * *"
+  workflow_dispatch:
+  push:
+    paths:
+      - ".github/workflows/btc_1d_rsi_scan.yml"
+
+permissions:
+  contents: write
+
+concurrency:
+  group: superman-btc-1d-rsi
+  cancel-in-progress: false
+
+jobs:
+  scan:
+    runs-on: ubuntu-latest
+    timeout-minutes: 25
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Verify immutable scanner content
+        shell: bash
+        run: |
+          set -euo pipefail
+          EXPECTED="ac045c768a34c8523f5b7d59d7dd3520bf7df7d56791c1769c94e0affbfcc633"
+          ACTUAL="$(sha256sum technical_1d/scanner_btc_confirm_rsi_v1.py | awk '{print $1}')"
+          echo "DAILY_SCANNER_SHA256=$ACTUAL"
+          test "$ACTUAL" = "$EXPECTED"
+
+      - name: Offline unit tests (BTC first, both directions, no MA/EMA)
+        shell: bash
+        run: |
+          set -euo pipefail
+          python3 -B -m unittest -v technical_1d/test_scanner_btc_confirm_rsi_v1.py
+
+      - name: Generate daily RSI advisory from fully closed 1D candles
+        env:
+          PYTHONUTF8: "1"
+        shell: bash
+        run: |
+          set -euo pipefail
+          if [ -f technical_1d/latest.json ]; then
+            python3 technical_1d/scanner_btc_confirm_rsi_v1.py \
+              --out /tmp/btc_daily_rsi_advisory.json \
+              --previous technical_1d/latest.json
+          else
+            python3 technical_1d/scanner_btc_confirm_rsi_v1.py \
+              --out /tmp/btc_daily_rsi_advisory.json
+          fi
+
+      - name: Verify BTC gate and individual altcoin RSI evidence
+        shell: bash
+        run: |
+          set -euo pipefail
+          python3 - <<'PY'
+          import json
+          from datetime import datetime, timezone
+          from pathlib import Path
+          d=json.loads(Path("/tmp/btc_daily_rsi_advisory.json").read_text())
+          assert d["schema_version"]=="SUPERMAN_BTC_1D_RSI_ADVISORY_V1"
+          assert d["rule_version"]=="1d_btc_confirm_rsi14_40_80_v1"
+          assert d["producer"]=="futures_1d_btc_confirm_rsi_v1"
+          assert d["timeframe"]=="1d"
+          assert d["decision_input_allowed"] is False
+          assert d["execution_command"] is False
+          assert d["shadow_test_required"] is True
+          gate=d["btc_gate"]
+          assert gate["symbol"]=="BTCUSDT" and gate["btc_confirmed_first"] is True
+          side="LONG" if gate["rsi14"]<40 else "SHORT" if gate["rsi14"]>80 else "NEUTRAL"
+          assert gate["side"]==side
+          if side=="NEUTRAL":assert not d["symbol_signals"]
+          for x in d["symbol_signals"]:
+              assert x["base_asset"]!="BTC"
+              assert x["decision_bias"]==side
+              assert x["source_market"]==gate["source_market"]
+              assert x["rsi14"]<40 if side=="LONG" else x["rsi14"]>80
+              assert "sma50" not in x and "ema50" not in x
+          generated=datetime.fromisoformat(d["generated_at_utc"].replace("Z","+00:00"))
+          expiry=datetime.fromisoformat(d["valid_until_utc"].replace("Z","+00:00"))
+          now=datetime.now(timezone.utc)
+          assert generated<=now and (now-generated).total_seconds()<1800
+          assert expiry>now
+          print("BTC_GATE_SIDE="+side)
+          print("BTC_DAILY_RSI="+str(round(gate["rsi14"],4)))
+          print("ALTCOIN_ADVISORIES="+str(len(d["symbol_signals"])))
+          print("DATA_SOURCE_MARKET="+str(d["source_mode"]))
+          PY
+
+      - name: Publish only a newer BTC daily RSI advisory
+        shell: bash
+        run: |
+          set -euo pipefail
+          git config user.name "Superman BTC 1D RSI Scanner"
+          git config user.email "actions@users.noreply.github.com"
+          git pull --rebase origin main
+          mkdir -p technical_1d
+          ACTION="publish"
+          if [ -f technical_1d/latest.json ]; then
+            ACTION="$(python3 - <<'PY'
+          import json
+          from datetime import datetime
+          from pathlib import Path
+          current=json.loads(Path("technical_1d/latest.json").read_text())
+          fresh=json.loads(Path("/tmp/btc_daily_rsi_advisory.json").read_text())
+          parse=lambda s:datetime.fromisoformat(s.replace("Z","+00:00"))
+          print("publish" if parse(fresh["generated_at_utc"])>parse(current["generated_at_utc"]) else "skip")
+          PY
+          )"
+          fi
+          echo "PUBLISH_ACTION=$ACTION"
+          if [ "$ACTION" = "skip" ]; then
+            exit 0
+          fi
+          cp /tmp/btc_daily_rsi_advisory.json technical_1d/latest.json
+          git add technical_1d/latest.json
+          if git diff --cached --quiet; then
+            exit 0
+          fi
+          git commit -m "Publish BTC-confirmed 1D RSI advisory"
+          git push origin HEAD:main
