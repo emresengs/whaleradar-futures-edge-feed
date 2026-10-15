@@ -1,0 +1,11 @@
+[Unit]
+Description=Safely enable Paper Quality Gate only when zero Paper positions
+
+[Timer]
+OnCalendar=*:0/5
+AccuracySec=1min
+Persistent=true
+Unit=futures-paper-quality-gate-install-v1.service
+
+[Install]
+WantedBy=timers.target
