@@ -5,12 +5,12 @@
   "scanner_implementation_version": "3.0.0",
   "max_score": 75,
   "minimum_candidate_score": 25,
-  "generated_at_utc": "2026-10-15T20:09:22.527Z",
-  "fresh_scan_timestamp": "2026-10-15T20:09:22.527Z",
-  "as_of_exchange_utc": "2026-10-15T20:00:55.845Z",
+  "generated_at_utc": "2026-10-15T21:06:58.917Z",
+  "fresh_scan_timestamp": "2026-10-15T21:06:58.917Z",
+  "as_of_exchange_utc": "2026-10-15T20:59:43.097Z",
   "evidence_timestamp_utc": "2026-10-15T19:59:59.999Z",
   "valid_until_utc": "2026-10-16T00:00:00.000Z",
-  "scan_status": "PARTIAL",
+  "scan_status": "COMPLETE_WITH_EXCLUSIONS",
   "source_mode": "SPOT",
   "decision_input_allowed": true,
   "shadow_test_required": false,
@@ -4932,6 +4932,132 @@
     },
     {
       "source_market": "SPOT",
+      "source_symbol": "STEEMUSDT",
+      "source_quote_asset": "USDT",
+      "base_asset": "STEEM",
+      "execution_market": "FUTURES",
+      "futures_symbol": null,
+      "mapping_status": "REQUIRES_CONSUMER_VALIDATION",
+      "stablecoin_pair": false,
+      "source_candle_close_utc": "2026-10-15T19:59:59.999Z",
+      "source_close": 0.05438,
+      "candles": 1000,
+      "sma50": 0.058610800000000005,
+      "sma200": 0.060435749999999996,
+      "ema50": 0.05817455176116776,
+      "ema200": 0.05795099734227028,
+      "rsi14": 36.14788543838115,
+      "previous": {
+        "close": 0.0545,
+        "sma50": 0.058704200000000005,
+        "sma200": 0.060397049999999994,
+        "ema50": 0.05832943142488889,
+        "ema200": 0.057986886762795606
+      },
+      "long_conditions": {
+        "sma_cross": {
+          "met": false,
+          "points": 0
+        },
+        "ema_cross": {
+          "met": false,
+          "points": 0
+        },
+        "rsi_below40": {
+          "met": true,
+          "points": 25
+        }
+      },
+      "short_conditions": {
+        "sma_cross": {
+          "met": false,
+          "points": 0
+        },
+        "ema_cross": {
+          "met": false,
+          "points": 0
+        },
+        "rsi_above80": {
+          "met": false,
+          "points": 0
+        }
+      },
+      "long_score": 25,
+      "short_score": 0,
+      "direction": "LONG_BIAS",
+      "decision_bias": "LONG",
+      "conflict": false,
+      "bias_strength": 0.3333333333333333,
+      "signal_id": "b1d75fe651af4ca421f7f034af1633c5cbe6ad597f13ac1bd4d8c5173821beb2",
+      "valid_until_utc": "2026-10-16T00:00:00.000Z",
+      "source_url": "https://data-api.binance.vision/api/v3/klines",
+      "spot_derived_futures_bias": true
+    },
+    {
+      "source_market": "SPOT",
+      "source_symbol": "STRAXUSDT",
+      "source_quote_asset": "USDT",
+      "base_asset": "STRAX",
+      "execution_market": "FUTURES",
+      "futures_symbol": null,
+      "mapping_status": "REQUIRES_CONSUMER_VALIDATION",
+      "stablecoin_pair": false,
+      "source_candle_close_utc": "2026-10-15T19:59:59.999Z",
+      "source_close": 0.01014,
+      "candles": 1000,
+      "sma50": 0.01068,
+      "sma200": 0.01106355,
+      "ema50": 0.010687180914412918,
+      "ema200": 0.010790093711925998,
+      "rsi14": 39.513806837338485,
+      "previous": {
+        "close": 0.01026,
+        "sma50": 0.010693399999999999,
+        "sma200": 0.011063400000000001,
+        "ema50": 0.010709514829286915,
+        "ema200": 0.010796627317070984
+      },
+      "long_conditions": {
+        "sma_cross": {
+          "met": false,
+          "points": 0
+        },
+        "ema_cross": {
+          "met": false,
+          "points": 0
+        },
+        "rsi_below40": {
+          "met": true,
+          "points": 25
+        }
+      },
+      "short_conditions": {
+        "sma_cross": {
+          "met": false,
+          "points": 0
+        },
+        "ema_cross": {
+          "met": false,
+          "points": 0
+        },
+        "rsi_above80": {
+          "met": false,
+          "points": 0
+        }
+      },
+      "long_score": 25,
+      "short_score": 0,
+      "direction": "LONG_BIAS",
+      "decision_bias": "LONG",
+      "conflict": false,
+      "bias_strength": 0.3333333333333333,
+      "signal_id": "e25db2e5f74f9956687c62686a2a6ad01f784d8b4215176447487c1f4f178a1f",
+      "valid_until_utc": "2026-10-16T00:00:00.000Z",
+      "source_url": "https://data-api.binance.vision/api/v3/klines",
+      "spot_derived_futures_bias": true
+    },
+    {
+      "source_market": "SPOT",
       "source_symbol": "SUNUSDT",
       "source_quote_asset": "USDT",
       "base_asset": "SUN",
@@ -6140,49 +6266,14 @@
       "candles": 470
     },
     {
+      "status": "INSUFFICIENT_HISTORY",
       "symbol": "SQQQBUSDT",
-      "status": "DATA_UNAVAILABLE",
-      "reason": "URLError:<urlopen error Tunnel connection failed: 403 Forbidden>"
+      "candles": 260
     },
     {
-      "symbol": "SSVUSDT",
-      "status": "DATA_UNAVAILABLE",
-      "reason": "URLError:<urlopen error Tunnel connection failed: 403 Forbidden>"
-    },
-    {
-      "symbol": "STEEMUSDT",
-      "status": "DATA_UNAVAILABLE",
-      "reason": "URLError:<urlopen error Tunnel connection failed: 403 Forbidden>"
-    },
-    {
-      "symbol": "STOUSDT",
-      "status": "DATA_UNAVAILABLE",
-      "reason": "URLError:<urlopen error Tunnel connection failed: 403 Forbidden>"
-    },
-    {
-      "symbol": "STRAXUSDT",
-      "status": "DATA_UNAVAILABLE",
-      "reason": "URLError:<urlopen error Tunnel connection failed: 403 Forbidden>"
-    },
-    {
-      "symbol": "STRKUSDT",
-      "status": "DATA_UNAVAILABLE",
-      "reason": "URLError:<urlopen error Tunnel connection failed: 403 Forbidden>"
-    },
-    {
+      "status": "INSUFFICIENT_HISTORY",
       "symbol": "STXBUSDT",
-      "status": "DATA_UNAVAILABLE",
-      "reason": "URLError:<urlopen error Tunnel connection failed: 403 Forbidden>"
-    },
-    {
-      "symbol": "STXUSDT",
-      "status": "DATA_UNAVAILABLE",
-      "reason": "URLError:<urlopen error Tunnel connection failed: 403 Forbidden>"
-    },
-    {
-      "symbol": "SUSHIUSDT",
-      "status": "DATA_UNAVAILABLE",
-      "reason": "URLError:<urlopen error Tunnel connection failed: 403 Forbidden>"
+      "candles": 260
     },
     {
       "status": "INSUFFICIENT_HISTORY",
@@ -6229,150 +6320,18 @@
       "candles": 218
     }
   ],
-  "expired_or_retracted_signal_ids": [
-    "00d4705483cc5caf78f418ab0429445f9063d5d0975d8bfa36a0a80576e65ec0",
-    "035d63deac4b74c492d26db8788f192b3a9c0c0bbc16e96d52f5f0125d0fdc1f",
-    "03f42069d19f1a8ede54dd0973b74410ac7687360f35f8a6de19092992908b2d",
-    "04059e890ef2c32a8242d031eda38b663afd6b83941af64bfd2cad641047aff6",
-    "05456fea232a61df13b8e17526601d40406c0af63589aaa882686e59a60fb76e",
-    "0695d932fa41688ac1ac3aa59029a977271c187e33900421163f19e5fc50fa4c",
-    "0a866718ab8c2cc6e72850eda40d42a73d1d97a76bbd928ac6a5215ff681f59d",
-    "0aa51965ed558ad5e5e89f05ee22c3347d333ccfa717912783c47661897d867f",
-    "0b496eaa94b7b4b8db89a18005a5dbebb24c5ee1fbefb717366af6955ebae803",
-    "0d0529dbf1be0168260f4677ed27a85d157cc9beb87426a4c8a5e8b285dd517a",
-    "116315456fe1b10607380258754e3c8aa2cce6da856bfffe1e98d61825eb6cb9",
-    "118a35847b93173087f5eb89fe71d92f6b8df456853492efc2fab60213524f1d",
-    "11fdeb9b229594bb0495c92ed7c778bbfcc1b25062a9404b71cad3f9ebc2c281",
-    "15c61bc7c3d83d686e9535624ac6045395c8294c5301c17ab5379bf242fa2509",
-    "160a6a2db41c1a6e56ca1aef07beb116436a01c6fb1d1e78c4f759cfb1169096",
-    "1884084f6b1e4dc3b58a373bb30fb51bb38853ee46753bbe0c37349b22bff894",
-    "1932d14c9ee137cbb17b7a31babfe8769853852ade4fec1428d9ee07cb1d6ab0",
-    "1b4bf9c440c3ec138b4c248cbc98916242a54b2f6feb88e3ab7edd6af95e4c59",
-    "1fdf49ed35f823ea440625533bdea06e62a0bca85175ece9ec686f8a6f19b9c3",
-    "2179ef02d4a388fe4b2717ba9ff7825a09754fa5e0c1b7c12c9dabf8bcf5c1e4",
-    "21b8ca31790b19c26695e226599ab79478682e71e8a49721866f26628c55b7b8",
-    "29f3ad066c6b3c99aacd68df12538dd3fa243d5187e21fd7fc47c3f544553c76",
-    "2a022d94ef4660bd91d8c464d34cdaf7f2d6c16e5ee9790f5d591dedad7a18df",
-    "2a3ff279da183a260281e202f967b82b2dc04b67daff56813b6594b1fdba2388",
-    "2e9b716f11efb43b02c4293ccda9d0b9c6ecea0b997b97f2f9442bfd07239647",
-    "2f511c264544564b9b79cc1e970ef2513e0811930f6d6a1f15ad5357585cb797",
-    "328609a44684594ab74f40660bd841c132ceb3cbbf1e6cebcb7fc3d943aa391c",
-    "3413dad325a103c9b0d427918d74f59ec299b2ffb750b2f4d4108c85dcb391c7",
-    "35a56d6736dd664a5e319f727f10677fadb69b4c322508ce707cd3f528f3bc18",
-    "35baa880faee70c06037d894341ae74017e21bf8b4f3bc8cf5479c011cb34b34",
-    "35fcf06386c0ce7e5489c7ee7e1c82f471ff95fc4d114a126b2c60101cc879be",
-    "3759aa34628ae820cf0ffe1eaea5baf6bd7667c92c10df58f246f75c6c706ba4",
-    "3a2719306891cb26fb695100c5ca582a5cc53cae710713109eb3117b19bf4c0f",
-    "3b2d57ca62f540166c786e123bcbb4ed301a4a2e7f0b701a3bdb46969eca68b6",
-    "44eb0b8e148503e161a7a57296943ea54a4f1a2fbd690fe3593d219358f0b5ac",
-    "467920f837fc9d99ade3f699a78f27ac072efee4723713e1a92c628c74edae06",
-    "46e7a033bd7be59a9623a28b121f3dd014810fa2cef1ec7429065751906110d6",
-    "46fdd7f3d741333373bf64a4e45e9ed56fa0e0bcceea0394472948d1d64ca422",
-    "4c4867e6c78d7d2823d158b71c8e143cf63f415a5b929cad418eb42564969c8c",
-    "4d899849da0ee7aa5eb8ae1feaf2af23d74b41a51a37e1dd6885824090107eb3",
-    "4da46e56e533723bea93f0376305a4c3aaf582d61a9db5cf4ca8202b32473b21",
-    "4fb403a92572e006aaf8bedc7b688f4f1c11fd711eab0a6d7690c53eb4bc2d09",
-    "54079f3d4675bea5de0816ac948ecd33c605e6e43d5d48779d3e15665d391fcb",
-    "5af89d83ff95c6b52580488c9c2aa1d76ed41e54cf12a85d9b90c3a72c5379e9",
-    "5bc0b891ae87839e8912ba706e33118e7b60338dd8a98b103e038bda050c28c4",
-    "5cf48d1b8754aad87ebd662b36e1a9e02555dcc57a3595b5e53498be8ef08eee",
-    "5d9aa60d8ba0be91c5a6ebc244ca2f3fbef5e60dd3738383c9b8d6e5bbfa96da",
-    "64f794fbbcea49176b4d445ee64122c70e9ec6d61aecdce1791a57e0345b763c",
-    "6606e166b4fdf9121337a67c9aec4a7151aa0fe7cd79041c217c438013cb6cca",
-    "67b847ecfa0e9ac03316fe5847089017043f9cbc75de333004b7768f7d71eea2",
-    "68014e96975fdbbcdff4a5bd65d1220e7565171d8ff89580e5e37e097262900c",
-    "6ca832880837cf0b7ce755a1c7b712835a65e42f6aa7b8a76302fc3ed8e203be",
-    "6d026e5a9102e33533893a69acf9e0701431fa1bbce60255583883a3ea29ae11",
-    "6ea05e21ae30de9a82cca4e42d6b62795fc4307c47dc780cf5161b4e5512638c",
-    "73b343386c0d74a5201fc7d7bac98a838519dfd7763dbaa652f9606d1e4c371e",
-    "754e2d9a3bde451ea615aa656d8b0f983cf78fbaa2c8dc011e327d67e1e4a64b",
-    "75716bc371416fdc98a1e428916360861facbb17dcbea2d95c88bd3d08d55ac5",
-    "7634889b25c5590f3241d63f3b82e58018707ed59a2b1ed671ad40875b3714b1",
-    "7682c0eaf4af07d38a697a49910d3db52ebe88080dff5587ce062d9d1f3b47ac",
-    "78ae1ddb1177ca12a47bc88c0be58d13325d647e8d2dbec8904e07f0a61095c5",
-    "7b4464708ec41f8e8ba55f24bd10a1b1a12fac0ec852b2aff291ca79c20647da",
-    "7d80775180d50dd558d29a46c487e73c347cdae0907d0cbb9a191d7b8f3903a9",
-    "7e24d855f899bcf7111421ed49aea4b7114d8a743cdabcde164f85f53f086445",
-    "845245f4599cc69cd71aa118e956830237e67a36485f7cecc11507eee7a59d43",
-    "851daf2b14b953dc06cede97b50bb0be1ab6da9867860c680f2db7afeda30890",
-    "857d281e589a90562145ed2cae9c6d6e1b3074112b65bb83aa84e51e973ec98b",
-    "8679de550fbe6c3df0c6cc1462f2e28f61388bbd640e234391f03ae2a3a04045",
-    "870bacdfd52ba3bd8e31d9fb96da14d8f01f28a013a25fa8087cd221d6dda421",
-    "8b06fa048bb2edf208a3d5f593d3d7da7b82b3909bf582ec21f9e0b4af78a4a1",
-    "8fefea887611a033a82fa062e5eee8b397170f932504aab4fc32b3eb9090e816",
-    "8ff6a9a093032c1bdc59c10a23c4f5f533364b6b43146b0482b7ba4197c826cc",
-    "9536d15a22c75a380f5f7e50fe0db0dc0d085d5cd32564cd492bac8b6c29484d",
-    "9541a5fe5b93bd085fc55eb13206708e94f91e6f23376b600bb175dbdd59b363",
-    "98f42629fb30b5a4c9ae4a2d4a2602a480eb26bdf47b754b86c8e6ee8f951372",
-    "99896f959bae6daa3b89874dce5059b487ac418ad45e8e4740803fd3fc5d9f6b",
-    "99d6d6b3c7f594f2c91925e9416ee8d5316c1b032a3f4576aa1e4f5a977e7908",
-    "9a957e7f0ea38eede3f252b2977a23ff6eb06dca388b318f88f758a283b4cc22",
-    "9c4e2486881476143c14af438436fef5490503d355aef46ade1ac6fab0ded824",
-    "9dd568d07f1d1adac38672b667521bbfc3b22ab34c9fd8bb2170782a86cab012",
-    "9f75e48182bade81b8df79e9ce40d9303427b794d00897f40674ba379bb32db4",
-    "9fb69517dfd8b3c0792260fb908e2232293bd98d925961cce5872a3237aec381",
-    "a0b583a5121938e4eaa32fcf67caa8b5b2274bebb1f21485fcec73252f834e3a",
-    "a2dd4e1eff28500d162b529b70b1bbdfcebc9560978a85fbcefa97b93bfe1429",
-    "a5758667c5d0a13f2b545099de16971276bf600332f9304bce3b61a1ba3e31ae",
-    "a60c61a1c666a2eb2cf0f9f0cc0d32cc1e2d6ce95c8bcb179584304ff97fd4be",
-    "a6a4225b1e88b5b25d4528a9bb6b8aba1feec029a770f0537adcb69f9f42ae30",
-    "a6dffe6072deaebeba13d1669e0349409188b598bd1f48008ceb36fcd34545ed",
-    "a905f51d647c0e91bef0ce8b33420ea3bc7fa1cf31ab5f49f969cd9611b9dbb9",
-    "ad68f7b3e7021a411729c2ed34ea484be04c7486acf2903039fca02e323e71c4",
-    "ae74c3aeda8a70739c752c8d66174808992afdc0f7158b2e6fad2e78213c202f",
-    "af387ec97ddefbc94e8c26e691f1342a072fd90b8fe4bfe7bb5548cbc980e1fe",
-    "afccd06876c100ecf84c292c39aa561413a4f8807748eadd21b8f0c027ed4a25",
-    "b20099337928def936ec2d2cd9cbb77ededd541bc1db86d208ae80165b3be303",
-    "b5c6f1ee97ba3c1dbaa50cf6b71d386efbbfffdceab08cd5811cc540e9d186ba",
-    "bb824ab38cad22e2e82ab1bb8c7a60b2fd05624bfdfc79aeb2f6d17d2a95eeb6",
-    "bc57a9166571512b25a1153935b7b11ceb8c21f0f0623446d3cdcf7a5be4507a",
-    "be63e850937709a97190b54c1fb270c74f410887872e53a40e26580db52fb2ec",
-    "bea2cb324b4b0f7a3cf36e2a93c1cc0324d1daf0666b61eef5f3d4468ff2205e",
-    "bea94d632bf54f4f3cbd545030506a528f77740cdb1ea968aee859338ba54440",
-    "c1716dbbbbb5a346a93b152b7146729315c84850b5dd78921170a8ffc41c4f30",
-    "c1a61d89d0e1b4e880c098f8c13e1d6e205ae1c40edff3c20c6f1177c28d41c9",
-    "c5643a2baa7883682f91672b9549a561af844b4f88d40fde6b7c59194b19a8b1",
-    "c56bc1dfa0c737d90c925d00f1a4917dc512df86c7073cf2af42233700c0f7f2",
-    "c7032a53e67671a9984883dd086b9add5d90f9599038bf9878c837bfd9e76437",
-    "c9b2581f8f6c294dfbe0e0c4e60dcaf9f0238588fd229f8f845038b36cc082a4",
-    "cd7d20b3a2da8c4cfa83308df37fcb2783be6db73eec3536a2dd6cec815edc35",
-    "cf5281de9baf0bc8adf4a07c37079555be57b52e14c6c12c7434a1028d38f93a",
-    "d25a1e4b59fbbee17d9c121723eba0387687411b5f9be6fe2807d9779b8ead4b",
-    "d2ce920897a805369ce56064f0dbf9486f5a09fc89f366b88d8db35763febfe9",
-    "d6893514d007538cbe3c7fed6078874ec24a0a9ff048f486f9fddbcf3aac3d5b",
-    "d7dc955d32265e696659433305ce3f75dedadfb1e7adad75f982240eaf16dba6",
-    "d8c81c6518799d817f15fad58cfe10fe765e76fbea648e1cab4037b57858b32d",
-    "da04881474f8344c6fd434fab2f021e32bee35f9f98e3eab6fb2a7e46688e816",
-    "e21a0a5c95836d2ecd0dd18dbdee66722ce87ffc7974ae4f29f697c5665f2149",
-    "e222414194c23b3d3dce2a7dc94a901f1e220829ddaa691b742be5827eb9fd51",
-    "e24e9c249b0a7c453401e8f3fbe95afdd9c10bd91ba5bfb862f238e40e24eaf6",
-    "e33ded6a7c5c37863747716c85d6a2d7fcda73c6c02ecedcdea9eb962f825d58",
-    "e3be3a4518393bc9d42feb21fdc68bbfadf8e282ba6261ec4462040944aa0266",
-    "e4488567a9ef7773cca9f8027246bfc0fb51a3e0a10f764924266fe68802647a",
-    "e7b13ad2b846b84c0eeca309d909fa76a8f4055f1c3a2b9cf12fc378e8c5e0a1",
-    "ea086e006fe05cd1d71ffaae6ec2e2b463421ddf5a47ec0918a22338f6965cee",
-    "ed177ec8a943c14c2b6c2a4d48c21f768eeffaafbdfb0e8a1ccfcdcab3fc17de",
-    "ee43225c9ec7dc1bcd2ead0b8d9dd801768d3253753c9dee2e2639d5bc746842",
-    "ee46d7d52756a7a443d84f1c67258d4602aef0bac9cfabdeed20d203b8af8791",
-    "efc5d0f8d4d23766266ff5c9826551623c8b48d2784c6bf40d866e527d79ad81",
-    "f61bb8809d97bf5ddbc841a982826becc938961df29668391f84e2cc43d7c13f",
-    "f6a2bfa06d7d934d3c40a9ffbb6c366b9131182b5e65ac973cd6e4244ad14ee8",
-    "f7240a7a9daa55702610c4a77691196284e431951e7ca6147f59b4fba865af07",
-    "f74f69379fbd277359db48d8a7b4de9ca6ef9b67e5c940f7f71a508bb271f77c",
-    "faa2239f3f30e0d483f1040db65a7542563ded47b3b982cb0a95a65689f2f02b",
-    "fae179b8d9efe35754e2cbfe7cb6ed24d36a7c580627e711889d04ab0d0be5c5"
-  ],
+  "expired_or_retracted_signal_ids": [],
   "universe_counts": {
     "active_base_assets": 512,
     "selected_pairs": 511,
     "attempted": 511,
-    "calculated": 429,
-    "insufficient_history": 73,
-    "data_errors": 9,
+    "calculated": 436,
+    "insufficient_history": 75,
+    "data_errors": 0,
     "unsupported_quote": 1
   },
   "coverage": {
-    "selected_pairs_calculated_pct": 83.953,
+    "selected_pairs_calculated_pct": 85.3229,
     "source_market": "SPOT",
     "futures_coverage_verified": false,
     "scope": "ALL_ACTIVE_SPOT_BASES_WITH_AVAILABLE_USD_STABLE_QUOTE"
@@ -6388,5 +6347,5 @@
   "delivery_status": "DELIVERY_UNCONFIRMED",
   "decision_effect_status": "DECISION_EFFECT_UNCONFIRMED",
   "integration_status": "RULE_UPDATE_REQUIRES_CONSUMER_V3",
-  "scan_id": "707c89e136bbc501a6cc08d6652a16f86d74b906341bfcb75e7b5c1f9997ea1c"
+  "scan_id": "094f31896da5b12b10287d9707d9d3380aa10170db8fcece00ad562b88c8bc6c"
 }
