@@ -1,0 +1,66 @@
+{
+  "schema_version": "SUPERMAN_BTC_1D_RSI_ADVISORY_V1",
+  "producer": "futures_1d_btc_confirm_rsi_v1",
+  "rule_version": "1d_btc_confirm_rsi14_40_80_v1",
+  "scanner_implementation_version": "1.0.0",
+  "max_score": 25,
+  "minimum_candidate_score": 25,
+  "generated_at_utc": "2026-10-15T06:46:37.847Z",
+  "fresh_scan_timestamp": "2026-10-15T06:46:37.847Z",
+  "as_of_exchange_utc": "2026-10-15T06:46:37.087Z",
+  "evidence_timestamp_utc": "2026-10-14T23:59:59.999Z",
+  "valid_until_utc": "2026-10-16T00:00:00.000Z",
+  "btc_gate": {
+    "status": "NEUTRAL_NO_ALTCOIN_ADVICE",
+    "side": "NEUTRAL",
+    "symbol": "BTCUSDT",
+    "source_market": "SPOT",
+    "rsi14": 46.7961045277822,
+    "candle_close_utc": "2026-10-14T23:59:59.999Z",
+    "long_threshold_exclusive": 40,
+    "short_threshold_exclusive": 80,
+    "btc_confirmed_first": true
+  },
+  "timeframe": "1d",
+  "scan_status": "COMPLETE_WITH_EXCLUSIONS",
+  "source_mode": "SPOT",
+  "decision_input_allowed": false,
+  "shadow_test_required": true,
+  "execution_command": false,
+  "symbol_signals": [],
+  "failures": [
+    {
+      "symbol": "USDT",
+      "status": "UNSUPPORTED_QUOTE"
+    }
+  ],
+  "expired_or_retracted_signal_ids": [],
+  "universe_counts": {
+    "active_base_assets": 512,
+    "selected_pairs": 501,
+    "attempted": 0,
+    "calculated": 0,
+    "insufficient_history": 0,
+    "data_errors": 0,
+    "unsupported_quote": 1
+  },
+  "coverage": {
+    "selected_pairs_calculated_pct": 0.0,
+    "source_market": "SPOT",
+    "futures_coverage_verified": false,
+    "scope": "BTC_CONFIRMED_DAILY_RSI_SPOT_ALTCOINS_WITH_FUTURES_MAPPING_REQUIRED"
+  },
+  "source_urls": [
+    "https://data-api.binance.vision/api/v3/exchangeInfo",
+    "https://data-api.binance.vision/api/v3/time",
+    "https://data-api.binance.vision/api/v3/klines"
+  ],
+  "notes": [
+    "USD-M public data unavailable; authorized spot fallback: HTTPError:HTTP Error 451: ",
+    "BTC gate first; altcoin scanning only if BTC 1D RSI<40 or RSI>80; this is not an order."
+  ],
+  "delivery_status": "DELIVERY_UNCONFIRMED",
+  "decision_effect_status": "DECISION_EFFECT_UNCONFIRMED",
+  "integration_status": "BTC_1D_RSI_ADVISORY_REQUIRES_SEPARATE_CONSUMER_VALIDATION",
+  "scan_id": "a49a5a5e865f37986279389bdefb2462b480e76abba70420a2c7d06bea6531cf"
+}
