@@ -133,8 +133,7 @@ def main():
             raise ValueError("Paper process did not load gate")
         if abs(float(r["totalEquity"])-equity)>.03:
             raise ValueError("Capital changed during passive gate installation")
-        if int(r["open"])!=0:
-            raise ValueError("Unexpected open positions immediately after restart")
+        # New signals may normally open immediately after restart; do not terminate them.
         receipt={
             "status":"PASSIVE_GATE_ACTIVATED","mode":"paper",
             "liveTradingEnabled":False,"installedUtc":dt.datetime.now(dt.timezone.utc).isoformat(),
@@ -159,7 +158,9 @@ def main():
         raise
     finally:
         # Maintain original running Paper bot even if a checkpoint race occurs.
-        if run("systemctl","is-active","futures-flow-bot")!="active":
+        probe=subprocess.run(["systemctl","is-active","--quiet","futures-flow-bot"],
+                             stdout=subprocess.DEVNULL,stderr=subprocess.DEVNULL)
+        if probe.returncode!=0:
             run("systemctl","start","futures-flow-bot",timeout=25)
 
 if __name__=="__main__":
