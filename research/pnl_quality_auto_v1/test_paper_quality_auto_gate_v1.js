@@ -34,7 +34,7 @@ assert.equal(gateDecision(signal('SHORT',now),[],null,now).allow,true);
 const c={...policy,arm:'cooldown'};
 const prior=[{symbol:'STRKUSDT',exitReason:'SL',closedAt:now-10*60*1000}];
 assert.equal(gateDecision(signal('SHORT',now),prior,c,now).allow,false);
-assert.equal(gateDecision(signal('SHORT',now-3600*1000),prior,c,now).allow,true);
+assert.equal(gateDecision(signal('SHORT',now-3600*1000),prior,c,now-3600*1000).allow,true);
 const future=[{symbol:'STRKUSDT',exitReason:'SL',closedAt:now+1000}];
 assert.equal(gateDecision(signal('SHORT',now),future,c,now).allow,true);
 const flow={...policy,arm:'flow_quality'};
