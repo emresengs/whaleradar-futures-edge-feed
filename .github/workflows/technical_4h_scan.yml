@@ -1,12 +1,9 @@
-name: Superman 4H Technical Scanner
+name: Superman 4H Technical Scanner (Archived / Manual Only)
 
+# Historical MA/EMA + RSI producer preserved for reproducibility.
+# Automatic scheduling disabled in favor of the BTC-confirmed 1D RSI scanner.
 on:
-  schedule:
-    - cron: "7 * * * *"
   workflow_dispatch:
-  push:
-    paths:
-      - ".github/workflows/technical_4h_scan.yml"
 
 permissions:
   contents: write
