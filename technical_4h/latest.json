@@ -5,9 +5,9 @@
   "scanner_implementation_version": "3.0.0",
   "max_score": 75,
   "minimum_candidate_score": 25,
-  "generated_at_utc": "2026-10-18T21:07:44.153Z",
-  "fresh_scan_timestamp": "2026-10-18T21:07:44.153Z",
-  "as_of_exchange_utc": "2026-10-18T21:01:54.793Z",
+  "generated_at_utc": "2026-10-18T22:01:05.518Z",
+  "fresh_scan_timestamp": "2026-10-18T22:01:05.518Z",
+  "as_of_exchange_utc": "2026-10-18T21:57:34.581Z",
   "evidence_timestamp_utc": "2026-10-18T19:59:59.999Z",
   "valid_until_utc": "2026-10-19T00:00:00.000Z",
   "scan_status": "COMPLETE_WITH_EXCLUSIONS",
@@ -23919,10 +23919,10 @@
     "https://data-api.binance.vision/api/v3/klines"
   ],
   "notes": [
-    "USD-M public data unavailable; authorized spot fallback: HTTPError:HTTP Error 451: "
+    "USD-M public data unavailable; authorized spot fallback: HTTPError:HTTP Error 451: Unknown"
   ],
   "delivery_status": "DELIVERY_UNCONFIRMED",
   "decision_effect_status": "DECISION_EFFECT_UNCONFIRMED",
   "integration_status": "RULE_UPDATE_REQUIRES_CONSUMER_V3",
-  "scan_id": "54507444b1eb11e0b00ff3b07c559fb43e59fca30acfad2bf1639af3ed69f7f3"
+  "scan_id": "23aa0e87e38482847da6ef9d1ae9f6bac301ab646752acef6fb676c66312e158"
 }
