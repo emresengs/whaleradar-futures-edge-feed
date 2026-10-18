@@ -5,18 +5,18 @@
   "scanner_implementation_version": "1.0.0",
   "max_score": 25,
   "minimum_candidate_score": 25,
-  "generated_at_utc": "2026-10-17T04:33:18.886Z",
-  "fresh_scan_timestamp": "2026-10-17T04:33:18.886Z",
-  "as_of_exchange_utc": "2026-10-17T04:33:17.995Z",
-  "evidence_timestamp_utc": "2026-10-16T23:59:59.999Z",
-  "valid_until_utc": "2026-10-18T00:00:00.000Z",
+  "generated_at_utc": "2026-10-18T04:39:04.559Z",
+  "fresh_scan_timestamp": "2026-10-18T04:39:04.559Z",
+  "as_of_exchange_utc": "2026-10-18T04:39:03.790Z",
+  "evidence_timestamp_utc": "2026-10-17T23:59:59.999Z",
+  "valid_until_utc": "2026-10-19T00:00:00.000Z",
   "btc_gate": {
     "status": "NEUTRAL_NO_ALTCOIN_ADVICE",
     "side": "NEUTRAL",
     "symbol": "BTCUSDT",
     "source_market": "SPOT",
-    "rsi14": 46.679288453276655,
-    "candle_close_utc": "2026-10-16T23:59:59.999Z",
+    "rsi14": 46.23613393682001,
+    "candle_close_utc": "2026-10-17T23:59:59.999Z",
     "long_threshold_exclusive": 40,
     "short_threshold_exclusive": 80,
     "btc_confirmed_first": true
@@ -62,5 +62,5 @@
   "delivery_status": "DELIVERY_UNCONFIRMED",
   "decision_effect_status": "DECISION_EFFECT_UNCONFIRMED",
   "integration_status": "BTC_1D_RSI_ADVISORY_REQUIRES_SEPARATE_CONSUMER_VALIDATION",
-  "scan_id": "08d017537239c9dde5bd3b2496258c98ab5382cc3db60bff599258e23c0346fb"
+  "scan_id": "ae38f683de2cede571b4f2a44b55935061e59f0f82ac2d0b4db724cc12d51654"
 }
