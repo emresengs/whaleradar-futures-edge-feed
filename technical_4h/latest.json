@@ -5,12 +5,12 @@
   "scanner_implementation_version": "3.0.0",
   "max_score": 75,
   "minimum_candidate_score": 25,
-  "generated_at_utc": "2026-10-19T12:04:24.611Z",
-  "fresh_scan_timestamp": "2026-10-19T12:04:24.611Z",
-  "as_of_exchange_utc": "2026-10-19T12:00:28.014Z",
+  "generated_at_utc": "2026-10-19T13:24:57.201Z",
+  "fresh_scan_timestamp": "2026-10-19T13:24:57.201Z",
+  "as_of_exchange_utc": "2026-10-19T13:16:55.891Z",
   "evidence_timestamp_utc": "2026-10-19T11:59:59.999Z",
   "valid_until_utc": "2026-10-19T16:00:00.000Z",
-  "scan_status": "COMPLETE_WITH_EXCLUSIONS",
+  "scan_status": "PARTIAL",
   "source_mode": "SPOT",
   "decision_input_allowed": true,
   "shadow_test_required": false,
@@ -390,69 +390,6 @@
       "conflict": false,
       "bias_strength": 0.3333333333333333,
       "signal_id": "176d83bee5fe90f685c2e5c474a2f75f863c19ad23558e92bf0ef7ed300e1b0b",
-      "valid_until_utc": "2026-10-19T16:00:00.000Z",
-      "source_url": "https://data-api.binance.vision/api/v3/klines",
-      "spot_derived_futures_bias": true
-    },
-    {
-      "source_market": "SPOT",
-      "source_symbol": "ACEUSDT",
-      "source_quote_asset": "USDT",
-      "base_asset": "ACE",
-      "execution_market": "FUTURES",
-      "futures_symbol": null,
-      "mapping_status": "REQUIRES_CONSUMER_VALIDATION",
-      "stablecoin_pair": false,
-      "source_candle_close_utc": "2026-10-19T11:59:59.999Z",
-      "source_close": 0.1496,
-      "candles": 1000,
-      "sma50": 0.17497,
-      "sma200": 0.17886500000000002,
-      "ema50": 0.1702199451359732,
-      "ema200": 0.17717642276331344,
-      "rsi14": 31.15206247801025,
-      "previous": {
-        "close": 0.1531,
-        "sma50": 0.17574,
-        "sma200": 0.178867,
-        "ema50": 0.17106157554968637,
-        "ema200": 0.17745357274083418
-      },
-      "long_conditions": {
-        "sma_cross": {
-          "met": false,
-          "points": 0
-        },
-        "ema_cross": {
-          "met": false,
-          "points": 0
-        },
-        "rsi_below40": {
-          "met": true,
-          "points": 25
-        }
-      },
-      "short_conditions": {
-        "sma_cross": {
-          "met": false,
-          "points": 0
-        },
-        "ema_cross": {
-          "met": false,
-          "points": 0
-        },
-        "rsi_above80": {
-          "met": false,
-          "points": 0
-        }
-      },
-      "long_score": 25,
-      "short_score": 0,
-      "direction": "LONG_BIAS",
-      "decision_bias": "LONG",
-      "conflict": false,
-      "bias_strength": 0.3333333333333333,
-      "signal_id": "2b8cb89cebde34211911295171128f49398a11bf66fc112cdb551115995ea00c",
       "valid_until_utc": "2026-10-19T16:00:00.000Z",
       "source_url": "https://data-api.binance.vision/api/v3/klines",
       "spot_derived_futures_bias": true
@@ -2154,69 +2091,6 @@
       "conflict": false,
       "bias_strength": 0.3333333333333333,
       "signal_id": "c219f659f70b1b768ef4ccbb6261cc98204f9a69026f7bd7b203eddac7bab3b3",
-      "valid_until_utc": "2026-10-19T16:00:00.000Z",
-      "source_url": "https://data-api.binance.vision/api/v3/klines",
-      "spot_derived_futures_bias": true
-    },
-    {
-      "source_market": "SPOT",
-      "source_symbol": "BLURUSDT",
-      "source_quote_asset": "USDT",
-      "base_asset": "BLUR",
-      "execution_market": "FUTURES",
-      "futures_symbol": null,
-      "mapping_status": "REQUIRES_CONSUMER_VALIDATION",
-      "stablecoin_pair": false,
-      "source_candle_close_utc": "2026-10-19T11:59:59.999Z",
-      "source_close": 0.00945,
-      "candles": 1000,
-      "sma50": 0.0123182,
-      "sma200": 0.0179323,
-      "ema50": 0.012184914677215967,
-      "ema200": 0.016310705946489774,
-      "rsi14": 32.75126489762988,
-      "previous": {
-        "close": 0.00984,
-        "sma50": 0.012502,
-        "sma200": 0.01796785,
-        "ema50": 0.012296543847714577,
-        "ema200": 0.01637965776504746
-      },
-      "long_conditions": {
-        "sma_cross": {
-          "met": false,
-          "points": 0
-        },
-        "ema_cross": {
-          "met": false,
-          "points": 0
-        },
-        "rsi_below40": {
-          "met": true,
-          "points": 25
-        }
-      },
-      "short_conditions": {
-        "sma_cross": {
-          "met": false,
-          "points": 0
-        },
-        "ema_cross": {
-          "met": false,
-          "points": 0
-        },
-        "rsi_above80": {
-          "met": false,
-          "points": 0
-        }
-      },
-      "long_score": 25,
-      "short_score": 0,
-      "direction": "LONG_BIAS",
-      "decision_bias": "LONG",
-      "conflict": false,
-      "bias_strength": 0.3333333333333333,
-      "signal_id": "a934045a8c71113d235ab58fc4ef1fbc763ea0cc690b1e333889b6fc1fd934a4",
       "valid_until_utc": "2026-10-19T16:00:00.000Z",
       "source_url": "https://data-api.binance.vision/api/v3/klines",
       "spot_derived_futures_bias": true
@@ -11610,195 +11484,6 @@
     },
     {
       "source_market": "SPOT",
-      "source_symbol": "ZBTUSDT",
-      "source_quote_asset": "USDT",
-      "base_asset": "ZBT",
-      "execution_market": "FUTURES",
-      "futures_symbol": null,
-      "mapping_status": "REQUIRES_CONSUMER_VALIDATION",
-      "stablecoin_pair": false,
-      "source_candle_close_utc": "2026-10-19T11:59:59.999Z",
-      "source_close": 0.0679,
-      "candles": 1000,
-      "sma50": 0.074504,
-      "sma200": 0.08221149999999999,
-      "ema50": 0.07387534809677787,
-      "ema200": 0.0805465000695497,
-      "rsi14": 34.79239271970491,
-      "previous": {
-        "close": 0.0696,
-        "sma50": 0.074742,
-        "sma200": 0.082253,
-        "ema50": 0.07411923985583004,
-        "ema200": 0.08067360057276127
-      },
-      "long_conditions": {
-        "sma_cross": {
-          "met": false,
-          "points": 0
-        },
-        "ema_cross": {
-          "met": false,
-          "points": 0
-        },
-        "rsi_below40": {
-          "met": true,
-          "points": 25
-        }
-      },
-      "short_conditions": {
-        "sma_cross": {
-          "met": false,
-          "points": 0
-        },
-        "ema_cross": {
-          "met": false,
-          "points": 0
-        },
-        "rsi_above80": {
-          "met": false,
-          "points": 0
-        }
-      },
-      "long_score": 25,
-      "short_score": 0,
-      "direction": "LONG_BIAS",
-      "decision_bias": "LONG",
-      "conflict": false,
-      "bias_strength": 0.3333333333333333,
-      "signal_id": "e7446b4cad936d3f5bcb9b0a240a956105faa81b267f25e5201e820e9b1105ab",
-      "valid_until_utc": "2026-10-19T16:00:00.000Z",
-      "source_url": "https://data-api.binance.vision/api/v3/klines",
-      "spot_derived_futures_bias": true
-    },
-    {
-      "source_market": "SPOT",
-      "source_symbol": "ZILUSDT",
-      "source_quote_asset": "USDT",
-      "base_asset": "ZIL",
-      "execution_market": "FUTURES",
-      "futures_symbol": null,
-      "mapping_status": "REQUIRES_CONSUMER_VALIDATION",
-      "stablecoin_pair": false,
-      "source_candle_close_utc": "2026-10-19T11:59:59.999Z",
-      "source_close": 0.002208,
-      "candles": 1000,
-      "sma50": 0.0030172,
-      "sma200": 0.003387265,
-      "ema50": 0.002823605875845586,
-      "ema200": 0.003183611338711964,
-      "rsi14": 28.621219687218826,
-      "previous": {
-        "close": 0.002267,
-        "sma50": 0.00304394,
-        "sma200": 0.00339043,
-        "ema50": 0.002848732646288263,
-        "ema200": 0.0031934164777944964
-      },
-      "long_conditions": {
-        "sma_cross": {
-          "met": false,
-          "points": 0
-        },
-        "ema_cross": {
-          "met": false,
-          "points": 0
-        },
-        "rsi_below40": {
-          "met": true,
-          "points": 25
-        }
-      },
-      "short_conditions": {
-        "sma_cross": {
-          "met": false,
-          "points": 0
-        },
-        "ema_cross": {
-          "met": false,
-          "points": 0
-        },
-        "rsi_above80": {
-          "met": false,
-          "points": 0
-        }
-      },
-      "long_score": 25,
-      "short_score": 0,
-      "direction": "LONG_BIAS",
-      "decision_bias": "LONG",
-      "conflict": false,
-      "bias_strength": 0.3333333333333333,
-      "signal_id": "607aa3febc1c6a5292301dd89689c005eef90e6c609f5b126c891812fd620d7b",
-      "valid_until_utc": "2026-10-19T16:00:00.000Z",
-      "source_url": "https://data-api.binance.vision/api/v3/klines",
-      "spot_derived_futures_bias": true
-    },
-    {
-      "source_market": "SPOT",
-      "source_symbol": "ZKCUSDT",
-      "source_quote_asset": "USDT",
-      "base_asset": "ZKC",
-      "execution_market": "FUTURES",
-      "futures_symbol": null,
-      "mapping_status": "REQUIRES_CONSUMER_VALIDATION",
-      "stablecoin_pair": false,
-      "source_candle_close_utc": "2026-10-19T11:59:59.999Z",
-      "source_close": 0.0327,
-      "candles": 1000,
-      "sma50": 0.036718,
-      "sma200": 0.040248,
-      "ema50": 0.036143371990189674,
-      "ema200": 0.03996094716962602,
-      "rsi14": 35.9926654936082,
-      "previous": {
-        "close": 0.0334,
-        "sma50": 0.036868,
-        "sma200": 0.0402725,
-        "ema50": 0.03628391778570762,
-        "ema200": 0.04003392151303935
-      },
-      "long_conditions": {
-        "sma_cross": {
-          "met": false,
-          "points": 0
-        },
-        "ema_cross": {
-          "met": false,
-          "points": 0
-        },
-        "rsi_below40": {
-          "met": true,
-          "points": 25
-        }
-      },
-      "short_conditions": {
-        "sma_cross": {
-          "met": false,
-          "points": 0
-        },
-        "ema_cross": {
-          "met": false,
-          "points": 0
-        },
-        "rsi_above80": {
-          "met": false,
-          "points": 0
-        }
-      },
-      "long_score": 25,
-      "short_score": 0,
-      "direction": "LONG_BIAS",
-      "decision_bias": "LONG",
-      "conflict": false,
-      "bias_strength": 0.3333333333333333,
-      "signal_id": "6dbc414af1e0aef637a843ef108bcf73ff4979eed287252865f421a0bf7d6e9c",
-      "valid_until_utc": "2026-10-19T16:00:00.000Z",
-      "source_url": "https://data-api.binance.vision/api/v3/klines",
-      "spot_derived_futures_bias": true
-    },
-    {
-      "source_market": "SPOT",
       "source_symbol": "ZKPUSDT",
       "source_quote_asset": "USDT",
       "base_asset": "ZKP",
@@ -12125,6 +11810,16 @@
       "candles": 492
     },
     {
+      "symbol": "ACEUSDT",
+      "status": "DATA_UNAVAILABLE",
+      "reason": "JSONDecodeError:Unterminated string starting at: line 1 column 130291 (char 130290)"
+    },
+    {
+      "symbol": "ADAUSDT",
+      "status": "DATA_UNAVAILABLE",
+      "reason": "JSONDecodeError:Unterminated string starting at: line 1 column 163602 (char 163601)"
+    },
+    {
       "status": "INSUFFICIENT_HISTORY",
       "symbol": "ADBEBUSDT",
       "candles": 114
@@ -12200,6 +11895,11 @@
       "candles": 492
     },
     {
+      "symbol": "BLURUSDT",
+      "status": "DATA_UNAVAILABLE",
+      "reason": "JSONDecodeError:Unterminated string starting at: line 1 column 131588 (char 131587)"
+    },
+    {
       "status": "INSUFFICIENT_HISTORY",
       "symbol": "BMNRBUSDT",
       "candles": 450
@@ -12273,6 +11973,11 @@
       "status": "INSUFFICIENT_HISTORY",
       "symbol": "GSBUSDT",
       "candles": 492
+    },
+    {
+      "symbol": "HEIUSDT",
+      "status": "DATA_UNAVAILABLE",
+      "reason": "JSONDecodeError:Expecting ',' delimiter: line 1 column 151317 (char 151316)"
     },
     {
       "status": "INSUFFICIENT_HISTORY",
@@ -12440,9 +12145,24 @@
       "candles": 492
     },
     {
+      "symbol": "SPELLUSDT",
+      "status": "DATA_UNAVAILABLE",
+      "reason": "JSONDecodeError:Unterminated string starting at: line 1 column 130331 (char 130330)"
+    },
+    {
+      "symbol": "SPKUSDT",
+      "status": "DATA_UNAVAILABLE",
+      "reason": "JSONDecodeError:Unterminated string starting at: line 1 column 130301 (char 130300)"
+    },
+    {
       "status": "INSUFFICIENT_HISTORY",
       "symbol": "SQQQBUSDT",
       "candles": 282
+    },
+    {
+      "symbol": "SSVUSDT",
+      "status": "DATA_UNAVAILABLE",
+      "reason": "JSONDecodeError:Unterminated string starting at: line 1 column 130299 (char 130298)"
     },
     {
       "status": "INSUFFICIENT_HISTORY",
@@ -12484,6 +12204,51 @@
       "candles": 114
     },
     {
+      "symbol": "XRPUSDT",
+      "status": "DATA_UNAVAILABLE",
+      "reason": "JSONDecodeError:Unterminated string starting at: line 1 column 130305 (char 130304)"
+    },
+    {
+      "symbol": "XUSDUSDT",
+      "status": "DATA_UNAVAILABLE",
+      "reason": "JSONDecodeError:Expecting value: line 1 column 130306 (char 130305)"
+    },
+    {
+      "symbol": "XVGUSDT",
+      "status": "DATA_UNAVAILABLE",
+      "reason": "JSONDecodeError:Unterminated string starting at: line 1 column 130291 (char 130290)"
+    },
+    {
+      "symbol": "XVSUSDT",
+      "status": "DATA_UNAVAILABLE",
+      "reason": "JSONDecodeError:Expecting value: line 1 column 130306 (char 130305)"
+    },
+    {
+      "symbol": "ZAMAUSDT",
+      "status": "DATA_UNAVAILABLE",
+      "reason": "JSONDecodeError:Unterminated string starting at: line 1 column 130293 (char 130292)"
+    },
+    {
+      "symbol": "ZBTUSDT",
+      "status": "DATA_UNAVAILABLE",
+      "reason": "JSONDecodeError:Unterminated string starting at: line 1 column 130301 (char 130300)"
+    },
+    {
+      "symbol": "ZILUSDT",
+      "status": "DATA_UNAVAILABLE",
+      "reason": "JSONDecodeError:Unterminated string starting at: line 1 column 130305 (char 130304)"
+    },
+    {
+      "symbol": "ZKCUSDT",
+      "status": "DATA_UNAVAILABLE",
+      "reason": "JSONDecodeError:Unterminated string starting at: line 1 column 130297 (char 130296)"
+    },
+    {
+      "symbol": "ZKUSDT",
+      "status": "DATA_UNAVAILABLE",
+      "reason": "JSONDecodeError:Expecting value: line 1 column 126741 (char 126740)"
+    },
+    {
       "status": "INSUFFICIENT_HISTORY",
       "symbol": "ZMBUSDT",
       "candles": 114
@@ -12495,128 +12260,23 @@
     }
   ],
   "expired_or_retracted_signal_ids": [
-    "01eff63be23c723e0460abc97d0204a54df700223603abbb0622ac2a6d12c26d",
-    "04c6535802d794802c7fcbfe9221e027647025bb5ea4e143caa53e7d0a43d055",
-    "04fbfc7664c465b101f8d5995fe08d0ab8b28b3ae3f5d902510c9afb5952f8a0",
-    "08d5066538aea897f3f2ba892f186bcbd41b7724ca51b53671bda25c5220f7f8",
-    "090e43ca32c80d8b1c2c0fe2be1bfe449e2dd313df6096e45df955973c771160",
-    "0d1046b19d30a04ebb9975c0fdae2baf04bae7c57993531f050953f95d70da10",
-    "0d10c4e299d145457cef80c1fa01f61cb4e50b7b1bc1bbea1effb3d82d672661",
-    "1806269d53f55c49110c86fbcb8381e5a398699ce459994a917b170ba5612641",
-    "18a6a160488b199bcd7283553b0224101dd6ac5b201256d0db7c68b1f6992477",
-    "19a19d6fb814b33ceca7afbf217fd9f09127cefe09c80fb9a57ce51ef3d23a42",
-    "1c1e36fe85bfd9142a4480053a18a96346a981ebd3a554452bae4ff08177c77f",
-    "1d4c708559f0f363c737771a4fe7e589176e404b020d9adf54ad005491d9f479",
-    "1f3236507ed005e83c24c86b03b37a1f79182db192d7c9d36b85fe2aadf3c5f3",
-    "20f3904aadfde797d15bdac192888d3bd3f52d14a5ce435fc3520e2662f35168",
-    "24025e2314ffc67b89ee85f18cfb624d7dbabda7814102ebc94e84c9011cb1f2",
-    "2719a38904d17afde0389cb5903d7b2f493e4c34a6f5f0b8a32c8f8742e46713",
-    "280bc1a3ff6a914020d14610fa92e852ffb190789d7d54269f310666c66d3d15",
-    "28291348d8adc6e5785065b32204048ab03ea73f59a18d22528aff57ee2e32ff",
-    "2854ed995f018b2a90cfaf34117327fde628e67215a4677073328ccb2008eb84",
-    "2af8e9f7c840b5203f30832ecd85cd72d8de2c17ad5721a0322c3c9aee58ea2e",
-    "2fe95561b1b39b10299d1fbe3171165bacd3e0841b53d83bf821b5bc8513d9d9",
-    "30747da90e35d513dfa514a421d146d7a41a2aef4fdf8e2fef69143274930a15",
-    "321b9d4770672ea09f45c91d595c3a5d70d38f4ceec754195c0c7d626d8450e7",
-    "3a16644eb94ccb04aa5ff285727db2c398ac445a7d911a410f332e97e115c763",
-    "3a512f4c28313d5c864ef732855cdb7a22a4f81329b81f7a0388c11f6cb9631b",
-    "3fc84fe3cb740d4c9c40397db54a10c447b85ef81fadf2135b96ab3c26ff64ad",
-    "43dbc4b41af1eba7550d329ff31cda2c9cf23cafd4e4a112b5788fc64f46a38b",
-    "44376ff609350b8c8ad26b4d7204e528601178f9583df0fe85d7d94bc21a0dc9",
-    "4a4241e894d80d497242e0757bd98213225aec44fb916886c53a1d72af29db66",
-    "4ac9de7821899b67344d3d9d8f3b18e3280e1d8fc1def73e38175099b7aa72a3",
-    "4b72c256ce81904aadc906c0540df5611cc24f1e6d74875d4abe42e86d466f8f",
-    "4d1c93350a719bcaf808d433e83db0fde8a6a3e2eec9a87bd060aa88f9c3f47d",
-    "5165f4950f0dcc0e54190e7c689323789236f9e9740fe3e0d0297c0e085636fc",
-    "56d24b06b9c69abc01e9bf9bddc10b6c895b4d234169b8a7c91cd990800f8ac3",
-    "5aadc0ad60ca165b028bd5546c9792c12ce9410640dd2b5229d683b9c81ebd3d",
-    "5ae0ce940b7afbf8df8168bb47be88e5c1e6a2492f76eded5b27daa8654672cc",
-    "5b8c39263dfd1cbd397850246bf74cfe281e1edd1076b9f254b6d0cf8c601c6b",
-    "5d6fa5695c05402fe495335a29513d50dc892e6768f5d9dd49cb10709b34711e",
-    "5dec7973ca4da1f751f4e89fb886c68be4fef74d3414ebf8c9f36e6030964087",
-    "6492824e2319005bc301f11a1d18cae1cfbdd4cceb2330a3b001683855fc4880",
-    "660c26d2d08aec98709d0a692f1d37765647b4f23faf326437462a5541d69f31",
-    "69c9ee741babaa7fba0359d208f80d824f0da0f4275d9af28ac8b281c97c6513",
-    "6b9f2eeac0d71fbf6573261846c6f19cdfe15088bf30f80bdc3f4d2a568feb85",
-    "6c1b0d71fb1dc342ecb5f49aa46110848e65f65a27c93103c55e0b169a83296b",
-    "6eab10ca35d2621de6d0e885689c85d36a005722f08cd0f9f4f6f5735ce34026",
-    "6f32307979adb29be8f5c8470982ce38c5c75f5176907ef470b68bef598fd4f0",
-    "716142d7c839b61b3cd4b70d5f9eca138df9ad4be6f813276f67096a296bcf28",
-    "725a39feac73e0a1e19d893182f31dafc78ddd3f20f2127906db0bbb6d64d83a",
-    "73588dba3a1da360e3b58a0e7f7ed548a963e685ab72959e00408d6d5be075f0",
-    "7571a2e8075a81d88ef1057b57861dae076be5f6aeda6d0fe9437bb7245375a4",
-    "775d794b265595c3b851c37e2689f97e84a1b499c818e9174bf080abcef0b9c5",
-    "79e7c85b735706ccedbc397546266cce6912c2535a5458d826ad4c62ed0a8f0b",
-    "7aec3bcdeb31ea87f1e4013e1d0c60d572b55049e62044fd47880f05dc32aa55",
-    "7d81effb9883aa9a8a35c7cb0dcf05c4a3fa1f5918ebc60ee1cc380eeabe9d6c",
-    "7df5f8cf8b448692aec82953e2837eed91c8f89cf67c42a9ad1cc4779a64d0ba",
-    "7eaad5cda8decb61ae6c12525e2a2bdc84b31b4be5506d3b3fb4c00921cebffc",
-    "7f9141624163567ee7a1f30f91f1f3dc9a1910cc70c78de0ec82e8762f7750fc",
-    "824a50c9b3335e6c8948fec04a56c95edf1f76dedabac5b0e2186399ba91092c",
-    "884392e2104b69b019f50ab24a5d2f85ef2f8d6887ffdac5457ed874112693a0",
-    "8f706b862358aea352f950156b2a621d4b21b7f3f574de9f2e6e5b434c71f0ad",
-    "94deb43b8fd90e1f9b1149044d505fbb1694aeeb851b0ae6086b45f86f0e74ee",
-    "950a3c6ab524eed3155415b93e22d093faab8c66bdf9bab5e8e6119045519067",
-    "96ec2934c29a61c02aa1a59b1a0f9d9cdbaf3383a0d72aa5d3498e2bcd34ec57",
-    "98e5359b9577e434a8a966db2187e62f2c828e33b38cdb959fdea07cd8023abc",
-    "9bea6fef22e379b6d3ac35868715417986c40c9f0d2abbd2a92e74cc0572287f",
-    "9da248752abf0cfca73b2bd101580816411a95d625bfb4cda925937643c30070",
-    "9dbda65c48438dca9fa31f570359c36c28dca14cb235fcc16fe70452017cb1d4",
-    "9e62170c001d008668fc9f8b21c03580d2ec0859abb21a012b7dee467981ecc7",
-    "a0717ceab2c3597196787ce8ea8fee0a926b868bf2125137fa536cf83157ea3e",
-    "a2428b18fd5c01bac2f4e934865ba2e5b42a19bf8de5725157a23b6fd67ac717",
-    "a34bf280d67354871f741fb01fcb118af2b49055da3a9e8cf4b89e86f845d4d0",
-    "a36dfe7a904bec6cf99b47809f873b06b6118705818b32b1531c876d9470084a",
-    "a41917d896349bbb6614f2c1f5241ac7561a403ffde1cab6c313ca672e013b09",
-    "a5234598cc7f21b838ca46597f15cbeb9a787f68c562bf305e2149e13ce5136d",
-    "a7bc02b292306363f4935a280ceb4a7b7c718869829c9adda592042cd3c12e13",
-    "a84d6a88f972c520cb5b60637ca7be5b92359138da764fe90ac278e6585909fe",
-    "a8a9fe3167dfaaec6c1340daf1eb99366a4d32915a14328d575f75c83d12d7fe",
-    "aba49b678688c37fc0e6e22fb9634e6aa8b56f13a9108ddc68ff36416c987839",
-    "adca15bace8612d8aea0a9885a9b65c8e4051965b3dec8775d08fb9c419a2339",
-    "adffc589976bcd4c574ef32bb8c3f15e933ad5c31c8349548ca741e366ec4214",
-    "b0495887d47631aa5369d900905bc1d3110a510bebce0064f9f17d42f86f48e3",
-    "b6112715d880e8368f1bb4717d1bea3455a9576287496cae846b11d9c1fdedc9",
-    "b6d0b63a67cc267ad8c82d309a9e7e680d705c96cad3eb2238732be884e331de",
-    "b790b00eaf07a8cb11fc3fca3590b7783bf8e16e30b2449ed47f42d24f3d169e",
-    "b8a394d5a76565f005a65ab9727cd1e5445f4f5bd94c8625a468427dd9d8898d",
-    "bcf325361c87e357c8e7e3563c85ebd6149f46d5117d2cf0696e084465ecf52a",
-    "c3bab2e12a503e29428b1ae4808bb19d1b29510d7f92f4445ee19070741c67a9",
-    "c3eeda9f37ec483de1fa998aacfe6de13a75f599616293f2862a865fbc08194e",
-    "c429b3cae1d223420a1386d33cc9f5f0f9a1a3bb024a5ae67ea24f5652b1cabb",
-    "c8fd7cd72d87f0c4da41c2e2d73e91da394ce832bf10ae0c44e054192908b05c",
-    "ca5a030614d7be260644067f98ea8f652dd6fc80f2c63196c35a0eae190ad1f2",
-    "cbd9bf4530b39b41cae21faff9491ba5330f9f68a675248c7714d4cd737c9e63",
-    "cc56b3f036e0f17cb6df3aec01ab2cf8e4cf73aa95a365b44940d5165d1dcd2d",
-    "cdc2c80a8b8fce214852546d21c0c6da157bd3d75b2a0d6dc514ba5b04e1c1d8",
-    "cf88b999acf53f3c8b0df1fdd80abb510828b63d7b5768dc2739442f756b9b4e",
-    "d517cf1e03f929c8d18ca65309ad9e06bc3ac342e2af3bb7abe3b819aa5dd3fd",
-    "d625a900d93641d0d21d9ebec247f5428d715c4b9c55f5f3eec315158fbddb35",
-    "d66edc6559bdfa7d35336c9e2cedafe89d1b4a47fb0ba70e6de0cdde66d17cbd",
-    "d7077e37a851d0db40efce50205a1ae419eb4ec6a2aadf2e8566bb1352df70e0",
-    "db5ba54b1395009215107563723d77a7ab19a94b2e5fc7aac824ec72694ffe6e",
-    "dc8a414de75d935e2a745973ede353b4703668183bac5a74bfb6c3f175a0ad30",
-    "dd6540002d4a9a8353d9f8f91df0b9aacb5de1e96d54dfefef91d4b2c2705a54",
-    "e28e3324f31bd76572c854949203dfcd9ac75a09fc9b890959af77c8c17de2f3",
-    "e3bb2d37348b0721a1bbd8fd3b7e7c4c4d5cf91830025b51c4e36d870ad36bd7",
-    "e59fa347cda2ba1160863b4a6dbbf57e4b94c4fa293b3b4a8a536ffeb3d0f34c",
-    "e74b246397d2d469e2b027d2e063ae6436f685be1ae8820b8a8cc45c5cfa521f",
-    "ee2fdc656f8d6149de361e2e94c037629a30cc6979c13d3a55126da3b86ed688",
-    "f1c7f6091ef1a417cfbe7b64e8282e34c9ebb4e15aa8edce84574d5a5a1318e2",
-    "f29379ed1fbe591d1622c732f60a1aba8373c9fde9ea339f9cf5d24060d805ba",
-    "fcd8ff9a9d493d7b098389608961fe580de0af13a469e9870c486e635c1dfe87"
+    "2b8cb89cebde34211911295171128f49398a11bf66fc112cdb551115995ea00c",
+    "607aa3febc1c6a5292301dd89689c005eef90e6c609f5b126c891812fd620d7b",
+    "6dbc414af1e0aef637a843ef108bcf73ff4979eed287252865f421a0bf7d6e9c",
+    "a934045a8c71113d235ab58fc4ef1fbc763ea0cc690b1e333889b6fc1fd934a4",
+    "e7446b4cad936d3f5bcb9b0a240a956105faa81b267f25e5201e820e9b1105ab"
   ],
   "universe_counts": {
     "active_base_assets": 512,
     "selected_pairs": 511,
     "attempted": 511,
-    "calculated": 436,
+    "calculated": 420,
     "insufficient_history": 75,
-    "data_errors": 0,
+    "data_errors": 16,
     "unsupported_quote": 1
   },
   "coverage": {
-    "selected_pairs_calculated_pct": 85.3229,
+    "selected_pairs_calculated_pct": 82.1918,
     "source_market": "SPOT",
     "futures_coverage_verified": false,
     "scope": "ALL_ACTIVE_SPOT_BASES_WITH_AVAILABLE_USD_STABLE_QUOTE"
@@ -12632,5 +12292,5 @@
   "delivery_status": "DELIVERY_UNCONFIRMED",
   "decision_effect_status": "DECISION_EFFECT_UNCONFIRMED",
   "integration_status": "RULE_UPDATE_REQUIRES_CONSUMER_V3",
-  "scan_id": "403197e9338696849706603228814908101bc31c025faf37efb452486f596f15"
+  "scan_id": "ed87159ddcafae40c7c682b79fbfa05d921e4c21b89c1932e0094929d6e355f5"
 }
