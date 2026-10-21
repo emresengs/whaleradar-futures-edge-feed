@@ -5,9 +5,9 @@
   "scanner_implementation_version": "3.0.0",
   "max_score": 75,
   "minimum_candidate_score": 25,
-  "generated_at_utc": "2026-10-21T08:11:10.759Z",
-  "fresh_scan_timestamp": "2026-10-21T08:11:10.759Z",
-  "as_of_exchange_utc": "2026-10-21T08:02:45.607Z",
+  "generated_at_utc": "2026-10-21T09:05:21.386Z",
+  "fresh_scan_timestamp": "2026-10-21T09:05:21.386Z",
+  "as_of_exchange_utc": "2026-10-21T09:01:29.697Z",
   "evidence_timestamp_utc": "2026-10-21T07:59:59.999Z",
   "valid_until_utc": "2026-10-21T12:00:00.000Z",
   "scan_status": "COMPLETE_WITH_EXCLUSIONS",
@@ -1217,29 +1217,7 @@
       "candles": 251
     }
   ],
-  "expired_or_retracted_signal_ids": [
-    "03e5934ebe64565d056c646a28538dc5c6d89f5084836f1323a37a02e8632346",
-    "1a145b959b3bd5830af655915ac863b6944b44108c740466b8536579d8206637",
-    "21de7324b4c168abcde2b14e11306acb99db66f43bf25b035fd569e7ede2c0da",
-    "3315f077494d05317e630867ffcce5ee42944072075a2d981cb0b3e3edcd2663",
-    "39770390e827cac7dd871836290c2385afdcf4f8dc60975b676bba56d17bb93e",
-    "407af5494c38377b3a00afa5ac767f6e35643baaf2540d5b9b5304bd3db72ce2",
-    "522bb9788b71fef58db44f6540cf9279da2e799e98924995d2ced8e2685305c2",
-    "56c5aa271b69555b4feba5a07de756b312e263f8a851b87d37bbc57ffbec60f6",
-    "66e839f5e70bf7714357c3d53fe0dc6aa37f62c9323ee09082bfb5769854e5fe",
-    "76767492aff81b15b108a96e084f56473da47b7f2821c70a34eb0df5866bace9",
-    "7982618ad7c6d55795889fbc9dc4aa2412395a5dc0094496bfc7f5efd5140e8d",
-    "878e47003aa5808699707254a193dd68a652a6c827f7f09415ef1ce444731ea5",
-    "9ad3b7c69e7e1a8abdcc35188917d460474e0f2bd0553087c32f7d5c2115baf2",
-    "a462ffb628e32be3928017794e7423cb8a1470883878f14ec7d08b1586b1b7fc",
-    "ba21c00099eeff77d3ecb95b9ec947ff351a38559212baecea1f00334defb0ef",
-    "cae0339a8b70d643bfd21b996859741eab8237bcb82f0282916f498fa2ff0ea4",
-    "d2f68fee6a0385f527d24acc5085e4995724c9737bf5eb153e18f218edb31e96",
-    "d75cbbda45603d471aa7d39c50e3f9db6e8afdcb0c6fe978c06caa34907cfc27",
-    "de63c196976e0f3a8bb8421229f36967f64d30cd98f23ec887cfa356a1c96677",
-    "e6e6f160bb7728ca58f42a93b0dcbee483ef9a320ea7dce4303d5c9369afcea0",
-    "ea3bb2fe31a277312537b1a5d7a2f6b869e2667e1e59e0c21d5fec142bcc1350"
-  ],
+  "expired_or_retracted_signal_ids": [],
   "universe_counts": {
     "active_base_assets": 512,
     "selected_pairs": 511,
@@ -1266,5 +1244,5 @@
   "delivery_status": "DELIVERY_UNCONFIRMED",
   "decision_effect_status": "DECISION_EFFECT_UNCONFIRMED",
   "integration_status": "RULE_UPDATE_REQUIRES_CONSUMER_V3",
-  "scan_id": "eb755a0d2dfb6acce9c70b62f455780dfc2ab9ffd1eeaf55ef69bb30c492e327"
+  "scan_id": "bf87365b764a77463376718290657ef47c4babe5008bfe5d60624768f5d05055"
 }
