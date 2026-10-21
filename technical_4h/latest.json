@@ -5,9 +5,9 @@
   "scanner_implementation_version": "3.0.0",
   "max_score": 75,
   "minimum_candidate_score": 25,
-  "generated_at_utc": "2026-10-21T12:05:26.099Z",
-  "fresh_scan_timestamp": "2026-10-21T12:05:26.099Z",
-  "as_of_exchange_utc": "2026-10-21T12:01:40.867Z",
+  "generated_at_utc": "2026-10-21T13:04:44.914Z",
+  "fresh_scan_timestamp": "2026-10-21T13:04:44.914Z",
+  "as_of_exchange_utc": "2026-10-21T13:01:16.250Z",
   "evidence_timestamp_utc": "2026-10-21T11:59:59.999Z",
   "valid_until_utc": "2026-10-21T16:00:00.000Z",
   "scan_status": "COMPLETE_WITH_EXCLUSIONS",
@@ -1615,21 +1615,7 @@
       "candles": 252
     }
   ],
-  "expired_or_retracted_signal_ids": [
-    "1197e8b1b3c79683b5f07941416d69090cd17b2e788cb59f76acf4c18bcae5d2",
-    "15d80e818efe819d20aaff920c8a9d16e557690bff986f86545adfd46440f66f",
-    "3e4a1c9b6c91b0d4ea767f680ca3f758ae90cde20e8e7743674fcc9e2e26cbb3",
-    "4c37b87be5f26a9567a9e6573829b2a09286fef9accaee926f83b7cd8c4fd4ac",
-    "6925a2a8d4d2c8a739acbbea8c896321d2846f6dad6d473a362a5c01d510d196",
-    "6949a9a8b2508994d896ca5d14b7cb368183ebfc8dd6dbdb400ebc138f26844e",
-    "779f881a7d39b616931c4bd9c0e8b7031aded8995a7eb01f18f1037c72174761",
-    "8371ed7414947c8b588157f012888085682fc7122338188a9bc94b55dccea6e9",
-    "98b3310fbd119003d384adc97bcce07fae6ff71db4ba73fe600c19e8c1172213",
-    "ce3927babdc86b0fed887af33e2787d1ae80ad4fe18a94484fb6cdd6228a457f",
-    "d426978d77a644f9401a267a4f811b833c83543cf708559d0003601657984bad",
-    "f3289775b47d73d0a708cc64eccc270536bb11d15e509143b753d243ecd853e9",
-    "fd9b231c53d1b9fda2067c81ed27ce332f1049424b172582793d124ef1aadc12"
-  ],
+  "expired_or_retracted_signal_ids": [],
   "universe_counts": {
     "active_base_assets": 517,
     "selected_pairs": 516,
@@ -1656,5 +1642,5 @@
   "delivery_status": "DELIVERY_UNCONFIRMED",
   "decision_effect_status": "DECISION_EFFECT_UNCONFIRMED",
   "integration_status": "RULE_UPDATE_REQUIRES_CONSUMER_V3",
-  "scan_id": "23d007a6fe3d4d0010c659030eb81b7c00d665bc5257534a5b5e74d985262e44"
+  "scan_id": "207bf4243ebe3478682b8999706cc0f01897b5ee5c43cb5af35609664136969d"
 }
