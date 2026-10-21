@@ -5,12 +5,12 @@
   "scanner_implementation_version": "3.0.0",
   "max_score": 75,
   "minimum_candidate_score": 25,
-  "generated_at_utc": "2026-10-21T00:05:09.233Z",
-  "fresh_scan_timestamp": "2026-10-21T00:05:09.233Z",
-  "as_of_exchange_utc": "2026-10-21T00:00:33.772Z",
+  "generated_at_utc": "2026-10-21T01:05:30.277Z",
+  "fresh_scan_timestamp": "2026-10-21T01:05:30.277Z",
+  "as_of_exchange_utc": "2026-10-21T01:00:52.205Z",
   "evidence_timestamp_utc": "2026-10-20T23:59:59.999Z",
   "valid_until_utc": "2026-10-21T04:00:00.000Z",
-  "scan_status": "COMPLETE_WITH_EXCLUSIONS",
+  "scan_status": "PARTIAL",
   "source_mode": "SPOT",
   "decision_input_allowed": true,
   "shadow_test_required": false,
@@ -1387,6 +1387,11 @@
       "candles": 501
     },
     {
+      "symbol": "ARKUSDT",
+      "status": "DATA_UNAVAILABLE",
+      "reason": "JSONDecodeError:Expecting ',' delimiter: line 1 column 97538 (char 97537)"
+    },
+    {
       "status": "INSUFFICIENT_HISTORY",
       "symbol": "ARMBUSDT",
       "candles": 585
@@ -1721,48 +1726,18 @@
       "candles": 249
     }
   ],
-  "expired_or_retracted_signal_ids": [
-    "066b81322831a22b19ce9363cff0de8601ff74342fe5aca1991b0d7dcf1551c1",
-    "06d3717051c9293f3f8b5619518d11f828d5c912660fa6b33f2a53ca86f75299",
-    "20329df4eba0c49546ddd78b2259feddece4b5344869dd851d0522c9ce8d62dc",
-    "22bdbdc6bf37b6f13d04a4dd67316cae3f6e4e842ec584c817d37c94b1944ab0",
-    "27be166276f29cbc940b6fc08ac1c75ad2737c4533b7ab21d75202feea95791d",
-    "2e580615123d9a9ab4298cbcff612a6ea1c5439db64c967322ee7006cd5969c6",
-    "3088026f9a081dc4ab127f53cce20bed18080ab7c91d7e35af8b9112d35f5d49",
-    "3b3da66b01a0135d6eb39d0dad023999ecd7ba6baac2cd60c2e0b9919741b22b",
-    "406fbae0b476a07e1d33b9e15707d457308a3f14e48af7e55746503a97a9c7aa",
-    "478aa31aa18831b0e28d42f0e6e54ac03c63c0659adf7c65fce64aa411769087",
-    "4c4053d0676c2f9c495e43fc17ac62b765deae1dd76974deb6898c4ab2177339",
-    "4cff6132c1db386cc043bb1c07f66af37cae39926bc1f924ece4b1440b1fca28",
-    "5056f76b17d3b1385d6684d14377d57ff9d7f1c5afdfc864e78494b4e57b3642",
-    "7b693a3826fe344c442bb30ce323c97216bfbf3259b65b627a8902387d927573",
-    "829b5742d2b7de526b01ca5dfc2c52c80e6cc8fa3206c12ca391b1fef139ec29",
-    "85b112daa59e688b4e50ca6500cc4a621c02ff4a1e0278a766b73570b894858b",
-    "8b241ba2bc8e4feb7d4e9b2b3f5b1c4538a08175240df775076afbad6b5ce4fa",
-    "8cda9bfd0bb178000b5f7313b767a8dae4afdee2ae4a0721b526da009cea9f33",
-    "9557b7a8d66ef46a4c9e897dafa0bf72b96c268112f0115d935a8c67e67aaa06",
-    "95d791311fc7577793a82c267adadb276a6d785ac44b6175bdd9298e5a7dba6a",
-    "ad8f05e97b6c97a95091fb4759f4fd5122cc6728e0b2bfebd3a83a14b25b9101",
-    "af4ce2de9688f2d92a0afe31eec2ec72c97e149dbc3acb24dda80810dc97120a",
-    "c83f44511494b88d2df1a06810ed04da36cdd7463cc210350e34a8fcd508652d",
-    "ceebdcd09fa9b1c0d02629ce4d51d6b8d9888f03f1930767bb24f290efbfe8b8",
-    "d1bcdb9d242cf6273a562d131860bb70b58693c0bfe1eeaa60273e799b0bc295",
-    "d9693f5da89187d70cefbe2686c99ff04ea0afec71cc4b4b7a635e269c6f9f43",
-    "dca3cc632721d369188b550c3dd0282c4cc9bb79f33217205f08a2f78a15221c",
-    "ea32538e9534b001e872f71f38772b10b8457df741ebf49665078da31bb406a3",
-    "f5bdb4dfabbb2b5dee34c341aa157f4af986a1f2f8b2c5c09cd277d7d89923bb"
-  ],
+  "expired_or_retracted_signal_ids": [],
   "universe_counts": {
     "active_base_assets": 512,
     "selected_pairs": 511,
     "attempted": 511,
-    "calculated": 436,
+    "calculated": 435,
     "insufficient_history": 75,
-    "data_errors": 0,
+    "data_errors": 1,
     "unsupported_quote": 1
   },
   "coverage": {
-    "selected_pairs_calculated_pct": 85.3229,
+    "selected_pairs_calculated_pct": 85.1272,
     "source_market": "SPOT",
     "futures_coverage_verified": false,
     "scope": "ALL_ACTIVE_SPOT_BASES_WITH_AVAILABLE_USD_STABLE_QUOTE"
@@ -1778,5 +1753,5 @@
   "delivery_status": "DELIVERY_UNCONFIRMED",
   "decision_effect_status": "DECISION_EFFECT_UNCONFIRMED",
   "integration_status": "RULE_UPDATE_REQUIRES_CONSUMER_V3",
-  "scan_id": "4fb95f3c2e149054812720c27d97252bc652c8d30716e4b1e89f494347c85f2e"
+  "scan_id": "ebb5c078fab462bfca936833504c0bc20f39418009ea335897ed91bd053e2b77"
 }
