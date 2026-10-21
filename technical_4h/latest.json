@@ -5,9 +5,9 @@
   "scanner_implementation_version": "3.0.0",
   "max_score": 75,
   "minimum_candidate_score": 25,
-  "generated_at_utc": "2026-10-21T20:04:15.467Z",
-  "fresh_scan_timestamp": "2026-10-21T20:04:15.467Z",
-  "as_of_exchange_utc": "2026-10-21T20:00:38.546Z",
+  "generated_at_utc": "2026-10-21T21:06:59.444Z",
+  "fresh_scan_timestamp": "2026-10-21T21:06:59.444Z",
+  "as_of_exchange_utc": "2026-10-21T21:01:17.203Z",
   "evidence_timestamp_utc": "2026-10-21T19:59:59.999Z",
   "valid_until_utc": "2026-10-22T00:00:00.000Z",
   "scan_status": "COMPLETE_WITH_EXCLUSIONS",
@@ -1615,23 +1615,7 @@
       "candles": 254
     }
   ],
-  "expired_or_retracted_signal_ids": [
-    "06a1449150ef9c7442e4a3f8a15772a307969cd3b5862683f275850ae86cb801",
-    "14e7104a77924237b868a2ab3d3edb1e58d066a0c4c809bbfb614f8232f1c05e",
-    "2cd8bee097ea72cf91a81ecad69b7909a7a6306ecebb1e72248e3dd2c1251516",
-    "41ed2e65a2a89f2ceb6550f9bd8b9d4dc9b64d66a0cad3ba6e273d2faa1f9835",
-    "5192f0d7529f412b43923ad0c7e78fa9367032dc9599e329c1a68a5fad5e1e90",
-    "54e2df90a8d1d43a1c9b542823871f8ae305152f66228fa900cbd8f61a5cc3a3",
-    "56767b437c85ba20306c884eddfa1d39a29cfd4fd34eaa6d3ac438546f1ac0bc",
-    "5ec4ab4dd78cb9346bcd3475a2520a97218a0da9911f22fde27b70bb48de41a9",
-    "67a074bb0344f19370a7bc21fb806f512979ee0cecb5feddbb917a590ec65c54",
-    "7412b156c7059fbc696154c6ae14cbdb3c135df034e019104d31fbf18050b142",
-    "823798c46c26ac0422c812325d0089322c59714bc7ec005543eb018324f06b62",
-    "871cd277a98745a2943a071069f1273a190ed2966e3d021d22f4c614193dc9b9",
-    "9167aa0455f3562bee19b58e7fb393a30c244dc055de50bad038ead7cdb68d45",
-    "a8fcf8376ba872f95d17b85cb91304ca713d88a7491cbaa48bf72a965de8616f",
-    "c21092559bced20c943e60c355c695c82fa32c0ea5c212798c931843d5b98fed"
-  ],
+  "expired_or_retracted_signal_ids": [],
   "universe_counts": {
     "active_base_assets": 517,
     "selected_pairs": 516,
@@ -1658,5 +1642,5 @@
   "delivery_status": "DELIVERY_UNCONFIRMED",
   "decision_effect_status": "DECISION_EFFECT_UNCONFIRMED",
   "integration_status": "RULE_UPDATE_REQUIRES_CONSUMER_V3",
-  "scan_id": "18709219b2bfd190b929fac7b4cd589718e8f1b2fd16af99f45e42c140bc236b"
+  "scan_id": "ba4bf9aaff8833ae266da9696ac2cde8d2252f8d604dd0dfd3642ce052fb127e"
 }
