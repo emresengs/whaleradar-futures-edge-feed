@@ -5,9 +5,9 @@
   "scanner_implementation_version": "3.0.0",
   "max_score": 75,
   "minimum_candidate_score": 25,
-  "generated_at_utc": "2026-10-22T00:05:12.955Z",
-  "fresh_scan_timestamp": "2026-10-22T00:05:12.955Z",
-  "as_of_exchange_utc": "2026-10-22T00:00:28.516Z",
+  "generated_at_utc": "2026-10-22T01:08:44.185Z",
+  "fresh_scan_timestamp": "2026-10-22T01:08:44.185Z",
+  "as_of_exchange_utc": "2026-10-22T01:04:40.230Z",
   "evidence_timestamp_utc": "2026-10-21T23:59:59.999Z",
   "valid_until_utc": "2026-10-22T04:00:00.000Z",
   "scan_status": "COMPLETE_WITH_EXCLUSIONS",
@@ -1804,27 +1804,7 @@
       "candles": 255
     }
   ],
-  "expired_or_retracted_signal_ids": [
-    "0af71e1ea151df529910b7c4c9600f587e86f65d4d0b7e83319888cb8905eb74",
-    "145616a64f7a5de33b6e6a8a5c5c88e7e66755d3d9478359d44afcc33858c107",
-    "25b1878efdd311c2c29da1bfaa6d6195a2e7031ee48ff2fe28605a16a2282d59",
-    "2f97e4e10d422e4e2baa65fde0f8ca1885bf6c6e94458d917c56a6549862cc2b",
-    "4baa0b8a68d6cabafb02fb51ffbb9d9a5b99754060ea1b84dd2e8c6dc3388b18",
-    "52b9c8c093d62dfaf6fa1abbe5df169ed61a3f65944e9a171a1550c8d946305b",
-    "64b6e037fbda641432ea442f994617019a30dbe7a23b532f4c52c3a677faf221",
-    "65b61ce36a78c9e3c801068d2ea9134b3d1b37cb1aa843529e3da0063ec5303d",
-    "704ad7469244c55c0860d8ec62501a9fa663249b4d65b23d959b2aac01327c9c",
-    "724a4b379b1e023fdc04ea5a00ff4a714f764f6eedae332f9aafc0bb95e0b0e1",
-    "9842c2aace97a7b8808ae754b4923b2959be431e5bcd8006021f3937b51db811",
-    "9b9b5a4a5a57c224a5a33dedbc2291772e87ebf55073de08d7714b3fc2ef21ea",
-    "9c1549dabffaeaeadd0b91a669e7ff53605b957f26f0a1823f775ddc6bda446f",
-    "a8338373443cd7e3c1df725d314c7fa8041781ab8fc5f3accd24148782bdf33b",
-    "b77bc155c4a3768af1c8585b0a03d185da4bd5ae5943af969b42388f12b05cfc",
-    "dadbee786842f95d63aa64474df27e065199464dce16424bc80ccf78c97c670d",
-    "de826e6cb1678c7e3cad138b228be076bf948ad767955f8d167a02e9507f8582",
-    "e86f2a9d32464234219e99fe30f8569e9e747c6c53114fdbd3b5801d69aec0c5",
-    "ffa1291eaf46ba4dcf0842815d9527f0b34ea32af52aeb88f6904c731a850e62"
-  ],
+  "expired_or_retracted_signal_ids": [],
   "universe_counts": {
     "active_base_assets": 517,
     "selected_pairs": 516,
@@ -1851,5 +1831,5 @@
   "delivery_status": "DELIVERY_UNCONFIRMED",
   "decision_effect_status": "DECISION_EFFECT_UNCONFIRMED",
   "integration_status": "RULE_UPDATE_REQUIRES_CONSUMER_V3",
-  "scan_id": "f52ddbaa4ab858c2d62247dbd9e8f84edb9ce18907ff783bc66d7ddb6db59c35"
+  "scan_id": "3dbd74dd052d727eb99fb2bff35c0e2bbb059221409054c76c641068765a63ed"
 }
