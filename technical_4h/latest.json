@@ -5,12 +5,12 @@
   "scanner_implementation_version": "3.0.0",
   "max_score": 75,
   "minimum_candidate_score": 25,
-  "generated_at_utc": "2026-10-26T17:07:29.497Z",
-  "fresh_scan_timestamp": "2026-10-26T17:07:29.497Z",
-  "as_of_exchange_utc": "2026-10-26T17:03:08.521Z",
+  "generated_at_utc": "2026-10-26T18:00:48.345Z",
+  "fresh_scan_timestamp": "2026-10-26T18:00:48.345Z",
+  "as_of_exchange_utc": "2026-10-26T17:56:44.322Z",
   "evidence_timestamp_utc": "2026-10-26T15:59:59.999Z",
   "valid_until_utc": "2026-10-26T20:00:00.000Z",
-  "scan_status": "PARTIAL",
+  "scan_status": "COMPLETE_WITH_EXCLUSIONS",
   "source_mode": "SPOT",
   "decision_input_allowed": true,
   "shadow_test_required": false,
@@ -1902,6 +1902,69 @@
       "conflict": false,
       "bias_strength": 0.3333333333333333,
       "signal_id": "3af210081cbb9c3af33e633e5a61cc07f3b2f80b4f8801b86f083ae2acb261e8",
+      "valid_until_utc": "2026-10-26T20:00:00.000Z",
+      "source_url": "https://data-api.binance.vision/api/v3/klines",
+      "spot_derived_futures_bias": true
+    },
+    {
+      "source_market": "SPOT",
+      "source_symbol": "DYDXUSDT",
+      "source_quote_asset": "USDT",
+      "base_asset": "DYDX",
+      "execution_market": "FUTURES",
+      "futures_symbol": null,
+      "mapping_status": "REQUIRES_CONSUMER_VALIDATION",
+      "stablecoin_pair": false,
+      "source_candle_close_utc": "2026-10-26T15:59:59.999Z",
+      "source_close": 0.10796,
+      "candles": 1000,
+      "sma50": 0.1137432,
+      "sma200": 0.13127485,
+      "ema50": 0.11418015871818923,
+      "ema200": 0.12437735290099969,
+      "rsi14": 39.963417574567906,
+      "previous": {
+        "close": 0.10827,
+        "sma50": 0.1139108,
+        "sma200": 0.13143015,
+        "ema50": 0.11443404274750309,
+        "ema200": 0.12454235142261777
+      },
+      "long_conditions": {
+        "sma_cross": {
+          "met": false,
+          "points": 0
+        },
+        "ema_cross": {
+          "met": false,
+          "points": 0
+        },
+        "rsi_below40": {
+          "met": true,
+          "points": 25
+        }
+      },
+      "short_conditions": {
+        "sma_cross": {
+          "met": false,
+          "points": 0
+        },
+        "ema_cross": {
+          "met": false,
+          "points": 0
+        },
+        "rsi_above80": {
+          "met": false,
+          "points": 0
+        }
+      },
+      "long_score": 25,
+      "short_score": 0,
+      "direction": "LONG_BIAS",
+      "decision_bias": "LONG",
+      "conflict": false,
+      "bias_strength": 0.3333333333333333,
+      "signal_id": "75f5fd07f4adeeb8ae77a8c98bee38f3dfc0bffd1dd970e72435b25eb7c4d968",
       "valid_until_utc": "2026-10-26T20:00:00.000Z",
       "source_url": "https://data-api.binance.vision/api/v3/klines",
       "spot_derived_futures_bias": true
@@ -6313,26 +6376,6 @@
       "candles": 367
     },
     {
-      "symbol": "DOLOUSDT",
-      "status": "DATA_UNAVAILABLE",
-      "reason": "JSONDecodeError:Unterminated string starting at: line 1 column 130298 (char 130297)"
-    },
-    {
-      "symbol": "DYDXUSDT",
-      "status": "DATA_UNAVAILABLE",
-      "reason": "JSONDecodeError:Unterminated string starting at: line 1 column 64768 (char 64767)"
-    },
-    {
-      "symbol": "DYMUSDT",
-      "status": "DATA_UNAVAILABLE",
-      "reason": "JSONDecodeError:Expecting ',' delimiter: line 1 column 64770 (char 64769)"
-    },
-    {
-      "symbol": "EDENUSDT",
-      "status": "DATA_UNAVAILABLE",
-      "reason": "JSONDecodeError:Expecting value: line 1 column 97538 (char 97537)"
-    },
-    {
       "status": "INSUFFICIENT_HISTORY",
       "symbol": "FLNCBUSDT",
       "candles": 535
@@ -6557,20 +6600,18 @@
       "candles": 283
     }
   ],
-  "expired_or_retracted_signal_ids": [
-    "75f5fd07f4adeeb8ae77a8c98bee38f3dfc0bffd1dd970e72435b25eb7c4d968"
-  ],
+  "expired_or_retracted_signal_ids": [],
   "universe_counts": {
     "active_base_assets": 517,
     "selected_pairs": 516,
     "attempted": 516,
-    "calculated": 444,
+    "calculated": 448,
     "insufficient_history": 68,
-    "data_errors": 4,
+    "data_errors": 0,
     "unsupported_quote": 1
   },
   "coverage": {
-    "selected_pairs_calculated_pct": 86.0465,
+    "selected_pairs_calculated_pct": 86.8217,
     "source_market": "SPOT",
     "futures_coverage_verified": false,
     "scope": "ALL_ACTIVE_SPOT_BASES_WITH_AVAILABLE_USD_STABLE_QUOTE"
@@ -6586,5 +6627,5 @@
   "delivery_status": "DELIVERY_UNCONFIRMED",
   "decision_effect_status": "DECISION_EFFECT_UNCONFIRMED",
   "integration_status": "RULE_UPDATE_REQUIRES_CONSUMER_V3",
-  "scan_id": "99d2b3494134761aa835248112e7c9c0f2c43ee46318d5e40d8015269882c936"
+  "scan_id": "3c70522840d5d6db7c35153f4fad9a34c4d60543f3458e0927b0309ecffc6fbd"
 }
