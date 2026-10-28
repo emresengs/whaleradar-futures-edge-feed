@@ -5,9 +5,9 @@
   "scanner_implementation_version": "3.0.0",
   "max_score": 75,
   "minimum_candidate_score": 25,
-  "generated_at_utc": "2026-10-28T08:08:20.001Z",
-  "fresh_scan_timestamp": "2026-10-28T08:08:20.001Z",
-  "as_of_exchange_utc": "2026-10-28T08:05:18.493Z",
+  "generated_at_utc": "2026-10-28T09:08:04.227Z",
+  "fresh_scan_timestamp": "2026-10-28T09:08:04.227Z",
+  "as_of_exchange_utc": "2026-10-28T09:03:41.082Z",
   "evidence_timestamp_utc": "2026-10-28T07:59:59.999Z",
   "valid_until_utc": "2026-10-28T12:00:00.000Z",
   "scan_status": "COMPLETE_WITH_EXCLUSIONS",
@@ -2379,32 +2379,7 @@
       "candles": 293
     }
   ],
-  "expired_or_retracted_signal_ids": [
-    "0cd49821b3ffc84a8dc1f10087f7624140d0f9c1f36f3d30e3ad21bbe0dbcf49",
-    "19e9c13a7cfdd420163c3ef1fdf32c4f8ace3867e23a08bf62a50f626ee2ffae",
-    "261f6d9ce87ccfaaca5a32b0dea35dfe462e98e8632208bf124b2f4486712543",
-    "310bfbcbc00832b94f451483fcc9a4704d017147ccbed74361bd8cc73b384b78",
-    "36e1f3b3eef43135cc4e87ca7af328d86c00d4ca42f086edcdb05101a5408dfa",
-    "3b4036c7f2ba62f568951976b7a1cf4c34ef733f23620c99b3fa2e5ccbd447fc",
-    "4cc50ee07135e5357f000dd8f62fc63f09143bb91fec4ef2db341e5bca5201c5",
-    "4fb97c82dfffbe855f6178f83cbc7a6cab2da607125fa72eca85a14a7c91ca5b",
-    "5229f79d939afe3dff18b2632aefe4daebdba440aeed1b2dd278dbc8c387691a",
-    "5bda7aa4ffc2dd3f752cec6e51f93ef8715b90b9088a7529c057ccf895120411",
-    "74ba1a33734f6237742dcf28f4b3a687da786223c14961e89b3afe947694008c",
-    "79b92cd1668041f4b1f77721f6b72d4860fa67cb4cde8062dfc8edbeb4124d91",
-    "832fed1be8ee9145642d79b930fcec5d11fd01795365c48b5100d59481d3202b",
-    "84397764bc7df8c9b60f55495cb92708159541804e0d082e3c74310c94cb5341",
-    "918518ac6d4b180e3932570f235acd32d17ef7709cd209a0e6758bad9081eca1",
-    "aa64fb311e8476ae078e3a1c845a78bbdcbb17d3d7d5a2909c0f40851c75e5d3",
-    "ba3a49ddce22defd20436b3fb9631624f321af97a19f46349b7c14ec46c7f3e8",
-    "bb258cf4a099809ce8a9670fb123c34f29c147d227fc060957eb45651e0aecbd",
-    "e73417bda14288ae85aa7937d252055c9b26f333276015cddc113f20ba40cc65",
-    "ea8239bf9845ed2e56867747d0472bb0f4266faee6ef1f212115293f59d812d0",
-    "eff9f66a2cc553785f81e81fc5c600c752c961f4e30c3a1ee639f0ac619a0076",
-    "f7441d98eadb542efd5c7d49917ed5366408636ea5cce258d0bffb69520297eb",
-    "fc36d09667d015e2149b556d223f182f15d7a217fb8f105827e2ded1c099970a",
-    "fc7f72687f6d3fc524579a9958eb1e9231b1dbca9b81fcd012d6bfd926cd7254"
-  ],
+  "expired_or_retracted_signal_ids": [],
   "universe_counts": {
     "active_base_assets": 515,
     "selected_pairs": 514,
@@ -2431,5 +2406,5 @@
   "delivery_status": "DELIVERY_UNCONFIRMED",
   "decision_effect_status": "DECISION_EFFECT_UNCONFIRMED",
   "integration_status": "RULE_UPDATE_REQUIRES_CONSUMER_V3",
-  "scan_id": "9dd854737336081454a84ad339bc6944da8b74956bc799eefe8761e9f4dc0201"
+  "scan_id": "6856d4136d5a5ff4d26345030784e1c859b947de66c3dc7d60e8884a759f4e32"
 }
