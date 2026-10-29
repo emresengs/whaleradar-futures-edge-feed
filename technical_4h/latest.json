@@ -5,12 +5,12 @@
   "scanner_implementation_version": "3.0.0",
   "max_score": 75,
   "minimum_candidate_score": 25,
-  "generated_at_utc": "2026-10-29T14:13:29.378Z",
-  "fresh_scan_timestamp": "2026-10-29T14:13:29.378Z",
-  "as_of_exchange_utc": "2026-10-29T14:01:41.465Z",
+  "generated_at_utc": "2026-10-29T15:28:08.111Z",
+  "fresh_scan_timestamp": "2026-10-29T15:28:08.111Z",
+  "as_of_exchange_utc": "2026-10-29T15:14:06.740Z",
   "evidence_timestamp_utc": "2026-10-29T11:59:59.999Z",
   "valid_until_utc": "2026-10-29T16:00:00.000Z",
-  "scan_status": "COMPLETE_WITH_EXCLUSIONS",
+  "scan_status": "PARTIAL",
   "source_mode": "SPOT",
   "decision_input_allowed": true,
   "shadow_test_required": false,
@@ -4662,9 +4662,34 @@
       "candles": 174
     },
     {
-      "status": "INSUFFICIENT_HISTORY",
+      "symbol": "HUMAUSDT",
+      "status": "DATA_UNAVAILABLE",
+      "reason": "URLError:<urlopen error timed out>"
+    },
+    {
       "symbol": "HYPEUSDT",
-      "candles": 211
+      "status": "DATA_UNAVAILABLE",
+      "reason": "URLError:<urlopen error timed out>"
+    },
+    {
+      "symbol": "IBMBUSDT",
+      "status": "DATA_UNAVAILABLE",
+      "reason": "URLError:<urlopen error timed out>"
+    },
+    {
+      "symbol": "ICPUSDT",
+      "status": "DATA_UNAVAILABLE",
+      "reason": "URLError:<urlopen error timed out>"
+    },
+    {
+      "symbol": "IDUSDT",
+      "status": "DATA_UNAVAILABLE",
+      "reason": "URLError:<urlopen error timed out>"
+    },
+    {
+      "symbol": "ILVUSDT",
+      "status": "DATA_UNAVAILABLE",
+      "reason": "URLError:<urlopen error timed out>"
     },
     {
       "status": "INSUFFICIENT_HISTORY",
@@ -4866,13 +4891,13 @@
     "active_base_assets": 520,
     "selected_pairs": 519,
     "attempted": 519,
-    "calculated": 446,
-    "insufficient_history": 73,
-    "data_errors": 0,
+    "calculated": 441,
+    "insufficient_history": 72,
+    "data_errors": 6,
     "unsupported_quote": 1
   },
   "coverage": {
-    "selected_pairs_calculated_pct": 85.9345,
+    "selected_pairs_calculated_pct": 84.9711,
     "source_market": "SPOT",
     "futures_coverage_verified": false,
     "scope": "ALL_ACTIVE_SPOT_BASES_WITH_AVAILABLE_USD_STABLE_QUOTE"
@@ -4888,5 +4913,5 @@
   "delivery_status": "DELIVERY_UNCONFIRMED",
   "decision_effect_status": "DECISION_EFFECT_UNCONFIRMED",
   "integration_status": "RULE_UPDATE_REQUIRES_CONSUMER_V3",
-  "scan_id": "c45028c9d41b4bb464cfece36a3d2bd9f505860fc4123638616a3be32d2bda79"
+  "scan_id": "416f32da1f487e8182445c529050db97992384d6bd1af81503326ba9f48f7e05"
 }
