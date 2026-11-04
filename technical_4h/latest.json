@@ -5,12 +5,12 @@
   "scanner_implementation_version": "3.0.0",
   "max_score": 75,
   "minimum_candidate_score": 25,
-  "generated_at_utc": "2026-11-04T18:13:42.824Z",
-  "fresh_scan_timestamp": "2026-11-04T18:13:42.824Z",
-  "as_of_exchange_utc": "2026-11-04T18:07:56.921Z",
+  "generated_at_utc": "2026-11-04T19:05:00.544Z",
+  "fresh_scan_timestamp": "2026-11-04T19:05:00.544Z",
+  "as_of_exchange_utc": "2026-11-04T18:58:54.238Z",
   "evidence_timestamp_utc": "2026-11-04T15:59:59.999Z",
   "valid_until_utc": "2026-11-04T20:00:00.000Z",
-  "scan_status": "PARTIAL",
+  "scan_status": "COMPLETE_WITH_EXCLUSIONS",
   "source_mode": "SPOT",
   "decision_input_allowed": true,
   "shadow_test_required": false,
@@ -2187,11 +2187,6 @@
       "candles": 127
     },
     {
-      "symbol": "PEPEUSDT",
-      "status": "DATA_UNAVAILABLE",
-      "reason": "JSONDecodeError:Unterminated string starting at: line 1 column 81143 (char 81142)"
-    },
-    {
       "status": "INSUFFICIENT_HISTORY",
       "symbol": "PYPLBUSDT",
       "candles": 589
@@ -2301,13 +2296,13 @@
     "active_base_assets": 519,
     "selected_pairs": 518,
     "attempted": 518,
-    "calculated": 454,
+    "calculated": 455,
     "insufficient_history": 63,
-    "data_errors": 1,
+    "data_errors": 0,
     "unsupported_quote": 1
   },
   "coverage": {
-    "selected_pairs_calculated_pct": 87.6448,
+    "selected_pairs_calculated_pct": 87.8378,
     "source_market": "SPOT",
     "futures_coverage_verified": false,
     "scope": "ALL_ACTIVE_SPOT_BASES_WITH_AVAILABLE_USD_STABLE_QUOTE"
@@ -2323,5 +2318,5 @@
   "delivery_status": "DELIVERY_UNCONFIRMED",
   "decision_effect_status": "DECISION_EFFECT_UNCONFIRMED",
   "integration_status": "RULE_UPDATE_REQUIRES_CONSUMER_V3",
-  "scan_id": "df16d78b33d247f89ada5e9d3e1ae55718e3505c07e603eedd7430c7d70c5fc9"
+  "scan_id": "4284b460e521151084a08360ed2b395d705ff657664a3b3944d2f6c118a2db48"
 }
