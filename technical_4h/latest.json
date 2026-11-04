@@ -5,12 +5,12 @@
   "scanner_implementation_version": "3.0.0",
   "max_score": 75,
   "minimum_candidate_score": 25,
-  "generated_at_utc": "2026-11-04T16:11:34.124Z",
-  "fresh_scan_timestamp": "2026-11-04T16:11:34.124Z",
-  "as_of_exchange_utc": "2026-11-04T16:05:52.894Z",
+  "generated_at_utc": "2026-11-04T17:01:03.401Z",
+  "fresh_scan_timestamp": "2026-11-04T17:01:03.401Z",
+  "as_of_exchange_utc": "2026-11-04T16:56:30.952Z",
   "evidence_timestamp_utc": "2026-11-04T15:59:59.999Z",
   "valid_until_utc": "2026-11-04T20:00:00.000Z",
-  "scan_status": "PARTIAL",
+  "scan_status": "COMPLETE_WITH_EXCLUSIONS",
   "source_mode": "SPOT",
   "decision_input_allowed": true,
   "shadow_test_required": false,
@@ -2247,11 +2247,6 @@
       "candles": 379
     },
     {
-      "symbol": "SUSDT",
-      "status": "DATA_UNAVAILABLE",
-      "reason": "JSONDecodeError:Expecting value: line 1 column 130303 (char 130302)"
-    },
-    {
       "status": "INSUFFICIENT_HISTORY",
       "symbol": "TMFBUSDT",
       "candles": 85
@@ -2296,49 +2291,18 @@
       "candles": 337
     }
   ],
-  "expired_or_retracted_signal_ids": [
-    "077ee087cdbf1c6f4d201aa658f8be1087156f2494b7c0e0f3c731827ae48a97",
-    "0c283b433c09e28780e14e20cb1a96a6fba3e7889af6ad4b7b8f656538bc0d25",
-    "117f7f204342349a5585d2b6e67d21d1db16a8fe50ac8956049147039c46c5e6",
-    "1c27e731593b78429d003a8dd46879871f16f356954498a6421e8e0935bbb3a2",
-    "26292f3acd6bd1d7822daacf02b4a8e775023682fb45906fd25016533ce1df68",
-    "27a1d270a1cb3b4ce3e2fead0f808fd9886ef889a90b9b2ad185b78576eeb46f",
-    "29917798b8e8e7840eb6ae2091f136e584bfa798654b60d58a1a0d3cd7fa64b7",
-    "32a54fa99a342c5dcd8bc42520d9570db28f18a5133bdc7320f88293891f4fc2",
-    "3ce87dd138611691f8035ff41a37bd3e674b22693c8ba520557a635b87d6e7f6",
-    "3ea464dff8a808b26179bfe282774bdfc7ec4340c9ad65453957e6e6a90caa7e",
-    "3fc59de3e23ad7730fa7b8d47b5b683a3916145de74972c28cf0320b6e9431eb",
-    "545cd10fe524aed807385d603d56b7f7fe8523fefd369293ab6050f09fa96c97",
-    "623d826a1f721da9ccef4fa6bfcef14294853c706dba1501a54e7bebd5836805",
-    "631db81540fbc1d2178dc5a094885114dbe6c078b3f2addf5475ecd569101de1",
-    "70e9073b64e59cdfb923f76cf3a235d2a60efc2fd575807f7ea5a05c251f80eb",
-    "7ca1cf9757137695c7b7f7d603eef2ec6527bf92090099ae0fcda3f058f7f589",
-    "7f2d16f684908d844e9161e8ebd84f72d0608f0d369ca8d5f2e32702f99467e7",
-    "8b5f44cf1b11e6c609fcc689c253362fb5bc2c300c46167b7299c1a9e444948b",
-    "8f385f0bff259da813b58b47df0dc7f9aa927258508d2d4674caa751e104bdcb",
-    "942dbc48b75f6b79608cfe91b01a76c18227d7563b01b4875284ac762fef2753",
-    "95de5aa0d0151a8e3aa11c4f6029bc0fe213cdeeb74d85c8dd3f920b73ed8194",
-    "9fed44351db9512cfc64f4cfdd03030a046dbf6dd0d738c82805e0fc47105041",
-    "a32766c2ce28630e60e0e661d9c8f53d2d2871d6d4b63d6f04badbc0beb0afde",
-    "d1eefd82ca77ee57005c42c43511c136d80618ce9b915982a54424b45281a739",
-    "d6bdee4e12814bdc96f49e061f1a3e72069537338f9d4fc3e4c1bbbe7e372937",
-    "ea036a8d74bd84922968b9bc34d89cf41a58f40ecca2531ac2f1610b83d41664",
-    "ee28d99775e990f920f3830968e7a75cb886957b0903c4c5f9205b84a9a8024b",
-    "f7ed9b364d149e160fc9b107180b4d09e2a33f064ed2e04490ce0124c326d7d4",
-    "f8cd42a509e764e1cf74d0bd2cd0f00a334d9b77146f0766d344f08f06e59c59",
-    "fd61b5f518a0b93ebc3533347444a7da2ff6c1a56075e7d59dbe648617fff591"
-  ],
+  "expired_or_retracted_signal_ids": [],
   "universe_counts": {
     "active_base_assets": 519,
     "selected_pairs": 518,
     "attempted": 518,
-    "calculated": 454,
+    "calculated": 455,
     "insufficient_history": 63,
-    "data_errors": 1,
+    "data_errors": 0,
     "unsupported_quote": 1
   },
   "coverage": {
-    "selected_pairs_calculated_pct": 87.6448,
+    "selected_pairs_calculated_pct": 87.8378,
     "source_market": "SPOT",
     "futures_coverage_verified": false,
     "scope": "ALL_ACTIVE_SPOT_BASES_WITH_AVAILABLE_USD_STABLE_QUOTE"
@@ -2354,5 +2318,5 @@
   "delivery_status": "DELIVERY_UNCONFIRMED",
   "decision_effect_status": "DECISION_EFFECT_UNCONFIRMED",
   "integration_status": "RULE_UPDATE_REQUIRES_CONSUMER_V3",
-  "scan_id": "47f087e50138d24de0eb377e8e8076b3e5a9d8a6e1a7a0fbaa760ce94b6c619c"
+  "scan_id": "fcb91c07475748c7ab3542d04d3376cb7aca137a05bf4859888ed6c6a83c97b3"
 }
